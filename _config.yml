@@ -5,7 +5,7 @@ header-img: img/back1.jpg
 email: lishenqu@gmail.com
 description: "缓慢地前进"
 keyword: "Computer Vision, Low-level"
-url: "https://qulishen.github.io/" # your host, for absolute URL
+url: "https://qulishen.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: lishenqu
+disqus_username: qulishen-github-io
 
 # Netease settings
 netease_comment: false
