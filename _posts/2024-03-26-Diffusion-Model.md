@@ -90,4 +90,4 @@ $$
 $$
 p_{\theta}(x_{t-1}|x_{t})=N(x_{t-1};\mu_\theta(x_t,t),\sum_{\theta}(x_{t},t))
 $$
-![alt text](../img/in-post/2024-03-26-Diffusion-Model/image.png)
+![alt text](/img/in-post/2024-03-26-Diffusion-Model/image.png)
