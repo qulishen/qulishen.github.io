@@ -13,10 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
+# weibo_username: huxpro
+zhihu_username: "不畏浮云遮望眼"
+github_username: qulishen
+# twitter_username: huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
@@ -59,18 +59,18 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: lishenqu
 
 # Netease settings
 netease_comment: false
 
 # Analytics settings
 # Baidu Analytics
-# ba_track_id: [your track id]
+ba_track_id: efebff06c6a4d1303f6f8dfed705c641
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: "G-FMSLR180WZ" # Format: UA-xxxxxx-xx
+ga_domain: qulishen.top
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
