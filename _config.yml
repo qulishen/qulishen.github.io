@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: Lishen Qu
+disqus_username: lishenqu
 
 # Netease settings
 netease_comment: false
