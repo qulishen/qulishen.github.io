@@ -74,7 +74,7 @@ ba_track_id: efebff06c6a4d1303f6f8dfed705c641
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "青溪尽是辛夷树，不及东风桃李花。"
+sidebar-about-description: "酒中堪累月,身外即浮云."
 sidebar-avatar: /img/xinyi.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
