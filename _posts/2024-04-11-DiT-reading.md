@@ -24,7 +24,7 @@ tags:
 
 本文主要贡献是共设计了四种方案来实现两个额外embeddings的嵌入，即如何将时间步 t 和条件控制 c 嵌入到原本的图像特征中，具体如下：
 
-![四种特征融合结构](../img/in-post/2023-4-11-DiT-reading/image.png)
+![四种特征融合结构](/img/in-post/2023-4-11-DiT-reading/image.png)
 1. In-context conditioning：将两个embeddings看成两个tokens合并在输入的tokens中，这种处理方式有点类似ViT中的cls token，实现起来比较简单，也不基本上不额外引入计算量。
 
 2. Cross-attention block：将两个embeddings拼接成一个数量为2的序列，然后在transformer block中插入一个cross attention，条件embeddings作为cross attention的key和value；这种方式也是目前文生图模型所采用的方式，它需要额外引入15%的Gflops。
