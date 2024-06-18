@@ -28,7 +28,29 @@ tags:
 
 [知乎](https://zhuanlan.zhihu.com/p/427845538)
 
-对于 Scattering Flare Images 的成像规律，我们目前认为主要成因是来自于光线的衍射而非散射。使用夫琅禾费远场衍射可以证明散射耀斑的相似性。
+对于 Scattering Flare Images 的成像规律，对于带很长”尾巴“的耀斑，主要成因是来自于光线的衍射而非散射。使用夫琅禾费远场衍射可以证明散射耀斑的相似性。
+
+其他：
+
+（一）  镜片表面二次反射，即鬼影(ghost/ghost flare)
+
+关键词：光源在视场内或附近、表面二次反射
+
+（二）  手机摄影的鬼像(ghost/ghost image)
+
+关键词：成像、中心对称
+
+（三）  光源打在镜筒机械件上发生反射/散射，即眩光(flare)
+
+关键词：光源在视场外、反射/散射
+
+（四）  机械装配件部分阻挡正常光路，发生反射/散射，也称眩光(flare)
+
+关键词：光源在视场内、机械装配件阻挡、反射/散射
+
+（五）  特殊光学元件带来的杂光，如红外冷反射、菲涅尔透镜、衍射面、“星芒”等
+
+[other](https://www.optkt.com/portal.php?mod=view&aid=694)
 
 $$
 \begin{aligned}
@@ -37,6 +59,6 @@ E=& C\frac{A^{\prime}}f\exp(ikf)\exp\left[ik\left(\frac{x^2+y^2}{2f}\right)\righ
 \end{aligned}
 $$
 
-# 3. 图像特征匹配。
+# 3. 艾里斑
 
-# 4. 
+# 4. 图像特征匹配
