@@ -90,7 +90,7 @@ page-mathjax: false
 
 # Friends
 friends:
-  [
+  [ {title: "Zhao Yankai", href: "https://yankayzhao.github.io/" },
     { title: "Hu Junyao", href: "https://junyaohu.github.io/" },
     { title: "Zhang Zhicheng",href: "https://zzcheng.top/" },
     { title: "Jia Guoli", href: "https://exped1230.github.io/"},
