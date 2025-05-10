@@ -24,15 +24,27 @@ My research interest includes image restoration, including flicker removal, and 
 
 # 🔥 News
 - *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
-
+- *2024.07*: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
+- 
 # 📝 Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='images/CVPR2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
+
+Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang, 
+
+[**Project**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358)
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='images/ECCV2024.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration](https://arxiv.org/pdf/2404.00288)
+Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 
-Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu** and Jufeng Yang
+Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 [**Project**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
 </div>
