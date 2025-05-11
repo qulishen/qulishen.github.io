@@ -17,10 +17,10 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently pursuing a Master's degree in [Jufeng Yang's Computer Vision Lab](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), having completed my undergraduate studies in the Software Engineering Department at the same institution.
 
-My research interest includes image restoration, including flicker removal, and flare removal. 
+I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
+My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
 # 🔥 News
 - *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
@@ -53,8 +53,8 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
-<!-- - *2023.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+- *2023.09 -, Huawei "Intelligent Foundation" Scholarship
+- *2022.09 -, SK Telecom Artificial Intelligence Scholarship, South Korea
 
 # 📖 Educations
 - *2024.09 - (now)*, Master student of Nankai University.
