@@ -53,8 +53,8 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
-- *2023.09 -, Huawei "Intelligent Foundation" Scholarship
-- *2022.09 -, SK Telecom Artificial Intelligence Scholarship, South Korea
+- *2023.09*, Huawei "Intelligent Foundation" Scholarship
+- *2022.09*, SK Telecom Artificial Intelligence Scholarship, South Korea
 
 # 📖 Educations
 - *2024.09 - (now)*, Master student of Nankai University.
