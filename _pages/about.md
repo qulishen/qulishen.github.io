@@ -48,7 +48,7 @@ Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 
 Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
-[**Code**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
+[**Project**](project/FPro.html) [**Code**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
 </div>
 </div>
 
