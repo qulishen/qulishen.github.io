@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>A Polarization-Aided Transformer for Image Deblurring via Motion Vector Decomposition</title>
+  <title>Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -51,13 +51,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">A Polarization-Aided Transformer for Image Deblurring via Motion Vector Decomposition</h1>
+            <h1 class="title is-1 publication-title">Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://github.com/Calvin11311" target="_blank">Duosheng chen</a>
-                </span>
-                <span class="author-block">
+               <span class="author-block">
                   <a href="https://joshyzhou.github.io/" target="_blank">Shihao Zhou</a>
                 </span>
                   <span class="author-block">
@@ -66,6 +63,9 @@
                   <span class="author-block">
                     <a href="https://jingleishi.github.io/" target="_blank">Jinglei Shi</a>
                   </span>
+                  <span class="author-block">
+                <a href="https://github.com/Calvin11311" target="_blank">Duosheng chen</a>
+                </span>
                   <span class="author-block">
                     <a href="https://qulishen.github.io/" target="_blank">Lishen Qu</a>
                   </span>
@@ -84,7 +84,7 @@ Technology<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CV
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2404.00358" target="_blank"
+                        <a href="https://arxiv.org/pdf/2404.00288" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -106,7 +106,7 @@ Technology<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CV
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/Calvin11311/MDT" target="_blank"
+                    <a href="https://github.com/joshyZhou/FPro" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -117,7 +117,7 @@ Technology<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CV
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2404.00358" target="_blank"
+                  <a href="https://arxiv.org/abs/2404.00288" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -159,7 +159,9 @@ Technology<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CV
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Effectively leveraging motion information is crucial for the image deblurring task. Existing methods typically build deep-learning models to restore a clean image by estimating blur patterns over the entire movement. This suggests that the blur caused by rotational motion components is processed together with the translational one. Exploring the movement without separation leads to limited performance for complex motion deblurring, especially rotational motion. In this paper, we propose Motion Decomposition Transformer (MDT), a transformer-based architecture augmented with polarized modules for deblurring via motion vector decomposition. MDT consists of a Motion Decomposition Module (MDM) for extracting hybrid rotation and translation features, and a Radial Stripe Attention Solver (RSAS) for sharp image reconstruction with enhanced rotational information. Specifically, the MDM uses a deformable Cartesian convolutional branch to capture translational motion, complemented by a polar-system branch to capture rotational motion. The RSAS employs radial stripe windows and angular relative positional encoding in the polar system to enhance rotational information. This design preserves translational details while keeping computational costs lower than dual-coordinate design. Experimental results on 6 image deblurring datasets show that MDT outperforms state-of-the-art methods, particularly in handling blur caused by complex motions with significant rotational components. 
+            How to explore useful features from images as prompts to
+            guide the deep image restoration models is an effective way to solve image restoration. In contrast to mining spatial relations within images as prompt, which leads to characteristics of different frequencies being neglected and further remaining subtle or undetectable artifacts in the restored image, we develop a Frequency Prompting image restoration method, dubbed FPro, which can effectively provide prompt components from a frequency perspective to guild the restoration model address these differences.Specifically, we first decompose input features into separate frequency parts via dynamically learned filters, where we introduce a gating mechanism for suppressing the less informative elements within the kernels. To propagate useful frequency information as prompt, we then propose a dual prompt block, consisting of a low-frequency prompt
+            modulator (LPM) and a high-frequency prompt modulator (HPM), to handle signals from different bands respectively. Each modulator contains a generation process to incorporate prompting components into the extracted frequency maps, and a modulation part that modifies the prompt feature with the guidance of the decoder features. Experimental results on commonly used benchmarks have demonstrated the favorable performance of our pipeline against SOTA methods on 5 image restoration tasks, including deraining, deraindrop, demoiréing, deblurring, and dehazing.
           </p>
         </div>
       </div>
@@ -176,11 +178,11 @@ Technology<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CV
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @inproceedings{chen2025polar,
-        title={A Polarization-aided Transformer for Image Deblurring via  Motion Vector Decomposition},
-        author={Duosheng, Chen and Shihao, Zhou and Jinshan, Pan and Jinglei, Shi and Lishen, Qu and Jufeng, Yang},
-        booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-        year={2025}
+        @inproceedings{zhou_ECCV2024_FPro,
+          title={Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration},
+          author={Zhou, Shihao and Pan, Jinshan and Shi, Jinglei and Chen, Duosheng and Qu, Lishen and Yang, Jufeng},
+          booktitle={ECCV},
+          year={2024}
         }
       </code></pre>
     </div>
