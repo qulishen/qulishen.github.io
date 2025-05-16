@@ -2,12 +2,17 @@
 title: "BurstDeflicker"
 permalink: /projects/BurstDeflicker/
 excerpt: "A project for flicker removal."
-author_profile: false
+author_profile: true
 ---
 
-# BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
-
-**Authors:** Lishen Qu, Zhihao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+<div align="center">
+  <h1 style="font-size:2.2em;font-weight:bold;margin-bottom:0.2em;">
+    BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
+  </h1>
+  <div style="font-size:1.2em;font-weight:500;margin-bottom:1em;">
+    <b>Authors:</b> Lishen Qu, Zhihao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+  </div>
+</div>
 
 <div style="margin: 1em 0;">
   <a href="https://arxiv.org/pdf/xxxx.xxxxx" target="_blank" style="margin-right: 1em;">
