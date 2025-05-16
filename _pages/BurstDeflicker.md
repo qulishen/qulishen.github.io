@@ -1,9 +1,19 @@
 ---
-title: "BurstDeflicker"
 permalink: /projects/BurstDeflicker/
-excerpt: "A project for flicker removal."
+title: "BurstDeflicker"
+excerpt: ""
 author_profile: true
 ---
+
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+
+
+<span class='anchor' id='about-me'></span>
 
 <div align="center">
   <h1 style="font-size:2.2em;font-weight:bold;margin-bottom:0.2em;">
