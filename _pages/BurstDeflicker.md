@@ -12,7 +12,6 @@ author_profile: true
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-
 <span class='anchor' id='about-me'></span>
 
 <div align="center">
@@ -24,17 +23,19 @@ author_profile: true
   </div>
 </div>
 
-<div style="margin: 1em 0;">
-  <a href="https://arxiv.org/pdf/xxxx.xxxxx" target="_blank" style="margin-right: 1em;">
-    <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoColor=white" alt="Paper" height="28">
-  </a>
-  <a href="https://github.com/your-repo/FlareX" target="_blank" style="margin-right: 1em;">
-    <img src="https://img.shields.io/badge/Code-GitHub-black?logo=github" alt="Code" height="28">
-  </a>
-  <a href="https://your-dataset-link" target="_blank">
-    <img src="https://img.shields.io/badge/Dataset-Download-blue?logo=databricks" alt="Dataset" height="28">
-  </a>
-</div>
+<div align="center">
+  <div style="margin: 1em 0;">
+    <a href="https://arxiv.org/pdf/xxxx.xxxxx" target="_blank" style="margin-right: 1em;">
+      <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoColor=white" alt="Paper" height="28">
+    </a>
+    <a href="https://github.com/your-repo/FlareX" target="_blank" style="margin-right: 1em;">
+      <img src="https://img.shields.io/badge/Code-GitHub-black?logo=github" alt="Code" height="28">
+    </a>
+    <a href="https://your-dataset-link" target="_blank">
+      <img src="https://img.shields.io/badge/Dataset-Download-blue?logo=databricks" alt="Dataset" height="28">
+    </a>
+  </div>
+<div align="center">
 
 ## Abstract
 
