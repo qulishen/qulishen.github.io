@@ -29,9 +29,6 @@ My research interests focus on image restoration, with particular attention to f
 # 📝 Publications 
 
 
-- [FlareX: Lens Flare Removal](/projects/flarex/)
-
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='images/CVPR2025.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -39,7 +36,7 @@ A Polarization-aided Transformer for Image Deblurring via Motion Vector Decompos
 
 Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang, 
 
-[**Project**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358)
+[**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) [**Project**](/projects/BurstDeflicker/)
 </div>
 </div>
 
@@ -50,7 +47,7 @@ Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 
 Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
-[**Project**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
+[**Code**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
 </div>
 </div>
 
