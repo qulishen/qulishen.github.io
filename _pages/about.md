@@ -29,7 +29,7 @@ My research interests focus on image restoration, with particular attention to f
 # 📝 Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='images/CVPR2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
@@ -41,7 +41,7 @@ Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='images/ECCV2024.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='project/static/images/Fpro/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
