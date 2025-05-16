@@ -36,7 +36,8 @@ A Polarization-aided Transformer for Image Deblurring via Motion Vector Decompos
 
 Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang, 
 
-[**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) [**Project**](/projects/BurstDeflicker/)
+[**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) 
+- [更多项目展示页面](template.html)
 </div>
 </div>
 
