@@ -25,16 +25,15 @@ My research interests focus on image restoration, with particular attention to f
 # 🔥 News
 - *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
 - *2024.07*: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
-- 
+ 
 # 📝 Publications 
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
 
-Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang, 
+Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 
 [**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) 
 
