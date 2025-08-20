@@ -23,6 +23,7 @@ I am currently pursuing a Master's degree in the Computer Vision Lab led by [Pro
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
 # 🔥 News
+- *2025.08*:  🎉🎉 We win the third place in the [MIPI 2025 challenge for Aberration Correction in Mobile Cameras](https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf).
 - *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
 - *2024.07*: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
  
