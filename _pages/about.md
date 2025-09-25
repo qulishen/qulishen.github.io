@@ -30,17 +30,16 @@ My research interests focus on image restoration, with particular attention to f
  
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
 **Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) 
+[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/pdf/xxx) 
 
 </div>
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
