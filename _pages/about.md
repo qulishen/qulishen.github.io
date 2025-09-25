@@ -23,11 +23,24 @@ I am currently pursuing a Master's degree in the Computer Vision Lab led by [Pro
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
 # 🔥 News
+- *2025.09*:  🎉🎉 2 paper is accepted to NeurIPS 2025 Dataset Track.
 - *2025.08*:  🎉🎉 We win the third place in the [MIPI 2025 challenge for Aberration Correction in Mobile Cameras](https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf).
 - *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
 - *2024.07*: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
  
 # 📝 Publications 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
+
+**Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+
+[**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) 
+
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
