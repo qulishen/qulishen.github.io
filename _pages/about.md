@@ -40,6 +40,19 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 [**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/pdf/xxx) 
 
 </div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/FlareX/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering
+
+**Lishen Qu**, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang
+
+[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/pdf/xxx) 
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
