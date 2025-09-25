@@ -138,22 +138,20 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-        <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4" -->
-        <!-- type="video/mp4"> -->
-      <!-- </video> -->
-      <!-- <h2 class="subtitle has-text-centered"> -->
-        <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
-      <!-- </h2> -->
-    <!-- </div> -->
-  <!-- </div> -->
-<!-- </section> -->
-<!-- End teaser video -->
+        Your video here
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -163,7 +161,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Effectively leveraging motion information is crucial for the image deblurring task. Existing methods typically build deep-learning models to restore a clean image by estimating blur patterns over the entire movement. This suggests that the blur caused by rotational motion components is processed together with the translational one. Exploring the movement without separation leads to limited performance for complex motion deblurring, especially rotational motion. In this paper, we propose Motion Decomposition Transformer (MDT), a transformer-based architecture augmented with polarized modules for deblurring via motion vector decomposition. MDT consists of a Motion Decomposition Module (MDM) for extracting hybrid rotation and translation features, and a Radial Stripe Attention Solver (RSAS) for sharp image reconstruction with enhanced rotational information. Specifically, the MDM uses a deformable Cartesian convolutional branch to capture translational motion, complemented by a polar-system branch to capture rotational motion. The RSAS employs radial stripe windows and angular relative positional encoding in the polar system to enhance rotational information. This design preserves translational details while keeping computational costs lower than dual-coordinate design. Experimental results on 6 image deblurring datasets show that MDT outperforms state-of-the-art methods, particularly in handling blur caused by complex motions with significant rotational components. 
+            Lens flare occurs when shooting towards strong light sources, significantly degrading the visual quality of images. Due to the difficulty in capturing flare-corrupted and flare-free image pairs in the real world, existing datasets are typically synthesized in 2D by overlaying artificial flare templates onto background images. However, the lack of flare diversity in templates and the neglect of physical principles in the synthesis process hinder models trained on these datasets from generalizing well to real-world scenarios. To address these challenges, we propose a new physics-informed method for flare data generation, which consists of three stages: parameterized template creation, the laws of illumination-aware 2D synthesis, and physical engine-based 3D rendering, which finally gives us a miXed flare dataset that incorporates both 2D and 3D perspectives, namely FlareX. This dataset offers 9,500 2D templates derived from 95 flare patterns and 3,000 flare image pairs rendered from 60 3D scenes. Furthermore, we design a masking approach to obtain real-world flare-free images from their corrupted counterparts to measure the performance of the model on real-world images. Extensive experiments demonstrate the effectiveness of our method and dataset. The code and dataset are available at https://github.com/qulishen/FlareX. 
           </p>
         </div>
       </div>
