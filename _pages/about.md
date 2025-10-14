@@ -37,7 +37,7 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
 **Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/pdf/xxx) 
+[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/abs/2510.09996) 
 
 </div>
 </div>
@@ -49,7 +49,7 @@ FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3
 
 **Lishen Qu**, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang
 
-[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/pdf/xxx) 
+[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/abs/2510.09995) 
 
 </div>
 </div>
