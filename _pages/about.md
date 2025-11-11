@@ -88,5 +88,5 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 # 📖 Educations
 - *2024.09 - (now)*, Master student of Nankai University.
-- *2020.09 - 2024.06*, Undergraduate students of Nankai University.
+- *2020.09 - 2024.06*, Undergraduate student of Nankai University.
 
