@@ -37,16 +37,46 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <!-- Vendor Stylesheets for before/after slider -->
-  <link rel="stylesheet" href="static/css/tab_gallery.css">
-  <link rel="stylesheet" href="static/css/juxtapose.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+  <style>
+    .tab_container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .tab_row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        justify-content: center;
+    }
+    .tab_column {
+        flex: 15%;
+        max-width: 15%;
+        padding: 0 4px;
+        cursor: pointer;
+    }
+    .tab_column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+    .tab_column img:hover {
+        border: 2px solid #3273dc;
+        opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
 
@@ -159,37 +189,6 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 
 <!-- Application -->
 
-<!-- Before/After Flare Removal -->
-<section class="section">
-  <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3 has-text-centered">Flare Removal Comparison</h2>
-    <p class="has-text-centered" style="margin-bottom:1.5rem;">
-      Drag the white line to compare the original flare image (left) and our flare-removed result (right).
-    </p>
-
-    <div class="tab_container">
-      <div id="juxtapose-embed" data-startingposition="50%" data-animate="true" class="juxtapose"
-           style="max-width: 900px; margin: 0 auto;">
-      </div>
-      <div>
-        <div id="juxtapose-hidden"></div>
-      </div>
-      <div id="imgtext"></div>
-    </div>
-
-    <div class="tab_row" style="margin-top: 1.5rem;">
-      <div class="tab_column">
-        <img src="static/images/FlareX/1-input.png" onclick="flare_tab_click('1');">
-      </div>
-      <div class="tab_column">
-        <img src="static/images/FlareX/1-input.png" onclick="flare_tab_click('2');">
-      </div>
-      <div class="tab_column">
-        <img src="static/images/FlareX/1-input.png" onclick="flare_tab_click('3');">
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -208,6 +207,42 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 </section>
 <!-- End paper abstract -->
 
+<!-- Image comparison slider -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Comparisons</h2>
+      <div class="content has-text-justified">
+        <p>
+          Drag the slider to compare the input image with the FlareX result.
+        </p>
+      </div>
+      
+      <!-- The expanding image container -->
+      <div class="tab_container">
+        <!-- Expanded image -->
+        <div id="juxtapose-embed" data-startingposition="50%" data-animate="true" class="juxtapose"
+          style="height: 500px; width: 100%;">
+        </div>
+
+        <div>
+          <div id="juxtapose-hidden"></div>
+        </div>
+      </div>
+
+      <!-- The grid: thumbnails -->
+      <!-- 
+      <div class="tab_row">
+        <div class="tab_column">
+          <img src="static/images/FlareX/1-input.png" onclick="set_slider('1');">
+        </div>
+      </div> 
+      -->
+    </div>
+  </div>
+</section>
+<!-- End image comparison slider -->
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -215,7 +250,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/FlareX/1-input.png" alt="MY ALT TEXT"
+        <img src="static/images/FlareX/1.png" alt="MY ALT TEXT"
      style="display:block;margin:auto;max-width:100%;max-height:350px;object-fit:contain;background:#f8f8f8;" />
         <h2 class="subtitle has-text-centered">
           
@@ -223,7 +258,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/FlareX/1-input.png" alt="MY ALT TEXT"
+        <img src="static/images/FlareX/2.png" alt="MY ALT TEXT"
      style="display:block;margin:auto;max-width:100%;max-height:350px;object-fit:contain;background:#f8f8f8;" />
         <h2 class="subtitle has-text-centered">
           <!-- First image description. -->
@@ -231,7 +266,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/FlareX/1-input.png" alt="MY ALT TEXT"
+        <img src="static/images/FlareX/3.png" alt="MY ALT TEXT"
      style="display:block;margin:auto;max-width:100%;max-height:350px;object-fit:contain;background:#f8f8f8;" />
         <h2 class="subtitle has-text-centered">
           <!-- First image description. -->
@@ -279,6 +314,31 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+  <script>
+    var slider;
+    let origImages = [
+      { "src": "static/images/FlareX/1-input.png", "label": "Input", },
+      { "src": "static/images/FlareX/1-output.png", "label": "FlareX", }
+    ];
+    let origOptions = {
+      "makeResponsive": true,
+      "showLabels": true,
+      "mode": "horizontal",
+      "showCredits": true,
+      "animate": true,
+      "startingPosition": "50"
+    };
+
+    const juxtaposeSelector = "#juxtapose-embed";
+    const transientSelector = "#juxtapose-hidden";
+
+    (function () {
+      slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    })();
+  </script>
 
   </body>
   </html>
