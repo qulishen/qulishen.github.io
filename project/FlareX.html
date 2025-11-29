@@ -76,10 +76,6 @@
         border: 2px solid #3273dc;
         opacity: 0.7;
     }
-    #juxtapose-hidden {
-        height: 0;
-        overflow: hidden;
-    }
   </style>
 </head>
 <body>
@@ -228,10 +224,6 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
         <div id="juxtapose-embed" data-startingposition="50%" data-animate="true" class="juxtapose"
           style="height: 500px; width: 100%;">
         </div>
-
-        <div>
-          <div id="juxtapose-hidden"></div>
-        </div>
       </div>
 
       <!-- The grid: thumbnails -->
@@ -346,7 +338,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
     };
 
     const juxtaposeSelector = "#juxtapose-embed";
-    const transientSelector = "#juxtapose-hidden";
+    // const transientSelector = "#juxtapose-hidden";
 
     function set_slider(name) {
       let inputImage = {
@@ -361,14 +353,10 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 
       let images = [inputImage, outputImage];
       let options = slider.options;
-      options.callback = function (obj) {
-        var newNode = document.getElementById(obj.selector.substring(1));
-        var oldNode = document.getElementById(juxtaposeSelector.substring(1));
-        oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
-        newNode.innerHTML = '';
-      };
+      options.callback = null;
 
-      slider = new juxtapose.JXSlider(transientSelector, images, options);
+      document.querySelector(juxtaposeSelector).innerHTML = '';
+      slider = new juxtapose.JXSlider(juxtaposeSelector, images, options);
     };
 
     (function () {
