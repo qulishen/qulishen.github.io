@@ -76,6 +76,10 @@
         border: 2px solid #3273dc;
         opacity: 0.7;
     }
+    #juxtapose-hidden {
+        height: 0;
+        overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -361,6 +365,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
         var newNode = document.getElementById(obj.selector.substring(1));
         var oldNode = document.getElementById(juxtaposeSelector.substring(1));
         oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+        newNode.innerHTML = '';
       };
 
       slider = new juxtapose.JXSlider(transientSelector, images, options);
