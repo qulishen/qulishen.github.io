@@ -231,13 +231,23 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
       </div>
 
       <!-- The grid: thumbnails -->
-      <!-- 
       <div class="tab_row">
         <div class="tab_column">
           <img src="static/images/FlareX/1-input.png" onclick="set_slider('1');">
         </div>
-      </div> 
-      -->
+        <div class="tab_column">
+          <img src="static/images/FlareX/2-input.png" onclick="set_slider('2');">
+        </div>
+        <div class="tab_column">
+          <img src="static/images/FlareX/3-input.png" onclick="set_slider('3');">
+        </div>
+        <div class="tab_column">
+          <img src="static/images/FlareX/4-input.png" onclick="set_slider('4');">
+        </div>
+        <div class="tab_column">
+          <img src="static/images/FlareX/5-input.png" onclick="set_slider('5');">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -333,6 +343,28 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 
     const juxtaposeSelector = "#juxtapose-embed";
     const transientSelector = "#juxtapose-hidden";
+
+    function set_slider(name) {
+      let inputImage = {
+        label: "Input",
+      };
+      let outputImage = {
+        label: "FlareX",
+      };
+
+      inputImage.src = "static/images/FlareX/".concat(name, "-input.png");
+      outputImage.src = "static/images/FlareX/".concat(name, "-output.png");
+
+      let images = [inputImage, outputImage];
+      let options = slider.options;
+      options.callback = function (obj) {
+        var newNode = document.getElementById(obj.selector.substring(1));
+        var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+        oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      };
+
+      slider = new juxtapose.JXSlider(transientSelector, images, options);
+    };
 
     (function () {
       slider = new juxtapose.JXSlider(
