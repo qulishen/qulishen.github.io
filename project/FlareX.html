@@ -43,6 +43,149 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .flare-comparison {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: ew-resize;
+    }
+
+    .flare-comparison .flare-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .flare-comparison .flare-image-after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      object-fit: cover;
+      overflow: hidden;
+      clip-path: inset(0 50% 0 0);
+    }
+
+    .flare-comparison .flare-slider-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.35);
+      pointer-events: none;
+    }
+
+    .flare-comparison .flare-slider-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .flare-comparison .flare-slider-handle-line {
+      width: 14px;
+      height: 2px;
+      background: #333;
+      position: relative;
+    }
+
+    .flare-comparison .flare-slider-handle-line::before,
+    .flare-comparison .flare-slider-handle-line::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      border: 4px solid transparent;
+    }
+
+    .flare-comparison .flare-slider-handle-line::before {
+      left: -6px;
+      border-right-color: #333;
+    }
+
+    .flare-comparison .flare-slider-handle-line::after {
+      right: -6px;
+      border-left-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .flare-comparison {
+        max-width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    (function() {
+      function initFlareComparison() {
+        var container = document.querySelector('.flare-comparison');
+        if (!container) return;
+
+        var afterImg = container.querySelector('.flare-image-after');
+        var line = container.querySelector('.flare-slider-line');
+        var handle = container.querySelector('.flare-slider-handle');
+
+        var dragging = false;
+
+        function setPosition(clientX) {
+          var rect = container.getBoundingClientRect();
+          var x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+          var percent = (x / rect.width) * 100;
+
+          afterImg.style.width = percent + '%';
+          afterImg.style.clipPath = 'inset(0 ' + (100 - percent) + '% 0 0)';
+          line.style.left = percent + '%';
+          handle.style.left = percent + '%';
+        }
+
+        function onPointerDown(e) {
+          dragging = true;
+          setPosition(e.clientX || (e.touches && e.touches[0].clientX));
+          e.preventDefault();
+        }
+
+        function onPointerMove(e) {
+          if (!dragging) return;
+          setPosition(e.clientX || (e.touches && e.touches[0].clientX));
+          e.preventDefault();
+        }
+
+        function onPointerUp() {
+          dragging = false;
+        }
+
+        container.addEventListener('mousedown', onPointerDown);
+        container.addEventListener('touchstart', onPointerDown, { passive: false });
+        window.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('touchmove', onPointerMove, { passive: false });
+        window.addEventListener('mouseup', onPointerUp);
+        window.addEventListener('touchend', onPointerUp);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFlareComparison);
+      } else {
+        initFlareComparison();
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -149,6 +292,26 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
       <h2 class="subtitle has-text-centered">
         The dataset introduction demo.
       </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Application -->
+
+<!-- Before/After Flare Removal -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Flare Removal Comparison</h2>
+    <p class="has-text-centered" style="margin-bottom:1.5rem;">
+      Drag the white line to compare the original image (left) and flare-removed result (right).
+    </p>
+    <div class="flare-comparison">
+      <img class="flare-image flare-image-before" src="static/images/FlareX/00000-ori.png" alt="Before flare removal">
+      <img class="flare-image flare-image-after" src="static/images/FlareX/00000-out.png" alt="After flare removal">
+      <div class="flare-slider-line"></div>
+      <div class="flare-slider-handle">
+        <span class="flare-slider-handle-line"></span>
+      </div>
     </div>
   </div>
 </section>
