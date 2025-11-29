@@ -43,40 +43,6 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
-  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-  <style>
-    .tab_container {
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-    .tab_row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        justify-content: center;
-    }
-    .tab_column {
-        flex: 15%;
-        max-width: 15%;
-        padding: 0 4px;
-        cursor: pointer;
-    }
-    .tab_column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-        border: 2px solid transparent;
-        border-radius: 4px;
-        transition: 0.3s;
-    }
-    .tab_column img:hover {
-        border: 2px solid #3273dc;
-        opacity: 0.7;
-    }
-  </style>
 </head>
 <body>
 
@@ -187,9 +153,6 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
   </div>
 </section>
 
-<!-- Application -->
-
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -206,48 +169,6 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
   </div>
 </section>
 <!-- End paper abstract -->
-
-<!-- Image comparison slider -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-3">Comparisons</h2>
-      <div class="content has-text-justified">
-        <p>
-          Drag the slider to compare the input image with the FlareX result.
-        </p>
-      </div>
-      
-      <!-- The expanding image container -->
-      <div class="tab_container">
-        <!-- Expanded image -->
-        <div id="juxtapose-embed" data-startingposition="50%" data-animate="true" class="juxtapose"
-          style="height: 500px; width: 100%;">
-        </div>
-      </div>
-
-      <!-- The grid: thumbnails -->
-      <div class="tab_row">
-        <div class="tab_column">
-          <img src="static/images/FlareX/1-input.png" onclick="set_slider('1');">
-        </div>
-        <div class="tab_column">
-          <img src="static/images/FlareX/2-input.png" onclick="set_slider('2');">
-        </div>
-        <div class="tab_column">
-          <img src="static/images/FlareX/3-input.png" onclick="set_slider('3');">
-        </div>
-        <div class="tab_column">
-          <img src="static/images/FlareX/4-input.png" onclick="set_slider('4');">
-        </div>
-        <div class="tab_column">
-          <img src="static/images/FlareX/5-input.png" onclick="set_slider('5');">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image comparison slider -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -320,50 +241,6 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
-  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-  <script>
-    var slider;
-    let origImages = [
-      { "src": "static/images/FlareX/1-input.png", "label": "Input", },
-      { "src": "static/images/FlareX/1-output.png", "label": "FlareX", }
-    ];
-    let origOptions = {
-      "makeResponsive": true,
-      "showLabels": true,
-      "mode": "horizontal",
-      "showCredits": true,
-      "animate": true,
-      "startingPosition": "50"
-    };
-
-    const juxtaposeSelector = "#juxtapose-embed";
-    // const transientSelector = "#juxtapose-hidden";
-
-    function set_slider(name) {
-      let inputImage = {
-        label: "Input",
-      };
-      let outputImage = {
-        label: "FlareX",
-      };
-
-      inputImage.src = "static/images/FlareX/".concat(name, "-input.png");
-      outputImage.src = "static/images/FlareX/".concat(name, "-output.png");
-
-      let images = [inputImage, outputImage];
-      let options = slider.options;
-      options.callback = null;
-
-      document.querySelector(juxtaposeSelector).innerHTML = '';
-      slider = new juxtapose.JXSlider(juxtaposeSelector, images, options);
-    };
-
-    (function () {
-      slider = new juxtapose.JXSlider(
-        juxtaposeSelector, origImages, origOptions);
-    })();
-  </script>
 
   </body>
   </html>
