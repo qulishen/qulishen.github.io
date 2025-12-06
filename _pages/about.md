@@ -80,6 +80,29 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
+# 🎖 Competitions
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+AIM 2025 Challenge on Robust Offline Video Super-Resolution.
+
+Zhihao Liu, **Lishen Qu**, Shihao Zhou, Jufeng Yang
+
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/MIPI-2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+MIPI 2025 Challenge for Aberration Correction in Mobile Cameras.
+
+Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng Yang
+
+</div>
+</div>
+
 # 🎖 Honors and Awards
 
 - *2024.06*, Outstanding Undergraduate Thesis Award, Nankai University
