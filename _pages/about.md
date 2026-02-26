@@ -86,7 +86,7 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 # 🎖 Competitions
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 AIM 2025 Challenge on Robust Offline Video Super-Resolution.
@@ -96,7 +96,7 @@ Zhihao Liu, **Lishen Qu**, Shihao Zhou, Jufeng Yang
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/MIPI-2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/MIPI-2025.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 MIPI 2025 Challenge for Aberration Correction in Mobile Cameras.
@@ -108,10 +108,10 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 
 # Experiences
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/oppo.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/oppo.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**Research Scientist/Engineer Intern** / OPPO Research Institute, Y Lab.
+**Research Scientist/Engineer Intern** \| OPPO Research Institute, Y Lab.
 
 Time: _2025.07 - (now)_
 
