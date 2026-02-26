@@ -108,8 +108,8 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 
 # Experiences
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/oppo.png' alt="sym" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class='paper-box'><div class='paper-box-image' style="min-width: 120px; max-width: 18%;"><div><img src='project/static/images/oppo.png' alt="OPPO" style="width: 100%; max-width: 120px;"></div></div>
+<div class='paper-box-text' markdown="1" style="padding-left: 1em; max-width: 82%;">
 
 **Research Scientist/Engineer Intern** \| OPPO Research Institute, Y Lab.
 
