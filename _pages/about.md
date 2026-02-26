@@ -112,6 +112,7 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 <div class='paper-box-text' markdown="1">
 
 **Research Scientist/Engineer Intern** | OPPO Research Institute, Y Lab
+
 Time: _2025.07 - (now)_
 
 </div>
