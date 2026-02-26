@@ -3,7 +3,7 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -17,19 +17,22 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-
 I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
 # 🔥 News
-- *2025.10*: &nbsp; We win the third place in the [AIM 2025 Challenge on Robust Offline Video Super-Resolution](https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf).
-- *2025.09*: &nbsp;🎉🎉 2 paper are accepted to NeurIPS 2025.
-- *2025.08*: &nbsp; We win the third place in the [MIPI 2025 Challenge for Aberration Correction in Mobile Cameras](https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf).
-- *2025.04*: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
-- *2024.07*: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
- 
-# 📝 Publications 
+
+- _2026.02_: &nbsp;🎉🎉 1 paper is accepted to CVPR 2026.
+- _2026.01_: &nbsp;🎉🎉 We are hosting [NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)](https://www.codabench.org/competitions/12728/#/pages-tab). Welcome to participate!
+- _2025.10_: &nbsp; We win the third place in the [AIM 2025 Challenge on Robust Offline Video Super-Resolution](https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf).
+- _2025.09_: &nbsp;🎉🎉 2 paper are accepted to NeurIPS 2025.
+- _2025.08_: &nbsp; We win the third place in the [MIPI 2025 Challenge for Aberration Correction in Mobile Cameras](https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf).
+- _2025.07_: &nbsp; 😊 I joined Y Lab at the OPPO Research Institute.
+- _2025.04_: &nbsp;🎉🎉 1 paper is accepted to CVPR 2025 highlight.
+- _2024.07_: &nbsp;🎉🎉 1 paper is accepted to ECCV 2024.
+
+# 📝 Publications
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -38,7 +41,7 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
 **Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/abs/2510.09996) 
+[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/abs/2510.09996)
 
 </div>
 </div>
@@ -50,7 +53,7 @@ FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3
 
 **Lishen Qu**, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang
 
-[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/abs/2510.09995) 
+[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/abs/2510.09995)
 
 </div>
 </div>
@@ -62,7 +65,7 @@ A Polarization-aided Transformer for Image Deblurring via Motion Vector Decompos
 
 Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 
-[**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358) 
+[**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358)
 
 </div>
 </div>
@@ -75,6 +78,7 @@ Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 [**Project**](project/FPro.html) [**Code**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
+
 </div>
 </div>
 
@@ -92,7 +96,6 @@ Zhihao Liu, **Lishen Qu**, Shihao Zhou, Jufeng Yang
 </div>
 </div>
 
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/MIPI-2025.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -103,13 +106,24 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 </div>
 </div>
 
+# Experiences
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Industry</div><img src='images/oppo_logo.png' alt="OPPO" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Research Scientist/Engineer Intern** | OPPO Research Institute, Y Lab
+Time: _2025.07 - (now)_
+
+</div>
+</div>
+
 # 🎖 Honors and Awards
 
-- *2024.06*, Outstanding Undergraduate Thesis Award, Nankai University
-- *2023.09*, Huawei "Intelligent Foundation" Scholarship
-- *2022.09*, SK Telecom Artificial Intelligence Scholarship, South Korea
+- _2024.06_, Outstanding Undergraduate Thesis Award, Nankai University
+- _2023.09_, Huawei "Intelligent Foundation" Scholarship
+- _2022.09_, SK Telecom Artificial Intelligence Scholarship, South Korea
 
 # 📖 Educations
-- *2024.09 - (now)*, Master student of Nankai University.
-- *2020.09 - 2024.06*, Undergraduate student of Nankai University.
 
+- _2024.09 - (now)_, Master student of Nankai University.
+- _2020.09 - 2024.06_, Undergraduate student of Nankai University.
