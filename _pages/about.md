@@ -34,6 +34,18 @@ My research interests focus on image restoration, with particular attention to f
 
 # 📝 Publications
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
+
+**Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+
+[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/) [**PDF**](https://arxiv.org/abs/xxx)
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
