@@ -34,7 +34,7 @@ My research interests focus on image restoration, with particular attention to f
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/3.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
