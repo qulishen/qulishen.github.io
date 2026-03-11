@@ -17,31 +17,144 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<div class="home-polish">
-<div class="section-glass intro-glass">
-
 I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
-</div>
+# 🔥 News
 
-## 🔥 News
+<section class="news-carousel" data-news-carousel>
+  <div class="news-carousel-head">
+    <p class="news-carousel-subtitle">Latest updates</p>
+    <div class="news-carousel-controls">
+      <button class="news-carousel-nav" type="button" data-news-prev aria-label="Previous news">&#8592;</button>
+      <button class="news-carousel-nav" type="button" data-news-next aria-label="Next news">&#8594;</button>
+    </div>
+  </div>
 
-<div class="section-glass news-card">
-<ul>
-  <li><span class="news-date">2026.02</span> 🎉🎉 1 paper is accepted to CVPR 2026.</li>
-  <li><span class="news-date">2026.01</span> 🎉🎉 We are hosting [NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)](https://www.codabench.org/competitions/12728/#/pages-tab). Welcome to participate!</li>
-  <li><span class="news-date">2025.10</span> We win the third place in the [AIM 2025 Challenge on Robust Offline Video Super-Resolution](https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf).</li>
-  <li><span class="news-date">2025.09</span> 🎉🎉 2 paper are accepted to NeurIPS 2025.</li>
-  <li><span class="news-date">2025.08</span> We win the third place in the [MIPI 2025 Challenge for Aberration Correction in Mobile Cameras](https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf).</li>
-  <li><span class="news-date">2025.07</span> 😊 I joined Y Lab at the OPPO Research Institute.</li>
-  <li><span class="news-date">2025.04</span> 🎉🎉 1 paper is accepted to CVPR 2025 highlight.</li>
-  <li><span class="news-date">2024.07</span> 🎉🎉 1 paper is accepted to ECCV 2024.</li>
-</ul>
-</div>
+  <div class="news-carousel-viewport">
+    <div class="news-carousel-track" data-news-track>
+      <article class="news-card">
+        <p class="news-card-date">2026.02</p>
+        <p class="news-card-content">🎉🎉 1 paper is accepted to CVPR 2026.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2026.01</p>
+        <p class="news-card-content">🎉🎉 We are hosting <a href="https://www.codabench.org/competitions/12728/#/pages-tab">NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)</a>. Welcome to participate!</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2025.10</p>
+        <p class="news-card-content">We win the third place in the <a href="https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf">AIM 2025 Challenge on Robust Offline Video Super-Resolution</a>.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2025.09</p>
+        <p class="news-card-content">🎉🎉 2 papers are accepted to NeurIPS 2025.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2025.08</p>
+        <p class="news-card-content">We win the third place in the <a href="https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf">MIPI 2025 Challenge for Aberration Correction in Mobile Cameras</a>.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2025.07</p>
+        <p class="news-card-content">😊 I joined Y Lab at the OPPO Research Institute.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2025.04</p>
+        <p class="news-card-content">🎉🎉 1 paper is accepted to CVPR 2025 highlight.</p>
+      </article>
+      <article class="news-card">
+        <p class="news-card-date">2024.07</p>
+        <p class="news-card-content">🎉🎉 1 paper is accepted to ECCV 2024.</p>
+      </article>
+    </div>
+  </div>
 
-## 📝 Publications
+  <div class="news-carousel-footer">
+    <div class="news-carousel-dots" data-news-dots></div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.querySelector("[data-news-carousel]");
+    if (!root) return;
+
+    var track = root.querySelector("[data-news-track]");
+    var cards = Array.prototype.slice.call(track.querySelectorAll(".news-card"));
+    var prevBtn = root.querySelector("[data-news-prev]");
+    var nextBtn = root.querySelector("[data-news-next]");
+    var dotsContainer = root.querySelector("[data-news-dots]");
+    var pageIndex = 0;
+    var cardsPerView = 3;
+    var pageCount = 1;
+    var dots = [];
+
+    function getCardsPerView() {
+      if (window.innerWidth < 700) return 1;
+      if (window.innerWidth < 1100) return 2;
+      return 3;
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = "";
+      dots = [];
+      for (var i = 0; i < pageCount; i++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "news-carousel-dot";
+        dot.setAttribute("aria-label", "Go to news page " + (i + 1));
+        dot.addEventListener("click", (function (index) {
+          return function () {
+            pageIndex = index;
+            update();
+          };
+        })(i));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      }
+    }
+
+    function update() {
+      var offset = pageIndex * (100 / cardsPerView);
+      track.style.transform = "translateX(-" + offset + "%)";
+
+      if (prevBtn) prevBtn.disabled = pageIndex <= 0;
+      if (nextBtn) nextBtn.disabled = pageIndex >= pageCount - 1;
+
+      dots.forEach(function (dot, index) {
+        dot.classList.toggle("is-active", index === pageIndex);
+      });
+    }
+
+    function layout() {
+      cardsPerView = getCardsPerView();
+      pageCount = Math.max(1, Math.ceil(cards.length / cardsPerView));
+      if (pageIndex > pageCount - 1) pageIndex = pageCount - 1;
+      track.style.setProperty("--news-cards-per-view", String(cardsPerView));
+      buildDots();
+      update();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        pageIndex = Math.max(0, pageIndex - 1);
+        update();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        pageIndex = Math.min(pageCount - 1, pageIndex + 1);
+        update();
+      });
+    }
+
+    layout();
+    window.addEventListener("resize", layout);
+  })();
+</script>
+
+# 📝 Publications
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -105,7 +218,7 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
-## 🎖 Competitions
+# 🎖 Competitions
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -127,7 +240,7 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 </div>
 </div>
 
-## 💼 Experiences
+# 💼 Experiences
 
 <div class='paper-box'><div class='paper-box-image' style="min-width: 150px; max-width: 18%;"><div><img src='project/static/images/oppo.png' alt="OPPO" style="width: 100%; max-width: 150px;"></div></div>
 <div class='paper-box-text' markdown="1" style="padding-left: 1em; max-width: 82%;">
@@ -139,15 +252,13 @@ Time: _2025.07 - (now)_
 </div>
 </div>
 
-## 🎖 Honors and Awards
+# 🎖 Honors and Awards
 
 - _2024.06_, Outstanding Undergraduate Thesis Award, Nankai University
 - _2023.09_, Huawei "Intelligent Foundation" Scholarship
 - _2022.09_, SK Telecom Artificial Intelligence Scholarship, South Korea
 
-## 📖 Educations
+# 📖 Educations
 
 - _2024.09 - (now)_, Master student of Nankai University.
 - _2020.09 - 2024.06_, Undergraduate student of Nankai University.
-
-</div>
