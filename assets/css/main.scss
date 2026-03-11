@@ -325,37 +325,96 @@ h1:before, .anchor:before {
     display: inline-flex;
     align-items: center;
     gap: .34em;
-    padding: .3em .72em;
+    padding: .32em .76em;
     border-radius: 999px;
-    border: 1px solid rgba(201, 215, 235, 0.95);
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.9));
-    color: #234472;
+    border: 1px solid rgba(214, 222, 233, 0.95);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.66));
+    color: #1f3f6f;
     font-size: .82em;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px) saturate(118%);
+    -webkit-backdrop-filter: blur(8px) saturate(118%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 200ms ease, box-shadow 220ms ease, background 220ms ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: radial-gradient(120% 70% at 20% 0%, rgba(255, 255, 255, 0.42), transparent 52%);
+    }
+
+    i,
+    span {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .about-meta-chip-link {
     text-decoration: none;
-    transition: transform 160ms ease, box-shadow 180ms ease;
+    color: inherit;
 
     &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 7px 14px rgba(15, 23, 42, 0.12);
+        transform: translateY(-2px);
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
+        box-shadow: 0 11px 18px rgba(15, 23, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
         text-decoration: none;
     }
 }
 
 .author__urls li.author-chip {
-    border: 1px solid rgba(201, 215, 235, 0.92);
+    display: inline-flex;
+    align-items: center;
+    gap: .34em;
+    border: 1px solid rgba(214, 222, 233, 0.95);
     border-radius: 999px;
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.9));
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-    padding: .22em .72em;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.66));
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px) saturate(118%);
+    -webkit-backdrop-filter: blur(8px) saturate(118%);
+    padding: .26em .74em;
     margin-bottom: .5em;
     width: fit-content;
+    color: #1f3f6f;
+    position: relative;
+    overflow: hidden;
+    transition: transform 200ms ease, box-shadow 220ms ease, background 220ms ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: radial-gradient(120% 70% at 20% 0%, rgba(255, 255, 255, 0.42), transparent 52%);
+    }
+
+    i,
+    span {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.author__urls li.author-chip:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
+    box-shadow: 0 11px 18px rgba(15, 23, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 .author__urls li.author-chip a {
+    display: inline-flex;
+    align-items: center;
+    gap: .34em;
+    margin-bottom: 0;
+    padding: 0;
+    color: inherit;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 }

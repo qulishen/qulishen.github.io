@@ -24,7 +24,7 @@ redirect_from:
 I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
-
+<!-- 
 <div class="about-meta-chips">
   {% if site.author.location %}
   <span class="about-meta-chip"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>{{ site.author.location }}</span>
@@ -35,7 +35,7 @@ My research interests focus on image restoration, with particular attention to f
   {% if site.author.googlescholar %}
   <a class="about-meta-chip about-meta-chip-link" href="{{ site.author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>
   {% endif %}
-</div>
+</div> -->
 
 </div>
 
