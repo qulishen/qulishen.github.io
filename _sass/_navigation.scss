@@ -225,20 +225,31 @@
 
     a {
       position: relative;
+      transition: color 200ms ease, transform 200ms ease;
 
       &:before {
         content: "";
         position: absolute;
         left: 0;
-        bottom: 0;
-        height: 4px;
-        background: mix(#fff, $primary-color, 50%);
+        bottom: 0.12rem;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(15, 61, 120, 0.62), rgba(15, 61, 120, 0.16));
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0);
             -ms-transform: scaleX(0);
                 transform: scaleX(0); /* hide*/
+        -webkit-transform-origin: left center;
+            -ms-transform-origin: left center;
+                transform-origin: left center;
+      }
+
+      &:hover {
+        color: #0f3d78;
+        -webkit-transform: translateY(-1px);
+            -ms-transform: translateY(-1px);
+                transform: translateY(-1px);
       }
 
       &:hover:before {
