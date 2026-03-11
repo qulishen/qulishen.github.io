@@ -38,16 +38,16 @@
   <link rel="stylesheet" href="static/css/index.css">
   <style>
     :root {
-      --bg-1: #f4fbff;
-      --bg-2: #eef5ff;
-      --bg-3: #f7f2ff;
-      --text-primary: rgba(24, 35, 62, 0.96);
-      --text-secondary: rgba(60, 81, 116, 0.78);
-      --glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.36));
-      --glass-border: linear-gradient(130deg, rgba(255, 255, 255, 0.95), rgba(167, 210, 255, 0.45));
-      --glass-shadow: 0 16px 32px rgba(108, 151, 216, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-      --accent: #4aa8ff;
-      --accent-strong: #3f8eff;
+      --bg-1: #fbfcfe;
+      --bg-2: #f5f7fb;
+      --bg-3: #f6f9fc;
+      --text-primary: rgba(22, 29, 43, 0.94);
+      --text-secondary: rgba(93, 103, 121, 0.86);
+      --glass-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.58));
+      --glass-border: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(210, 219, 232, 0.7));
+      --glass-shadow: 0 10px 24px rgba(15, 23, 42, 0.08), 0 1px 0 rgba(255, 255, 255, 0.95) inset;
+      --accent: #0071e3;
+      --accent-strong: #0066cc;
     }
 
     html,
@@ -60,8 +60,8 @@
       font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, sans-serif;
       color: var(--text-primary);
       background:
-        radial-gradient(1000px 500px at -10% -20%, rgba(154, 208, 255, 0.36), transparent 60%),
-        radial-gradient(900px 500px at 110% 12%, rgba(187, 166, 255, 0.28), transparent 62%),
+        radial-gradient(900px 420px at -10% -20%, rgba(182, 214, 255, 0.24), transparent 60%),
+        radial-gradient(780px 420px at 110% 10%, rgba(210, 219, 255, 0.22), transparent 62%),
         linear-gradient(140deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
       position: relative;
       overflow-x: hidden;
@@ -82,13 +82,13 @@
     body::before {
       top: -120px;
       left: -90px;
-      background: rgba(170, 223, 255, 0.34);
+      background: rgba(201, 220, 248, 0.24);
     }
 
     body::after {
       right: -90px;
       bottom: -130px;
-      background: rgba(194, 169, 255, 0.26);
+      background: rgba(213, 223, 238, 0.25);
     }
 
     .hero,
@@ -102,15 +102,15 @@
     .glass-card {
       position: relative;
       overflow: hidden;
-      border-radius: 24px;
+      border-radius: 22px;
       padding: 2rem;
-      backdrop-filter: blur(18px) saturate(145%);
-      -webkit-backdrop-filter: blur(18px) saturate(145%);
+      backdrop-filter: blur(14px) saturate(120%);
+      -webkit-backdrop-filter: blur(14px) saturate(120%);
       background: var(--glass-bg);
       border: 1px solid transparent;
       background-clip: padding-box;
       box-shadow: var(--glass-shadow);
-      transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease;
+      transition: transform 200ms ease, box-shadow 220ms ease, background 220ms ease, border-color 220ms ease;
     }
 
     .glass-card::before {
@@ -133,14 +133,14 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: radial-gradient(130% 70% at 20% 0%, rgba(255, 255, 255, 0.2), transparent 50%);
+      background: radial-gradient(120% 65% at 20% 0%, rgba(255, 255, 255, 0.42), transparent 52%);
       pointer-events: none;
     }
 
     .glass-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 22px 36px rgba(103, 152, 229, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.98);
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.46));
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1), 0 1px 0 rgba(255, 255, 255, 1) inset;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
     }
 
     .glass-card:active {
@@ -150,7 +150,8 @@
     .publication-title,
     .title {
       color: var(--text-primary) !important;
-      text-shadow: 0 1px 16px rgba(177, 215, 255, 0.22);
+      letter-spacing: -0.015em;
+      text-shadow: none;
     }
 
     .publication-authors,
@@ -160,28 +161,29 @@
     }
 
     .author-block a {
-      color: rgba(45, 86, 146, 0.92);
+      color: rgba(56, 72, 95, 0.92);
       transition: color 180ms ease, opacity 180ms ease;
     }
 
     .author-block a:hover {
-      color: #1e4f8f;
+      color: var(--accent-strong);
       opacity: 0.9;
     }
 
     .publication-links .button {
-      border: 1px solid rgba(155, 204, 255, 0.5);
-      background: linear-gradient(150deg, rgba(104, 189, 255, 0.34), rgba(255, 255, 255, 0.68));
+      border: 1px solid rgba(210, 218, 230, 0.95);
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.95), rgba(246, 248, 252, 0.88));
       color: var(--text-primary);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 10px 20px rgba(109, 155, 222, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08), 0 1px 0 rgba(255, 255, 255, 0.95) inset;
       transition: transform 180ms ease, box-shadow 200ms ease, filter 180ms ease, background 180ms ease;
     }
 
     .publication-links .button:hover {
-      filter: brightness(1.05);
-      box-shadow: 0 15px 24px rgba(87, 142, 219, 0.33), 0 0 14px rgba(114, 188, 255, 0.3);
+      filter: brightness(1.01);
+      color: var(--accent-strong);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(0, 113, 227, 0.14) inset;
       transform: translateY(-1px);
     }
 
@@ -192,33 +194,33 @@
     .video-shell video {
       width: 100%;
       border-radius: 18px;
-      border: 1px solid rgba(173, 210, 255, 0.6);
-      background: rgba(246, 251, 255, 0.78);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 8px 18px rgba(104, 145, 212, 0.22);
+      border: 1px solid rgba(213, 220, 232, 0.9);
+      background: rgba(249, 251, 254, 0.9);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 8px 18px rgba(15, 23, 42, 0.08);
     }
 
     .carousel .item img {
       border-radius: 14px;
-      border: 1px solid rgba(171, 211, 255, 0.56);
-      background: rgba(249, 253, 255, 0.86) !important;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(214, 222, 234, 0.9);
+      background: rgba(252, 253, 255, 0.9) !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
     }
 
     pre {
       border-radius: 16px;
-      border: 1px solid rgba(166, 207, 255, 0.58);
-      background: rgba(245, 250, 255, 0.78) !important;
-      color: rgba(36, 66, 104, 0.9);
+      border: 1px solid rgba(214, 222, 233, 0.95);
+      background: rgba(249, 251, 254, 0.9) !important;
+      color: rgba(50, 67, 92, 0.95);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
 
     code {
-      color: rgba(39, 70, 114, 0.94) !important;
+      color: rgba(55, 72, 98, 0.95) !important;
     }
 
     .footer {
-      color: rgba(81, 112, 159, 0.8);
+      color: rgba(112, 122, 140, 0.9);
       padding-top: 1.4rem;
       padding-bottom: 1.6rem;
     }
