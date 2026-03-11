@@ -36,6 +36,204 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <style>
+    :root {
+      --bg-1: #090b18;
+      --bg-2: #151a33;
+      --bg-3: #1d1240;
+      --text-primary: rgba(247, 250, 255, 0.96);
+      --text-secondary: rgba(232, 239, 255, 0.75);
+      --glass-bg: linear-gradient(140deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+      --glass-border: linear-gradient(130deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.08));
+      --glass-shadow: 0 14px 34px rgba(6, 7, 20, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.42);
+      --accent: #8bd3ff;
+      --accent-strong: #73b8ff;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Google Sans", "Noto Sans", system-ui, -apple-system, sans-serif;
+      color: var(--text-primary);
+      background:
+        radial-gradient(1100px 550px at -10% -20%, rgba(153, 104, 255, 0.32), transparent 60%),
+        radial-gradient(900px 500px at 110% 12%, rgba(89, 188, 255, 0.26), transparent 62%),
+        linear-gradient(140deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      filter: blur(28px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      top: -120px;
+      left: -90px;
+      background: rgba(166, 203, 255, 0.2);
+    }
+
+    body::after {
+      right: -90px;
+      bottom: -130px;
+      background: rgba(196, 145, 255, 0.16);
+    }
+
+    .hero,
+    .section,
+    .footer {
+      position: relative;
+      z-index: 1;
+      background: transparent !important;
+    }
+
+    .glass-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(18px) saturate(145%);
+      -webkit-backdrop-filter: blur(18px) saturate(145%);
+      background: var(--glass-bg);
+      border: 1px solid transparent;
+      background-clip: padding-box;
+      box-shadow: var(--glass-shadow);
+      transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease;
+    }
+
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: var(--glass-border);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .glass-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(130% 70% at 20% 0%, rgba(255, 255, 255, 0.2), transparent 50%);
+      pointer-events: none;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(4, 8, 22, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.48);
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+    }
+
+    .glass-card:active {
+      transform: scale(0.98);
+    }
+
+    .publication-title,
+    .title {
+      color: var(--text-primary) !important;
+      text-shadow: 0 1px 20px rgba(178, 208, 255, 0.2);
+    }
+
+    .publication-authors,
+    .subtitle,
+    .content p {
+      color: var(--text-secondary) !important;
+    }
+
+    .author-block a {
+      color: rgba(234, 245, 255, 0.95);
+      transition: color 180ms ease, opacity 180ms ease;
+    }
+
+    .author-block a:hover {
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    .publication-links .button {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: linear-gradient(150deg, rgba(130, 185, 255, 0.25), rgba(255, 255, 255, 0.09));
+      color: var(--text-primary);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 24px rgba(16, 24, 52, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition: transform 180ms ease, box-shadow 200ms ease, filter 180ms ease, background 180ms ease;
+    }
+
+    .publication-links .button:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 16px 28px rgba(27, 53, 96, 0.35), 0 0 18px rgba(115, 184, 255, 0.32);
+      transform: translateY(-1px);
+    }
+
+    .publication-links .button:active {
+      transform: scale(0.98);
+    }
+
+    .video-shell video {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(4, 8, 22, 0.55);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .carousel .item img {
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06) !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    pre {
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(11, 17, 35, 0.58) !important;
+      color: rgba(230, 244, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    code {
+      color: rgba(221, 240, 255, 0.95) !important;
+    }
+
+    .footer {
+      color: rgba(223, 238, 255, 0.65);
+      padding-top: 1.4rem;
+      padding-bottom: 1.6rem;
+    }
+
+    @media (max-width: 768px) {
+      .glass-card {
+        padding: 1.3rem;
+        border-radius: 18px;
+      }
+
+      .publication-title {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -51,6 +249,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+            <div class="glass-card">
             <h1 class="title is-1 publication-title">FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -131,38 +330,40 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
               </span>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-        Your video here
-        <source src="static/videos/flarex.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        The dataset introduction demo.
-      </h2>
+      <div class="glass-card video-shell">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/flarex.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          The dataset introduction demo.
+        </h2>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <div class="glass-card">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Lens flare occurs when shooting towards strong light sources, significantly degrading the visual quality of images. Due to the difficulty in capturing flare-corrupted and flare-free image pairs in the real world, existing datasets are typically synthesized in 2D by overlaying artificial flare templates onto background images. However, the lack of flare diversity in templates and the neglect of physical principles in the synthesis process hinder models trained on these datasets from generalizing well to real-world scenarios. To address these challenges, we propose a new physics-informed method for flare data generation, which consists of three stages: parameterized template creation, the laws of illumination-aware 2D synthesis, and physical engine-based 3D rendering, which finally gives us a miXed flare dataset that incorporates both 2D and 3D perspectives, namely FlareX. This dataset offers 9,500 2D templates derived from 95 flare patterns and 3,000 flare image pairs rendered from 60 3D scenes. Furthermore, we design a masking approach to obtain real-world flare-free images from their corrupted counterparts to measure the performance of the model on real-world images. Extensive experiments demonstrate the effectiveness of our method and dataset. The code and dataset are available at https://github.com/qulishen/FlareX. 
           </p>
+        </div>
         </div>
       </div>
     </div>
@@ -174,6 +375,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="glass-card">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
@@ -200,6 +402,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
         </h2>
       </div>
   </div>
+      </div>
 </div>
 </div>
 </section>
@@ -209,6 +412,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
+      <div class="glass-card">
       <h2 class="title">BibTeX</h2>
       <pre><code>
         @inproceedings{FlareX_lishenqu,
@@ -218,6 +422,7 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
         year={2025}
         }
       </code></pre>
+      </div>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -227,9 +432,8 @@ Technology<br>Advances in Neural Information Processing Systems (NeurIPS), 2025<
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
-
-
+        <div class="content has-text-centered">
+          FlareX Project Page
         </div>
       </div>
     </div>
