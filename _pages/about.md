@@ -116,8 +116,10 @@ My research interests focus on image restoration, with particular attention to f
       }
 
       function update() {
-        var offset = pageIndex * (100 / cardsPerPage);
-        track.style.transform = "translateX(-" + offset + "%)";
+        var targetCardIndex = pageIndex * cardsPerPage;
+        var targetCard = cards[Math.min(targetCardIndex, cards.length - 1)];
+        var offsetPx = targetCard ? targetCard.offsetLeft : 0;
+        track.style.transform = "translateX(-" + offsetPx + "px)";
 
         if (prevBtn) prevBtn.disabled = pageIndex === 0;
         if (nextBtn) nextBtn.disabled = pageIndex >= pageCount - 1;

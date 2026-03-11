@@ -9,7 +9,7 @@ if ! command -v bundle >/dev/null 2>&1; then
 fi
 
 set +e
-bundle exec jekyll liveserve
+bundle exec jekyll serve --livereload
 status=$?
 set -e
 
