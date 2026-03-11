@@ -23,75 +23,70 @@ My research interests focus on image restoration, with particular attention to f
 
 # 🔥 News
 
-<section class="news-carousel" data-news-carousel>
-  <div class="news-carousel-head">
-    <p class="news-carousel-subtitle">Latest updates</p>
-    <div class="news-carousel-controls">
-      <button class="news-carousel-nav" type="button" data-news-prev aria-label="Previous news">&#8592;</button>
-      <button class="news-carousel-nav" type="button" data-news-next aria-label="Next news">&#8594;</button>
+<section class="news-row-carousel" data-news-row-carousel>
+  <div class="news-row-controls">
+    <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous news">&#8592;</button>
+    <button class="news-row-nav" type="button" data-news-row-next aria-label="Next news">&#8594;</button>
+  </div>
+
+  <div class="news-row-viewport">
+    <div class="news-row-track" data-news-row-track>
+      <article class="news-row-card">
+        <p class="news-row-date">2026.02</p>
+        <p class="news-row-text">🎉🎉 1 paper is accepted to CVPR 2026.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2026.01</p>
+        <p class="news-row-text">🎉🎉 We are hosting <a href="https://www.codabench.org/competitions/12728/#/pages-tab">NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)</a>. Welcome to participate!</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2025.10</p>
+        <p class="news-row-text">We win the third place in the <a href="https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf">AIM 2025 Challenge on Robust Offline Video Super-Resolution</a>.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2025.09</p>
+        <p class="news-row-text">🎉🎉 2 papers are accepted to NeurIPS 2025.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2025.08</p>
+        <p class="news-row-text">We win the third place in the <a href="https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf">MIPI 2025 Challenge for Aberration Correction in Mobile Cameras</a>.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2025.07</p>
+        <p class="news-row-text">😊 I joined Y Lab at the OPPO Research Institute.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2025.04</p>
+        <p class="news-row-text">🎉🎉 1 paper is accepted to CVPR 2025 highlight.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2024.07</p>
+        <p class="news-row-text">🎉🎉 1 paper is accepted to ECCV 2024.</p>
+      </article>
     </div>
   </div>
 
-  <div class="news-carousel-viewport">
-    <div class="news-carousel-track" data-news-track>
-      <article class="news-card">
-        <p class="news-card-date">2026.02</p>
-        <p class="news-card-content">🎉🎉 1 paper is accepted to CVPR 2026.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2026.01</p>
-        <p class="news-card-content">🎉🎉 We are hosting <a href="https://www.codabench.org/competitions/12728/#/pages-tab">NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)</a>. Welcome to participate!</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2025.10</p>
-        <p class="news-card-content">We win the third place in the <a href="https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf">AIM 2025 Challenge on Robust Offline Video Super-Resolution</a>.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2025.09</p>
-        <p class="news-card-content">🎉🎉 2 papers are accepted to NeurIPS 2025.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2025.08</p>
-        <p class="news-card-content">We win the third place in the <a href="https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf">MIPI 2025 Challenge for Aberration Correction in Mobile Cameras</a>.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2025.07</p>
-        <p class="news-card-content">😊 I joined Y Lab at the OPPO Research Institute.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2025.04</p>
-        <p class="news-card-content">🎉🎉 1 paper is accepted to CVPR 2025 highlight.</p>
-      </article>
-      <article class="news-card">
-        <p class="news-card-date">2024.07</p>
-        <p class="news-card-content">🎉🎉 1 paper is accepted to ECCV 2024.</p>
-      </article>
-    </div>
-  </div>
-
-  <div class="news-carousel-footer">
-    <div class="news-carousel-dots" data-news-dots></div>
-  </div>
+  <div class="news-row-dots" data-news-row-dots></div>
 </section>
 
 <script>
   (function () {
-    var root = document.querySelector("[data-news-carousel]");
+    var root = document.querySelector("[data-news-row-carousel]");
     if (!root) return;
 
-    var track = root.querySelector("[data-news-track]");
-    var cards = Array.prototype.slice.call(track.querySelectorAll(".news-card"));
-    var prevBtn = root.querySelector("[data-news-prev]");
-    var nextBtn = root.querySelector("[data-news-next]");
-    var dotsContainer = root.querySelector("[data-news-dots]");
+    var track = root.querySelector("[data-news-row-track]");
+    var cards = Array.prototype.slice.call(track.querySelectorAll(".news-row-card"));
+    var prevBtn = root.querySelector("[data-news-row-prev]");
+    var nextBtn = root.querySelector("[data-news-row-next]");
+    var dotsContainer = root.querySelector("[data-news-row-dots]");
     var pageIndex = 0;
-    var cardsPerView = 3;
+    var cardsPerPage = 3;
     var pageCount = 1;
     var dots = [];
 
-    function getCardsPerView() {
+    function getCardsPerPage() {
       if (window.innerWidth < 700) return 1;
-      if (window.innerWidth < 1100) return 2;
+      if (window.innerWidth < 1080) return 2;
       return 3;
     }
 
@@ -101,7 +96,7 @@ My research interests focus on image restoration, with particular attention to f
       for (var i = 0; i < pageCount; i++) {
         var dot = document.createElement("button");
         dot.type = "button";
-        dot.className = "news-carousel-dot";
+        dot.className = "news-row-dot";
         dot.setAttribute("aria-label", "Go to news page " + (i + 1));
         dot.addEventListener("click", (function (index) {
           return function () {
@@ -115,22 +110,22 @@ My research interests focus on image restoration, with particular attention to f
     }
 
     function update() {
-      var offset = pageIndex * (100 / cardsPerView);
+      var offset = pageIndex * (100 / cardsPerPage);
       track.style.transform = "translateX(-" + offset + "%)";
 
-      if (prevBtn) prevBtn.disabled = pageIndex <= 0;
+      if (prevBtn) prevBtn.disabled = pageIndex === 0;
       if (nextBtn) nextBtn.disabled = pageIndex >= pageCount - 1;
 
-      dots.forEach(function (dot, index) {
-        dot.classList.toggle("is-active", index === pageIndex);
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === pageIndex);
       });
     }
 
     function layout() {
-      cardsPerView = getCardsPerView();
-      pageCount = Math.max(1, Math.ceil(cards.length / cardsPerView));
+      cardsPerPage = getCardsPerPage();
+      pageCount = Math.max(1, Math.ceil(cards.length / cardsPerPage));
       if (pageIndex > pageCount - 1) pageIndex = pageCount - 1;
-      track.style.setProperty("--news-cards-per-view", String(cardsPerView));
+      track.style.setProperty("--news-per-page", String(cardsPerPage));
       buildDots();
       update();
     }
