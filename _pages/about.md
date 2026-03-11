@@ -25,29 +25,11 @@ I am currently pursuing a Master's degree in the Computer Vision Lab led by [Pro
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
-<!--
-<div class="about-meta-chips">
-  {% if site.author.location %}
-  <span class="about-meta-chip"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>{{ site.author.location }}</span>
-  {% endif %}
-  {% if site.author.email %}
-  <a class="about-meta-chip about-meta-chip-link" href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>Email</a>
-  {% endif %}
-  {% if site.author.googlescholar %}
-  <a class="about-meta-chip about-meta-chip-link" href="{{ site.author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>
-  {% endif %}
-</div> -->
-
-<!-- </div> -->
+</div>
 
 # 🔥 News
 
 <section class="news-row-carousel" data-news-row-carousel>
-  <div class="news-row-controls">
-    <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous news">&#8592;</button>
-    <button class="news-row-nav" type="button" data-news-row-next aria-label="Next news">&#8594;</button>
-  </div>
-
   <div class="news-row-viewport">
     <div class="news-row-track" data-news-row-track>
       <article class="news-row-card">
@@ -85,7 +67,13 @@ My research interests focus on image restoration, with particular attention to f
     </div>
   </div>
 
-  <div class="news-row-dots" data-news-row-dots></div>
+  <div class="news-row-footer">
+    <div class="news-row-dots" data-news-row-dots></div>
+    <div class="news-row-controls">
+      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous news">&#8592;</button>
+      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next news">&#8594;</button>
+    </div>
+  </div>
 </section>
 
 <script>
@@ -279,11 +267,6 @@ Time: _2025.07 - (now)_
 # 🎖 Honors and Awards
 
 <section class="news-row-carousel" data-news-row-carousel>
-  <div class="news-row-controls">
-    <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous honors">&#8592;</button>
-    <button class="news-row-nav" type="button" data-news-row-next aria-label="Next honors">&#8594;</button>
-  </div>
-
   <div class="news-row-viewport">
     <div class="news-row-track" data-news-row-track>
       <article class="news-row-card">
@@ -301,7 +284,13 @@ Time: _2025.07 - (now)_
     </div>
   </div>
 
-  <div class="news-row-dots" data-news-row-dots></div>
+  <div class="news-row-footer">
+    <div class="news-row-dots" data-news-row-dots></div>
+    <div class="news-row-controls">
+      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous honors">&#8592;</button>
+      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next honors">&#8594;</button>
+    </div>
+  </div>
 </section>
 
 # 📖 Educations

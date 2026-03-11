@@ -148,9 +148,8 @@ h1:before, .anchor:before {
 
 .news-row-controls {
     display: flex;
-    justify-content: flex-end;
     gap: .45em;
-    margin-bottom: .7em;
+    justify-content: flex-end;
 }
 
 .news-row-nav {
@@ -252,10 +251,26 @@ h1:before, .anchor:before {
 }
 
 .news-row-dots {
-    margin-top: .7em;
+    margin-top: 0;
     display: flex;
     justify-content: center;
     gap: .4em;
+}
+
+.news-row-footer {
+    margin-top: .7em;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.news-row-footer .news-row-dots {
+    grid-column: 2;
+}
+
+.news-row-footer .news-row-controls {
+    grid-column: 3;
+    justify-self: end;
 }
 
 .news-row-dot {
