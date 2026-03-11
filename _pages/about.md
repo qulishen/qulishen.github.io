@@ -17,9 +17,27 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+# 😄 About Me
+
+<div class="about-intro-card" markdown="1">
+
 I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
+
+<div class="about-meta-chips">
+  {% if site.author.location %}
+  <span class="about-meta-chip"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>{{ site.author.location }}</span>
+  {% endif %}
+  {% if site.author.email %}
+  <a class="about-meta-chip about-meta-chip-link" href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>Email</a>
+  {% endif %}
+  {% if site.author.googlescholar %}
+  <a class="about-meta-chip about-meta-chip-link" href="{{ site.author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>
+  {% endif %}
+</div>
+
+</div>
 
 # 🔥 News
 
@@ -71,81 +89,91 @@ My research interests focus on image restoration, with particular attention to f
 
 <script>
   (function () {
-    var root = document.querySelector("[data-news-row-carousel]");
-    if (!root) return;
+    function boot() {
+    function initRowCarousel(root) {
+      var track = root.querySelector("[data-news-row-track]");
+      var cards = Array.prototype.slice.call(track.querySelectorAll(".news-row-card"));
+      var prevBtn = root.querySelector("[data-news-row-prev]");
+      var nextBtn = root.querySelector("[data-news-row-next]");
+      var dotsContainer = root.querySelector("[data-news-row-dots]");
+      var pageIndex = 0;
+      var cardsPerPage = 3;
+      var pageCount = 1;
+      var dots = [];
 
-    var track = root.querySelector("[data-news-row-track]");
-    var cards = Array.prototype.slice.call(track.querySelectorAll(".news-row-card"));
-    var prevBtn = root.querySelector("[data-news-row-prev]");
-    var nextBtn = root.querySelector("[data-news-row-next]");
-    var dotsContainer = root.querySelector("[data-news-row-dots]");
-    var pageIndex = 0;
-    var cardsPerPage = 3;
-    var pageCount = 1;
-    var dots = [];
-
-    function getCardsPerPage() {
-      if (window.innerWidth < 700) return 1;
-      if (window.innerWidth < 1080) return 2;
-      return 3;
-    }
-
-    function buildDots() {
-      dotsContainer.innerHTML = "";
-      dots = [];
-      for (var i = 0; i < pageCount; i++) {
-        var dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "news-row-dot";
-        dot.setAttribute("aria-label", "Go to news page " + (i + 1));
-        dot.addEventListener("click", (function (index) {
-          return function () {
-            pageIndex = index;
-            update();
-          };
-        })(i));
-        dotsContainer.appendChild(dot);
-        dots.push(dot);
+      function getCardsPerPage() {
+        if (window.innerWidth < 700) return 1;
+        if (window.innerWidth < 1080) return 2;
+        return 3;
       }
-    }
 
-    function update() {
-      var offset = pageIndex * (100 / cardsPerPage);
-      track.style.transform = "translateX(-" + offset + "%)";
+      function buildDots() {
+        dotsContainer.innerHTML = "";
+        dots = [];
+        for (var i = 0; i < pageCount; i++) {
+          var dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "news-row-dot";
+          dot.setAttribute("aria-label", "Go to page " + (i + 1));
+          dot.addEventListener("click", (function (index) {
+            return function () {
+              pageIndex = index;
+              update();
+            };
+          })(i));
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        }
+      }
 
-      if (prevBtn) prevBtn.disabled = pageIndex === 0;
-      if (nextBtn) nextBtn.disabled = pageIndex >= pageCount - 1;
+      function update() {
+        var offset = pageIndex * (100 / cardsPerPage);
+        track.style.transform = "translateX(-" + offset + "%)";
 
-      dots.forEach(function (dot, i) {
-        dot.classList.toggle("is-active", i === pageIndex);
-      });
-    }
+        if (prevBtn) prevBtn.disabled = pageIndex === 0;
+        if (nextBtn) nextBtn.disabled = pageIndex >= pageCount - 1;
 
-    function layout() {
-      cardsPerPage = getCardsPerPage();
-      pageCount = Math.max(1, Math.ceil(cards.length / cardsPerPage));
-      if (pageIndex > pageCount - 1) pageIndex = pageCount - 1;
-      track.style.setProperty("--news-per-page", String(cardsPerPage));
-      buildDots();
-      update();
-    }
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle("is-active", i === pageIndex);
+        });
+      }
 
-    if (prevBtn) {
-      prevBtn.addEventListener("click", function () {
-        pageIndex = Math.max(0, pageIndex - 1);
+      function layout() {
+        cardsPerPage = getCardsPerPage();
+        pageCount = Math.max(1, Math.ceil(cards.length / cardsPerPage));
+        if (pageIndex > pageCount - 1) pageIndex = pageCount - 1;
+        track.style.setProperty("--news-per-page", String(cardsPerPage));
+        buildDots();
         update();
-      });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+          pageIndex = Math.max(0, pageIndex - 1);
+          update();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+          pageIndex = Math.min(pageCount - 1, pageIndex + 1);
+          update();
+        });
+      }
+
+      layout();
+      window.addEventListener("resize", layout);
     }
 
-    if (nextBtn) {
-      nextBtn.addEventListener("click", function () {
-        pageIndex = Math.min(pageCount - 1, pageIndex + 1);
-        update();
-      });
+    var carousels = document.querySelectorAll("[data-news-row-carousel]");
+    Array.prototype.forEach.call(carousels, initRowCarousel);
     }
 
-    layout();
-    window.addEventListener("resize", layout);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
   })();
 </script>
 
@@ -249,11 +277,50 @@ Time: _2025.07 - (now)_
 
 # 🎖 Honors and Awards
 
-- _2024.06_, Outstanding Undergraduate Thesis Award, Nankai University
-- _2023.09_, Huawei "Intelligent Foundation" Scholarship
-- _2022.09_, SK Telecom Artificial Intelligence Scholarship, South Korea
+<section class="news-row-carousel" data-news-row-carousel>
+  <div class="news-row-controls">
+    <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous honors">&#8592;</button>
+    <button class="news-row-nav" type="button" data-news-row-next aria-label="Next honors">&#8594;</button>
+  </div>
+
+  <div class="news-row-viewport">
+    <div class="news-row-track" data-news-row-track>
+      <article class="news-row-card">
+        <p class="news-row-date">2024.06</p>
+        <p class="news-row-text">Outstanding Undergraduate Thesis Award, Nankai University.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2023.09</p>
+        <p class="news-row-text">Huawei "Intelligent Foundation" Scholarship.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2022.09</p>
+        <p class="news-row-text">SK Telecom Artificial Intelligence Scholarship, South Korea.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="news-row-dots" data-news-row-dots></div>
+</section>
 
 # 📖 Educations
 
-- _2024.09 - (now)_, Master student of Nankai University.
-- _2020.09 - 2024.06_, Undergraduate student of Nankai University.
+<div class='paper-box'><div class='paper-box-image' style="min-width: 135px; max-width: 16%;"><div><img src='project/static/images/nankai.png' alt="Nankai University" style="width: 100%; max-width: 130px;"></div></div>
+<div class='paper-box-text' markdown="1" style="padding-left: 1em; max-width: 84%;">
+
+**Master Student, Computer Science and Technology** \| Nankai University.
+
+Time: _2024.09 - (now)_
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image' style="min-width: 135px; max-width: 16%;"><div><img src='project/static/images/nankai.png' alt="Nankai University" style="width: 100%; max-width: 130px;"></div></div>
+<div class='paper-box-text' markdown="1" style="padding-left: 1em; max-width: 84%;">
+
+**Undergraduate Student, Software Engineering** \| Nankai University.
+
+Time: _2020.09 - 2024.06_
+
+</div>
+</div>
