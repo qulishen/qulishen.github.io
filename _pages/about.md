@@ -316,3 +316,36 @@ Time: _2020.09 - 2024.06_
 
 </div>
 </div>
+
+# 🤝 Academic Services
+
+<section class="news-row-carousel" data-news-row-carousel>
+  <div class="news-row-viewport">
+    <div class="news-row-track" data-news-row-track>
+      <article class="news-row-card">
+        <p class="news-row-date">Journal Reviewer</p>
+        <p class="news-row-text">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">Conference Reviewer</p>
+        <p class="news-row-text">Annual Conference on Neural Information Processing Systems (NeurIPS)</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">Conference Reviewer</p>
+        <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">Journal Reviewer</p>
+        <p class="news-row-text">Jordanian Journal of Computers and Information Technology (JJCIT)</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="news-row-footer">
+    <div class="news-row-dots" data-news-row-dots></div>
+    <div class="news-row-controls">
+      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous services">&#8592;</button>
+      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next services">&#8594;</button>
+    </div>
+  </div>
+</section>
