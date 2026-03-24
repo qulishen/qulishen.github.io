@@ -272,6 +272,10 @@ Time: _2025.07 - (now)_
   <div class="news-row-viewport">
     <div class="news-row-track" data-news-row-track>
       <article class="news-row-card">
+        <p class="news-row-date">2024.11</p>
+        <p class="news-row-text">Gold Award, Huawei Ascend AI Innovation Competition (Tianjin Division).</p>
+      </article>
+      <article class="news-row-card">
         <p class="news-row-date">2024.06</p>
         <p class="news-row-text">Outstanding Undergraduate Thesis Award, Nankai University.</p>
       </article>
