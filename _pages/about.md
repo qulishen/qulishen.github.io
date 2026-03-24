@@ -177,7 +177,7 @@ It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 
 **Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/Flickerformer) [**PDF**](https://arxiv.org/abs/xxx)
+[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/Flickerformer) [**PDF**](/project/static/pdfs/It_Takes_Two__A_Duet_of_Periodicity_and_Directionality_for_Burst_Flicker_Removal.pdf)
 
 </div>
 </div>
