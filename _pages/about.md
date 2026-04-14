@@ -232,6 +232,41 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
+# 📄 Workshop Reports
+
+<section class="news-row-carousel" data-news-row-carousel>
+  <div class="news-row-viewport">
+    <div class="news-row-track" data-news-row-track>
+      <article class="news-row-card">
+        <p class="news-row-date">CVPRW 2026</p>
+        <p class="news-row-text">
+          NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Multi-Exposure Image Fusion in Dynamic Scenes
+          <br>
+          <a href="https://arxiv.org/abs/2604.09030">[arXiv]</a>
+          <a href="https://www.codabench.org/competitions/12728/">[Competition]</a>
+        </p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">CVPRW 2026</p>
+        <p class="news-row-text">
+          NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: AI Flash Portrait
+          <br>
+          <a href="https://arxiv.org/abs/2604.11230">[arXiv]</a>
+          <a href="https://www.codabench.org/competitions/12885/">[Competition]</a>
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <div class="news-row-footer">
+    <div class="news-row-dots" data-news-row-dots></div>
+    <div class="news-row-controls">
+      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous reports">&#8592;</button>
+      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next reports">&#8594;</button>
+    </div>
+  </div>
+</section>
+
 # 🎖 Competitions
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym" width="80%"></div></div>
@@ -337,6 +372,10 @@ Time: _2020.09 - 2024.06_
       <article class="news-row-card">
         <p class="news-row-date">Conference Reviewer</p>
         <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">Conference Reviewer</p>
+        <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop(CVPRW)</p>
       </article>
       <article class="news-row-card">
         <p class="news-row-date">Journal Reviewer</p>
