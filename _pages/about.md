@@ -237,6 +237,15 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 <section class="news-row-carousel" data-news-row-carousel>
   <div class="news-row-viewport">
     <div class="news-row-track" data-news-row-track>
+    <article class="news-row-card">
+        <p class="news-row-date">CVPRW 2026</p>
+        <p class="news-row-text">
+          NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Professional Image Quality Assessment
+          <br>
+          <a href="https://openaccess.thecvf.com/content/CVPR2026W/NTIRE/papers/Qin_NTIRE_2026_The_3rd_Restore_Any_Image_Model_RAIM_Challenge_CVPRW_2026_paper.pdf">[arXiv]</a>
+          <a href="https://www.codabench.org/competitions/12789/">[Competition]</a>
+        </p>
+      </article>
       <article class="news-row-card">
         <p class="news-row-date">CVPRW 2026</p>
         <p class="news-row-text">
@@ -306,6 +315,10 @@ Time: _2025.07 - (now)_
 <section class="news-row-carousel" data-news-row-carousel>
   <div class="news-row-viewport">
     <div class="news-row-track" data-news-row-track>
+     <article class="news-row-card">
+        <p class="news-row-date">2026.05</p>
+        <p class="news-row-text">OPPO Outstanding Research Intern</p>
+      </article>
       <article class="news-row-card">
         <p class="news-row-date">2024.11</p>
         <p class="news-row-text">Gold Award, Huawei Ascend AI Innovation Competition (Tianjin Division).</p>
