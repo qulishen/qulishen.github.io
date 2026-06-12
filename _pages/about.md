@@ -25,8 +25,6 @@ I am currently pursuing a Master's degree in the Computer Vision Lab led by [Pro
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
-Google Scholar Citations: <span id="total_cit">Loading...</span>
-
 </div>
 
 # 🔥 News
