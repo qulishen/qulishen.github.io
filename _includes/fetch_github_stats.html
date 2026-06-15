@@ -1,0 +1,54 @@
+<script>
+  (function () {
+  {% assign github_user = site.author.github | default: "qulishen" %}
+    var githubUsername = "{{ github_user }}";
+
+    function updateGithubStars() {
+      var starsEl = document.getElementById("total_github_stars");
+      if (!starsEl) return;
+
+      var page = 1;
+      var totalStars = 0;
+
+      function fetchPage() {
+        return fetch(
+          "https://api.github.com/users/" +
+            encodeURIComponent(githubUsername) +
+            "/repos?per_page=100&page=" +
+            page,
+          { headers: { Accept: "application/vnd.github+json" } }
+        ).then(function (response) {
+          if (!response.ok) throw new Error("GitHub API request failed");
+          return response.json();
+        });
+      }
+
+      function loadNextPage() {
+        return fetchPage().then(function (repos) {
+          if (!Array.isArray(repos) || repos.length === 0) return;
+
+          totalStars += repos.reduce(function (sum, repo) {
+            return sum + (repo.stargazers_count || 0);
+          }, 0);
+
+          if (repos.length === 100) {
+            page += 1;
+            return loadNextPage();
+          }
+        });
+      }
+
+      loadNextPage()
+        .then(function () {
+          starsEl.textContent = totalStars;
+        })
+        .catch(function () {});
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", updateGithubStars);
+    } else {
+      updateGithubStars();
+    }
+  })();
+</script>

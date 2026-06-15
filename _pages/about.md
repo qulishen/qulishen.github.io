@@ -25,6 +25,23 @@ I am currently pursuing a Master's degree in the Computer Vision Lab led by [Pro
 
 My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
 
+<div class="about-intro-links">
+  <p class="about-intro-link about-intro-gs">
+    <a href="{{ site.author.googlescholar }}" class="about-intro-link-chip">
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+      <span class="about-intro-link-label">Google Scholar</span>
+      <span class="about-intro-link-meta"><span id="total_cit">—</span> citations</span>
+    </a>
+  </p>
+  <p class="about-intro-link about-intro-gh">
+    <a href="https://github.com/qulishen/" class="about-intro-link-chip">
+      <i class="fab fa-github" aria-hidden="true"></i>
+      <span class="about-intro-link-label">GitHub</span>
+      <span class="about-intro-link-meta"><span id="total_github_stars">—</span> stars</span>
+    </a>
+  </p>
+</div>
+
 </div>
 
 # 🔥 News
