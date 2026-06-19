@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <g stroke="#f4f7fa" stroke-width="1">
+    <path d="M80 180H1510M80 270H1510M80 360H1510M80 450H1510M80 540H1510M80 630H1510M80 720H1510"/>
+    <path d="M200 160V760M320 160V760M440 160V760M560 160V760M680 160V760M800 160V760M920 160V760M1040 160V760M1160 160V760M1280 160V760M1400 160V760"/>
+  </g>
+  <text x="110" y="130" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="98" font-weight="700" fill="#182334">FreeMEF</text>
+  <text x="115" y="178" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="31" fill="#5a6674">Flexible-frame transformer for multi-exposure fusion</text>
+
+  <g>
+    <rect x="155" y="285" width="260" height="166" rx="20" fill="#161f31" stroke="#dee5eb" stroke-width="2"/>
+    <rect x="167" y="297" width="236" height="142" rx="14" fill="#223552"/>
+    <circle cx="353" cy="328" r="21" fill="#6f87aa"/>
+    <path d="M175 425L233 365L285 425L321 382L395 425Z" fill="#0f1624"/>
+    <rect x="205" y="363" width="260" height="166" rx="20" fill="#e0f0f7" stroke="#dee5eb" stroke-width="2"/>
+    <rect x="217" y="375" width="236" height="142" rx="14" fill="#8bc5dd"/>
+    <circle cx="403" cy="406" r="21" fill="#fabb52"/>
+    <path d="M225 503L283 443L335 503L371 460L445 503Z" fill="#497674"/>
+    <rect x="255" y="441" width="260" height="166" rx="20" fill="#fbf8e7" stroke="#dee5eb" stroke-width="2"/>
+    <rect x="267" y="453" width="236" height="142" rx="14" fill="#f8eecd"/>
+    <circle cx="453" cy="484" r="21" fill="#ffde86"/>
+    <path d="M275 581L333 521L385 581L421 538L495 581Z" fill="#b3c3b4"/>
+    <text x="142" y="662" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="26" fill="#364253">2 / 3 / 5 / ... exposures</text>
+    <rect x="152" y="702" width="202" height="44" rx="22" fill="#f6fafb" stroke="#d6e0e8" stroke-width="2"/>
+    <text x="253" y="731" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="23" text-anchor="middle" fill="#2c647c">arbitrary frames</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M520 455H645" stroke="#4f7091" stroke-width="5"/>
+    <path d="M632 447L650 455L632 463Z" fill="#4f7091" stroke="none"/>
+    <rect x="686" y="383" width="218" height="144" rx="34" fill="#fafdff" stroke="#c5d9e2" stroke-width="2"/>
+    <path d="M918 455H1054" stroke="#4f7091" stroke-width="5"/>
+    <path d="M1041 447L1059 455L1041 463Z" fill="#4f7091" stroke="none"/>
+    <path d="M701 455a94 94 0 1 1 188 -1" stroke="#2878c8" stroke-width="5"/>
+    <path d="M716 480a78 78 0 1 1 158 -1" stroke="#22a084" stroke-width="5"/>
+    <path d="M734 504a62 62 0 1 1 122 -1" stroke="#eca643" stroke-width="5"/>
+    <circle cx="745" cy="560" r="13" fill="#22a084" stroke="none"/>
+    <circle cx="795" cy="558" r="13" fill="#375a91" stroke="none"/>
+    <circle cx="842" cy="540" r="13" fill="#eca643" stroke="none"/>
+    <text x="795" y="453" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#182334">RSSM</text>
+    <text x="795" y="486" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="21" text-anchor="middle" fill="#566574">recurrent state</text>
+    <text x="795" y="515" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="21" text-anchor="middle" fill="#566574">space fusion</text>
+    <rect x="690" y="618" width="210" height="52" rx="25" fill="#f8fbfd" stroke="#d5e0e8" stroke-width="2"/>
+    <text x="795" y="652" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="23" text-anchor="middle" fill="#2f6683">global feature</text>
+  </g>
+
+  <g>
+    <rect x="1012" y="313" width="146" height="284" rx="28" fill="#f9fcfc" stroke="#cddee7" stroke-width="2"/>
+    <text x="1085" y="405" font-family="SF Pro Display, Inter, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#182334">GFGB</text>
+    <text x="1085" y="452" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#2d7384">EAHA</text>
+    <text x="1085" y="494" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#b27627">AFFN</text>
+    <path d="M1168 455H1248" stroke="#4f7091" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1235 447L1253 455L1235 463Z" fill="#4f7091"/>
+    <rect x="1246" y="305" width="270" height="300" rx="20" fill="#e9f8f6" stroke="#dee5eb" stroke-width="2"/>
+    <rect x="1258" y="317" width="246" height="276" rx="14" fill="#5cb9d6"/>
+    <circle cx="1435" cy="365" r="35" fill="#ffb540"/>
+    <path d="M1266 575L1340 445L1402 575L1458 480L1496 575Z" fill="#1f8068"/>
+    <path d="M1226 610A260 260 0 0 0 1536 610" fill="none" stroke="#2a8ec6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1218 622A278 278 0 0 0 1544 622" fill="none" stroke="#32a282" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1210 634A296 296 0 0 0 1552 634" fill="none" stroke="#f7ab42" stroke-width="4" stroke-linecap="round"/>
+    <text x="1381" y="666" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#364253">HDR result</text>
+    <rect x="1266" y="702" width="231" height="44" rx="22" fill="#fcf8f0" stroke="#e8dac0" stroke-width="2"/>
+    <text x="1381" y="731" font-family="SF Pro Text, Inter, Arial, sans-serif" font-size="23" text-anchor="middle" fill="#875d21">less ghosting</text>
+  </g>
+</svg>
