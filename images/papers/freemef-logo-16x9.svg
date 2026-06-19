@@ -5,7 +5,7 @@
     <rect x="-36" y="0" width="156" height="104" rx="18" stroke="#1e9b84" stroke-width="9"/>
     <rect x="14" y="42" width="156" height="104" rx="18" stroke="#f0a437" stroke-width="9"/>
     <path d="M-14.3 165.2A126 126 0 0 1 -14.3 -41.2A126 126 0 0 1 182.1 40.1" stroke="#172333" stroke-width="10"/>
-    <polygon points="182.1,40.1 154.5,10.5 197.8,2.8" fill="#172333" stroke="none"/>
+    <path d="M178 18L182.1 40.1L147 62Z" fill="#172333" stroke="none"/>
     <path d="M98 -18H142M120 -40V4" stroke="#f0a437" stroke-width="6"/>
     <circle cx="120" cy="-18" r="6" fill="#f0a437" stroke="none"/>
   </g>

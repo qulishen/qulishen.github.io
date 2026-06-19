@@ -191,6 +191,18 @@ My research interests focus on image restoration, with particular attention to f
 
 # 📝 Publications
 
+<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
+
+**Lishen Qu**, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+
+[**Project**](project/FreeMEF.html) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**]()
+
+</div>
+</div>
+
 <div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -198,7 +210,7 @@ It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 
 **Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/Flickerformer) [**PDF**](/project/static/pdfs/It_Takes_Two__A_Duet_of_Periodicity_and_Directionality_for_Burst_Flicker_Removal.pdf)
+[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/Flickerformer) [**PDF**](https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf)
 
 </div>
 </div>
