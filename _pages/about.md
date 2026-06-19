@@ -191,7 +191,7 @@ My research interests focus on image restoration, with particular attention to f
 
 # 📝 Publications
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">ECCV 2026</div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
