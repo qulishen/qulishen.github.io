@@ -207,6 +207,18 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 </div>
 </div>
 
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2026</div><div class='paper-box-image'><div><img src='project/static/images/Expomotion/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
+
+Yao Liu, **Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+
+[**Project**]() [**Code**]() [**PDF**]()
+
+</div>
+</div>
+
 <div class='paper-box paper-box--brand paper-box--publication'><div class="badge">CVPR 2026</div><div class='paper-box-image'><div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
