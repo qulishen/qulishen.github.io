@@ -191,7 +191,7 @@ My research interests focus on image restoration, with particular attention to f
 
 # 📝 Publications
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">ECCV 2026</div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2026</div><div class='paper-box-image'><div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
@@ -203,7 +203,7 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">CVPR 2026</div><div class='paper-box-image'><div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
@@ -215,7 +215,7 @@ It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">NeurIPS 2025</div><div class='paper-box-image'><div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
@@ -227,7 +227,7 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/static/images/FlareX/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">NeurIPS 2025</div><div class='paper-box-image'><div><img src='project/static/images/FlareX/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering
@@ -239,7 +239,7 @@ FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">CVPR 2025 Highlight</div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">CVPR 2025 Highlight</div><div class='paper-box-image'><div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
@@ -251,7 +251,7 @@ Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='project/static/images/Fpro/1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2024</div><div class='paper-box-image'><div><img src='project/static/images/Fpro/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
@@ -311,7 +311,7 @@ Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
 # 🎖 Competitions
 
-<div class='paper-box paper-box--brand paper-box--competition'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/AIM-2025.png' alt="sym"></div></div>
+<div class='paper-box paper-box--brand paper-box--competition'><div class="badge">ICCV Workshop</div><div class='paper-box-image'><div><img src='project/static/images/competition/AIM-2025.png' alt="sym"></div></div>
 <div class='paper-box-text' markdown="1">
 
 AIM 2025 Challenge on Robust Offline Video Super-Resolution.
@@ -321,7 +321,7 @@ Zhihao Liu, **Lishen Qu**, Shihao Zhou, Jufeng Yang
 </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--competition'><div class='paper-box-image'><div><div class="badge">ICCV Workshop</div><img src='project/static/images/competition/MIPI-2025.png' alt="sym"></div></div>
+<div class='paper-box paper-box--brand paper-box--competition'><div class="badge">ICCV Workshop</div><div class='paper-box-image'><div><img src='project/static/images/competition/MIPI-2025.png' alt="sym"></div></div>
 <div class='paper-box-text' markdown="1">
 
 MIPI 2025 Challenge for Aberration Correction in Mobile Cameras.
