@@ -51,6 +51,10 @@ My research interests focus on image restoration, with particular attention to f
     <div class="news-row-track" data-news-row-track>
       <article class="news-row-card">
         <p class="news-row-date">2026.06</p>
+        <p class="news-row-text">🎉🎉 2 papers are accepted to ECCV 2026.</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">2026.06</p>
         <p class="news-row-text">I will attend CVPR 2026 in Denver and give an oral presentation of the NTIRE 2026 Workshop in Room 207 on June 4. Welcome to join!</p>
       </article>
       <article class="news-row-card">
