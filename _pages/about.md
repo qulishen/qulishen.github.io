@@ -23,7 +23,7 @@ redirect_from:
 
 I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
-My research interests focus on image restoration, with particular attention to flicker removal, lens flare removal and deblurring.
+My research interests focus on low-level research, with particular attention to multi-exposure fusion, flicker removal, lens flare removal and deblurring.
 
 <div class="about-intro-links">
   <p class="about-intro-link about-intro-gs">
@@ -202,7 +202,7 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 **Lishen Qu**, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/FreeMEF.html) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**]()
+[**Project**](project/FreeMEF.html) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**](https://arxiv.org/abs/2606.27905)
 
 </div>
 </div>
@@ -212,9 +212,11 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
 
-Yao Liu, **Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+Yao Liu<sup>_</sup>, **Lishen Qu**<sup>_</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**]() [**Code**]() [**PDF**]()
+<small><sup>\*</sup>Equal contribution.</small>
+
+[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/Leo-LiuYao/ExpoMotion) [**PDF**]()
 
 </div>
 </div>
