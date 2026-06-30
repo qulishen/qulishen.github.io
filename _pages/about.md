@@ -212,7 +212,7 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
 
-Yao Liu<sup>_</sup>, **Lishen Qu**<sup>_</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
+Yao Liu<sup>\*</sup>, **Lishen Qu**<sup>\*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
 <small><sup>\*</sup>Equal contribution.</small>
 
