@@ -21,9 +21,9 @@ redirect_from:
 
 <div class="about-intro-card" markdown="1">
 
-I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I also completed my undergraduate studies in the [Department of Software Engineering](https://cs.nankai.edu.cn/).
+I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I earned my Bachelor's degree in Software Engineering from the [Department of Software Engineering](https://cs.nankai.edu.cn/).
 
-My research interests focus on low-level research, with particular attention to multi-exposure fusion, flicker removal, lens flare removal and deblurring.
+My research interests focus on low-level vision, with particular attention to multi-exposure fusion, flicker removal, lens flare removal, and deblurring.
 
 <div class="about-intro-links">
   <p class="about-intro-link about-intro-gs">
@@ -413,7 +413,7 @@ Time: _2024.09 - (now)_
 <div class='paper-box paper-box--brand'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**Undergraduate Student, Software Engineering** \| Nankai University.
+**Bachelor's Degree, Software Engineering** \| Nankai University.
 
 Time: _2020.09 - 2024.06_
 
