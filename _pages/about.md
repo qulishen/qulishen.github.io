@@ -507,25 +507,59 @@ Time: _2020.09 - 2024.06_
         el.classList.add("reveal-on-load");
       });
 
-      var observer = new IntersectionObserver(function (entries, obs) {
-        var visible = entries.filter(function (entry) {
-          return entry.isIntersecting;
-        });
-
-        visible.sort(function (a, b) {
-          return a.boundingClientRect.top - b.boundingClientRect.top;
-        });
-
-        visible.forEach(function (entry, index) {
-          entry.target.style.transitionDelay = Math.min(index * 90, 600) + "ms";
-          entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target);
-        });
-      }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
+      var viewportH = window.innerHeight || document.documentElement.clientHeight;
+      var initial = [];
+      var deferred = [];
 
       elements.forEach(function (el) {
-        observer.observe(el);
+        var top = el.getBoundingClientRect().top;
+        if (top < viewportH * 0.95) {
+          initial.push(el);
+        } else {
+          deferred.push(el);
+        }
       });
+
+      initial.sort(function (a, b) {
+        return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+      });
+
+      // Force a reflow so the hidden (opacity:0) state is painted first,
+      // then reveal top-to-bottom on the next frame to trigger the transition.
+      void document.body.offsetHeight;
+
+      requestAnimationFrame(function () {
+        initial.forEach(function (el, index) {
+          el.style.transitionDelay = Math.min(index * 110, 900) + "ms";
+          el.classList.add("is-visible");
+        });
+      });
+
+      if (deferred.length && "IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries, obs) {
+          var visible = entries.filter(function (entry) {
+            return entry.isIntersecting;
+          });
+
+          visible.sort(function (a, b) {
+            return a.boundingClientRect.top - b.boundingClientRect.top;
+          });
+
+          visible.forEach(function (entry, index) {
+            entry.target.style.transitionDelay = Math.min(index * 90, 400) + "ms";
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          });
+        }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
+
+        deferred.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        deferred.forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+      }
     }
 
     if (document.readyState === "loading") {
