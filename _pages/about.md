@@ -456,3 +456,82 @@ Time: _2020.09 - 2024.06_
     </div>
   </div>
 </section>
+
+<style>
+  .reveal-on-load {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-load.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-on-load {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    function boot() {
+      var selector = [
+        ".page__content h1",
+        ".about-intro-card",
+        ".news-row-carousel",
+        ".paper-box"
+      ].join(",");
+
+      var elements = Array.prototype.slice.call(document.querySelectorAll(selector));
+      if (!elements.length) return;
+
+      var reduceMotion = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        elements.forEach(function (el) {
+          el.classList.add("reveal-on-load", "is-visible");
+        });
+        return;
+      }
+
+      elements.forEach(function (el) {
+        el.classList.add("reveal-on-load");
+      });
+
+      var observer = new IntersectionObserver(function (entries, obs) {
+        var visible = entries.filter(function (entry) {
+          return entry.isIntersecting;
+        });
+
+        visible.sort(function (a, b) {
+          return a.boundingClientRect.top - b.boundingClientRect.top;
+        });
+
+        visible.forEach(function (entry, index) {
+          entry.target.style.transitionDelay = Math.min(index * 90, 600) + "ms";
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        });
+      }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
+
+      elements.forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
+  })();
+</script>
