@@ -469,6 +469,7 @@ Time: _2020.09 - 2024.06_
   .reveal-on-load.is-visible {
     opacity: 1;
     transform: none;
+    will-change: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -486,7 +487,7 @@ Time: _2020.09 - 2024.06_
       var selector = [
         ".page__content h1",
         ".about-intro-card",
-        ".news-row-carousel",
+        ".news-row-viewport",
         ".paper-box"
       ].join(",");
 

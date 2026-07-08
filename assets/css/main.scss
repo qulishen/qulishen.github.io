@@ -224,6 +224,7 @@ h1:before,
   width: 0;
   height: $scroll_offset;
   margin-top: -$scroll_offset;
+  pointer-events: none;
 }
 
 .badge {
@@ -244,8 +245,9 @@ h1:before,
 }
 
 .news-row-carousel {
-  margin: 0.65em 0 1.2em;
+  margin: 0.65em 0 calc(1.2em + #{$scroll_offset});
   position: relative;
+  z-index: 2;
 }
 
 .news-row-controls {
@@ -399,7 +401,7 @@ h1:before,
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .news-row-footer .news-row-dots {
