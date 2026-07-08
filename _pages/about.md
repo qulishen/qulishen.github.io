@@ -202,7 +202,7 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 **Lishen Qu**, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/FreeMEF.html) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**](https://arxiv.org/abs/2606.27905)
+[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**](https://arxiv.org/abs/2606.27905)
 
 </div>
 </div>
@@ -216,7 +216,7 @@ Yao Liu<sup>\*</sup>, **Lishen Qu**<sup>\*</sup>, Shihao Zhou, Jie Liang, Hui Ze
 
 <small><sup>\*</sup>Equal contribution.</small>
 
-[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/Leo-LiuYao/ExpoMotion) [**PDF**]()
+[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/Leo-LiuYao/ExpoMotion) [**PDF**](https://arxiv.org/abs/2607.03110)
 
 </div>
 </div>
