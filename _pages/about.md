@@ -439,6 +439,10 @@ Time: _2020.09 - 2024.06_
       </article>
       <article class="news-row-card">
         <p class="news-row-date">Conference Reviewer</p>
+        <p class="news-row-text">International Journal of Computer Vision (IJCV)</p>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">Conference Reviewer</p>
         <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop(CVPRW)</p>
       </article>
       <article class="news-row-card">
