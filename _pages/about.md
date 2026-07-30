@@ -15,9 +15,7 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
-
-<header class="hero-profile">
+<header class="hero-profile" id="about-me">
   <div class="hero-profile__aside">
     <img class="hero-profile__avatar" src="images/zipai.jpg" alt="Lishen Qu">
     <div class="hero-profile__socials" aria-label="Contact links">
@@ -195,7 +193,7 @@ redirect_from:
   })();
 </script>
 
-<div class="section-heading"><span><i class="fas fa-book-open" aria-hidden="true"></i></span><h2 id="publications">Publications</h2></div>
+<div class="section-heading"><span><i class="fas fa-book-open" aria-hidden="true"></i></span><h2 id="publications"><span class="lang-en">Publications</span><span class="lang-zh">论文发表</span></h2></div>
 
 <div class="feature">
   <div class="feat-media"><img src="project/static/images/FreeMEF/1.png" alt="There and Back Again"></div>
