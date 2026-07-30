@@ -360,17 +360,10 @@ h1:before,
     );
   }
 
-  &:hover,
-  &:focus-within {
-    transform: translateY(-4px) scale(1.015);
-    border-color: rgba(144, 171, 207, 0.95);
-    background: linear-gradient(
-      160deg,
-      rgba(255, 255, 255, 0.94),
-      rgba(240, 247, 255, 0.78)
-    );
+  &:hover {
+    transform: translateY(-2px);
     box-shadow:
-      0 17px 30px rgba(15, 52, 95, 0.14),
+      0 14px 28px rgba(15, 23, 42, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 1);
   }
 }

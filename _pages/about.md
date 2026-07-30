@@ -2,7 +2,7 @@
 permalink: /
 title: ""
 excerpt: ""
-author_profile: true
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
@@ -17,89 +17,53 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 😄 About Me
-
-<div class="about-intro-card" markdown="1">
-
-I am currently pursuing a Master's degree in the Computer Vision Lab led by [Prof. Jufeng Yang](https://cv.nankai.edu.cn/) at [Nankai University](https://www.nankai.edu.cn/), where I earned my Bachelor's degree in Software Engineering from the [Department of Software Engineering](https://cs.nankai.edu.cn/).
-
-My research interests focus on low-level vision, with particular attention to multi-exposure fusion, flicker removal, lens flare removal, and deblurring.
-
-<div class="about-intro-links">
-  <p class="about-intro-link about-intro-gs">
-    <a href="{{ site.author.googlescholar }}" class="about-intro-link-chip">
-      <i class="ai ai-google-scholar" aria-hidden="true"></i>
-      <span class="about-intro-link-label">Google Scholar</span>
-      <span class="about-intro-link-meta"><span id="total_cit">—</span> citations</span>
-    </a>
-  </p>
-  <p class="about-intro-link about-intro-gh">
-    <a href="https://github.com/qulishen/" class="about-intro-link-chip">
-      <i class="fab fa-github" aria-hidden="true"></i>
-      <span class="about-intro-link-label">GitHub</span>
-      <span class="about-intro-link-meta"><span id="total_github_stars">—</span> stars</span>
-    </a>
-  </p>
-</div>
-
-</div>
-
-# 🔥 News
-
-<section class="news-row-carousel" data-news-row-carousel>
-  <div class="news-row-viewport">
-    <div class="news-row-track" data-news-row-track>
-      <article class="news-row-card">
-        <p class="news-row-date">2026.06</p>
-        <p class="news-row-text">🎉🎉 2 papers are accepted to ECCV 2026.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2026.06</p>
-        <p class="news-row-text">I will attend CVPR 2026 in Denver and give an oral presentation of the NTIRE 2026 Workshop in Room 207 on June 4. Welcome to join!</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2026.02</p>
-        <p class="news-row-text">🎉🎉 1 paper is accepted to CVPR 2026.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2026.01</p>
-        <p class="news-row-text">🎉🎉 We are hosting <a href="https://www.codabench.org/competitions/12728/#/pages-tab">NTIRE 2026 The 3rd Restore Any Image Model (RAIM): Multi-Exposure Image Fusion in Dynamic Scenes (Track 2)</a>. Welcome to participate!</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2025.10</p>
-        <p class="news-row-text">We win the third place in the <a href="https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf">AIM 2025 Challenge on Robust Offline Video Super-Resolution</a>.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2025.09</p>
-        <p class="news-row-text">🎉🎉 2 papers are accepted to NeurIPS 2025.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2025.08</p>
-        <p class="news-row-text">We win the third place in the <a href="https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf">MIPI 2025 Challenge for Aberration Correction in Mobile Cameras</a>.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2025.07</p>
-        <p class="news-row-text">😊 I joined Y Lab at the OPPO Research Institute.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2025.04</p>
-        <p class="news-row-text">🎉🎉 1 paper is accepted to CVPR 2025 highlight.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2024.07</p>
-        <p class="news-row-text">🎉🎉 1 paper is accepted to ECCV 2024.</p>
-      </article>
+<header class="hero-profile">
+  <div class="hero-profile__aside">
+    <img class="hero-profile__avatar" src="images/zipai.jpg" alt="Lishen Qu">
+    <div class="hero-profile__socials" aria-label="Contact links">
+      <a href="{{ site.author.googlescholar }}" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+      <a href="https://github.com/qulishen/" title="GitHub" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="mailto:{{ site.author.email }}" title="Email" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
     </div>
   </div>
 
-  <div class="news-row-footer">
-    <div class="news-row-dots" data-news-row-dots></div>
-    <div class="news-row-controls">
-      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous news">&#8592;</button>
-      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next news">&#8594;</button>
+  <div class="hero-profile__main">
+    <p class="hero-profile__eyebrow">About Me</p>
+    <h1 class="hero-profile__name">Lishen Qu <span>瞿立燊</span></h1>
+    <p class="hero-profile__role">Master's Student in Computer Vision</p>
+    <p class="hero-profile__affiliation"><i class="fas fa-university" aria-hidden="true"></i> Nankai University &nbsp;·&nbsp; <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tianjin, China</p>
+    <p class="hero-profile__bio">I am currently pursuing a Master's degree in the Computer Vision Lab led by <a href="https://cv.nankai.edu.cn/">Prof. Jufeng Yang</a> at <a href="https://www.nankai.edu.cn/">Nankai University</a>, where I earned my Bachelor's degree in Software Engineering from the <a href="https://cs.nankai.edu.cn/">Department of Software Engineering</a>.</p>
+    <p class="hero-profile__bio">My research focuses on low-level vision, especially multi-exposure fusion, flicker removal, lens flare removal, and deblurring.</p>
+
+    <div class="focus-banner">
+      <i class="fas fa-lightbulb" aria-hidden="true"></i>
+      <div><span>Research focus</span><strong>Computational Photography · Image Restoration · Low-level Vision</strong></div>
+    </div>
+    <div class="research-tags" aria-label="Research interests">
+      <span>Multi-exposure Fusion</span><span>Flicker Removal</span><span>Lens Flare Removal</span><span>Deblurring</span>
+    </div>
+    <div class="profile-stats">
+      <a href="{{ site.author.googlescholar }}"><strong id="total_cit">—</strong><span>Citations</span></a>
+      <a href="https://github.com/qulishen/"><strong id="total_github_stars">—</strong><span>GitHub Stars</span></a>
+      <a href="mailto:{{ site.author.email }}"><strong>Open</strong><span>to Collaborate</span></a>
     </div>
   </div>
-</section>
+</header>
+
+<div class="section-heading"><span>✦</span><h2 id="news">News</h2></div>
+
+<ul class="news-feed">
+  <li class="is-highlight"><time>2026.06</time><span><strong>2 papers</strong> are accepted to ECCV 2026.</span></li>
+  <li><time>2026.06</time><span>I will attend CVPR 2026 in Denver and give an oral presentation at the NTIRE 2026 Workshop. Welcome to join!</span></li>
+  <li class="is-highlight"><time>2026.02</time><span><strong>1 paper</strong> is accepted to CVPR 2026.</span></li>
+  <li><time>2026.01</time><span>We are hosting <a href="https://www.codabench.org/competitions/12728/#/pages-tab">NTIRE 2026 RAIM: Multi-Exposure Image Fusion in Dynamic Scenes</a>. Welcome to participate!</span></li>
+  <li><time>2025.10</time><span>We won third place in the <a href="https://www.cvlai.net/aim/2025/AIM2025awards_certificates.pdf">AIM 2025 Challenge on Robust Offline Video Super-Resolution</a>.</span></li>
+  <li class="is-highlight"><time>2025.09</time><span><strong>2 papers</strong> are accepted to NeurIPS 2025.</span></li>
+  <li><time>2025.08</time><span>We won third place in the <a href="https://mipi-challenge.org/MIPI2025/award_certificates_2025.pdf">MIPI 2025 Challenge for Aberration Correction in Mobile Cameras</a>.</span></li>
+  <li><time>2025.07</time><span>I joined Y Lab at the OPPO Research Institute.</span></li>
+  <li><time>2025.04</time><span><strong>1 paper</strong> is accepted to CVPR 2025 as a Highlight.</span></li>
+  <li><time>2024.07</time><span><strong>1 paper</strong> is accepted to ECCV 2024.</span></li>
+</ul>
 
 <script>
   (function () {
@@ -193,7 +157,7 @@ My research interests focus on low-level vision, with particular attention to mu
   })();
 </script>
 
-# 📝 Publications
+<div class="section-heading"><span>✦</span><h2 id="publications">Publications</h2></div>
 
 <div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2026</div><div class='paper-box-image'><div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -202,7 +166,7 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 **Lishen Qu**, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/qulishen/FreeMEF) [**PDF**](https://arxiv.org/abs/2606.27905)
+[**Project**](https://qulishen.github.io/MEF) [**GitHub**](https://github.com/qulishen/FreeMEF) [**arXiv**](https://arxiv.org/abs/2606.27905)
 
 </div>
 </div>
@@ -216,7 +180,7 @@ Yao Liu<sup>\*</sup>, **Lishen Qu**<sup>\*</sup>, Shihao Zhou, Jie Liang, Hui Ze
 
 <small><sup>\*</sup>Equal contribution.</small>
 
-[**Project**](https://qulishen.github.io/MEF) [**Code**](https://github.com/Leo-LiuYao/ExpoMotion) [**PDF**](https://arxiv.org/abs/2607.03110)
+[**Project**](https://qulishen.github.io/MEF) [**GitHub**](https://github.com/Leo-LiuYao/ExpoMotion) [**arXiv**](https://arxiv.org/abs/2607.03110)
 
 </div>
 </div>
@@ -228,7 +192,7 @@ It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 
 **Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/Flickerformer.html) [**Code**](https://github.com/qulishen/Flickerformer) [**PDF**](https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf)
+[**Project**](project/Flickerformer.html) [**GitHub**](https://github.com/qulishen/Flickerformer) [**Paper**](https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf)
 
 </div>
 </div>
@@ -240,7 +204,7 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
 **Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
 
-[**Project**](project/BurstDeflicker.html) [**Code**](https://github.com/qulishen/BurstDeflicker) [**PDF**](https://arxiv.org/abs/2510.09996)
+[**Project**](project/BurstDeflicker.html) [**GitHub**](https://github.com/qulishen/BurstDeflicker) [**arXiv**](https://arxiv.org/abs/2510.09996)
 
 </div>
 </div>
@@ -252,7 +216,7 @@ FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3
 
 **Lishen Qu**, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang
 
-[**Project**](project/FlareX.html) [**Code**](https://github.com/qulishen/FlareX) [**PDF**](https://arxiv.org/abs/2510.09995)
+[**Project**](project/FlareX.html) [**GitHub**](https://github.com/qulishen/FlareX) [**arXiv**](https://arxiv.org/abs/2510.09995)
 
 </div>
 </div>
@@ -264,7 +228,7 @@ A Polarization-aided Transformer for Image Deblurring via Motion Vector Decompos
 
 Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 
-[**Project**](project/MDT.html) [**Code**](https://github.com/Calvin11311/MDT) [**PDF**](https://arxiv.org/pdf/2404.00358)
+[**Project**](project/MDT.html) [**GitHub**](https://github.com/Calvin11311/MDT) [**arXiv**](https://arxiv.org/pdf/2404.00358)
 
 </div>
 </div>
@@ -276,7 +240,7 @@ Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 
 Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
 
-[**Project**](project/FPro.html) [**Code**](https://github.com/joshyZhou/FPro) [**PDF**](https://arxiv.org/pdf/2404.00288)
+[**Project**](project/FPro.html) [**GitHub**](https://github.com/joshyZhou/FPro) [**arXiv**](https://arxiv.org/pdf/2404.00288)
 
 </div>
 </div>
