@@ -121,6 +121,34 @@ body { background: var(--site-bg) !important; background-image: var(--site-glow)
 .chip { will-change: transform; transition: transform .15s ease, border-color .15s ease, color .15s ease, background-color .15s ease; }
 .chip:hover, .chip:focus-visible { box-shadow: none !important; }
 
+/* 竞赛、经历与教育图片直接融入卡片，去除独立色块媒体框，并扩大图文留白。 */
+.paper-box--brand:not(.paper-box--publication) .paper-box-image {
+  flex-basis: 220px;
+  width: 220px;
+  min-width: 220px !important;
+  max-width: 220px !important;
+  height: 146px;
+  padding: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.paper-box--brand:not(.paper-box--publication) .paper-box-image > div {
+  overflow: hidden;
+  border-radius: var(--site-radius-sm);
+}
+.paper-box--competition .paper-box-image {
+  flex-basis: 255px;
+  width: 255px;
+  min-width: 255px !important;
+  max-width: 255px !important;
+  height: 150px;
+}
+.paper-box--brand:not(.paper-box--publication) .paper-box-text {
+  padding-left: 2.1em !important;
+}
+
 @media (max-width: 860px) { .hero-profile { grid-template-columns: 1fr; gap: 1.4em; text-align: center; }.hero-profile__aside { display: flex; flex-direction: column; align-items: center; }.research-tags, .focus-banner { justify-content: center; }.feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; gap: 1.1em; }.feature:nth-of-type(even) .feat-media { order: 0; }.feat-media { max-width: 680px; width: 100%; margin: 0 auto; }.feat-info { padding: .1em .15em; } }
 @media (max-width: 640px) { #main { padding: 0 1em !important; }.paper-box--brand:not(.paper-box--publication) { flex-direction: column; align-items: stretch; }.paper-box--brand:not(.paper-box--publication) .paper-box-image, .paper-box--competition .paper-box-image { width: 100%; min-width: 0 !important; max-width: none !important; height: 150px; flex-basis: 150px; }.paper-box--brand:not(.paper-box--publication) .paper-box-text { padding: .85em .2em .2em !important; }.hero-profile__avatar { width: 150px; height: 150px; }.profile-stats, .award-grid { grid-template-columns: 1fr; }.info-list li, .svc-row { flex-direction: column; gap: 5px; }.info-list .when, .svc-label { flex-basis: auto; }.svc-chips { display: flex !important; width: 100%; }.svc-chip { display: inline-flex !important; min-height: 28px; padding: 4px 12px !important; background-color: var(--site-surface-alt) !important; border: 1px solid var(--site-border) !important; }.feature { gap: .95em; padding: .85em; }.feat-title { font-size: 1.06rem; }.feat-authors, .feat-desc { font-size: .86rem; }.meta { gap: 6px; }.chip { padding: 4px 9px; font-size: .76rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
