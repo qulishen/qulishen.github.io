@@ -148,21 +148,28 @@ body { background: var(--site-bg) !important; background-image: var(--site-glow)
 .paper-box--brand:not(.paper-box--publication) .paper-box-text {
   padding-left: 2.1em !important;
 }
-/* 经历与教育信息较短，使用更紧凑的图片尺寸和排版，避免卡片过高。 */
-.paper-box--compact .paper-box-image {
-  flex-basis: 170px !important;
-  width: 170px !important;
-  min-width: 170px !important;
-  max-width: 170px !important;
-  height: 106px !important;
+/* 经历与教育信息较短，压缩卡片本体、图片与文字排版。 */
+.paper-box.paper-box--compact {
+  padding: .55em 1em !important;
+  margin: .65em 0 !important;
 }
-.paper-box--compact .paper-box-text {
-  padding-top: .15em !important;
-  padding-bottom: .15em !important;
+.paper-box--brand.paper-box--compact .paper-box-image {
+  flex-basis: 145px !important;
+  width: 145px !important;
+  min-width: 145px !important;
+  max-width: 145px !important;
+  height: 90px !important;
 }
-.paper-box--compact .paper-box-text p {
-  margin-bottom: .3em !important;
-  line-height: 1.45 !important;
+.paper-box--brand.paper-box--compact .paper-box-text {
+  padding-top: .05em !important;
+  padding-bottom: .05em !important;
+}
+.paper-box--brand.paper-box--compact .paper-box-text p {
+  margin-bottom: .18em !important;
+  line-height: 1.35 !important;
+}
+.paper-box--brand.paper-box--compact .paper-box-text p:last-child {
+  margin-bottom: 0 !important;
 }
 
 @media (max-width: 860px) { .hero-profile { grid-template-columns: 1fr; gap: 1.4em; text-align: center; }.hero-profile__aside { display: flex; flex-direction: column; align-items: center; }.research-tags, .focus-banner { justify-content: center; }.feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; gap: 1.1em; }.feature:nth-of-type(even) .feat-media { order: 0; }.feat-media { max-width: 680px; width: 100%; margin: 0 auto; }.feat-info { padding: .1em .15em; } }
