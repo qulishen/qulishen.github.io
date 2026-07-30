@@ -160,88 +160,81 @@ redirect_from:
 
 <div class="section-heading"><span>✦</span><h2 id="publications">Publications</h2></div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2026</div><div class='paper-box-image'><div><img src='project/static/images/FreeMEF/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
-
-<p class="publication-authors"><strong>Lishen Qu</strong>, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
-<p class="publication-description">A flexible-frame transformer that reconstructs a natural high-dynamic-range result from bracketed exposures.</p>
-<div class="publication-links"><a href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/FreeMEF"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2606.27905"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
-</div>
-</div>
-
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2026</div><div class='paper-box-image'><div><img src='project/static/images/Expomotion/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
-
-<p class="publication-authors">Yao Liu<sup>*</sup>, <strong>Lishen Qu</strong><sup>*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang <small><sup>*</sup>Equal contribution.</small></p>
-<p class="publication-description">A large-scale benchmark and learning framework for evaluating multi-exposure fusion under household lighting.</p>
-<div class="publication-links"><a href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/Leo-LiuYao/ExpoMotion"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2607.03110"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
-</div>
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/FreeMEF/1.png" alt="There and Back Again"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">ECCV 2026</span><span class="role role-first">First Author</span></div>
+    <h3 class="feat-title">There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion</h3>
+    <p class="feat-authors"><span class="me">Lishen Qu</span>, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+    <p class="feat-desc">A flexible-frame transformer that reconstructs a natural high-dynamic-range result from bracketed exposures.</p>
+    <div class="meta"><a class="chip chip-page" href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/qulishen/FreeMEF"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/abs/2606.27905"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">CVPR 2026</div><div class='paper-box-image'><div><img src='project/static/images/Flickerformer/0.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
-
-<p class="publication-authors"><strong>Lishen Qu</strong>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
-<p class="publication-description">A dual-stream model that jointly exploits periodicity and directionality to remove flicker from burst captures.</p>
-<div class="publication-links"><a href="project/Flickerformer.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/Flickerformer"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i>Paper</a></div>
-
-</div>
-</div>
-
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">NeurIPS 2025</div><div class='paper-box-image'><div><img src='project/static/images/BurstDeflicker/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
-
-<p class="publication-authors"><strong>Lishen Qu</strong>, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
-<p class="publication-description">A benchmark dataset and method suite for robust flicker removal in dynamic real-world scenes.</p>
-<div class="publication-links"><a href="project/BurstDeflicker.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/BurstDeflicker"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2510.09996"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
-</div>
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/Expomotion/1.png" alt="ExpoMotion"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">ECCV 2026</span><span class="role role-cofirst">Co-First Author</span></div>
+    <h3 class="feat-title">ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion</h3>
+    <p class="feat-authors">Yao Liu<sup>*</sup>, <span class="me">Lishen Qu</span><sup>*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang <small><sup>*</sup>Equal contribution.</small></p>
+    <p class="feat-desc">A large-scale benchmark and learning framework for evaluating multi-exposure fusion under household lighting.</p>
+    <div class="meta"><a class="chip chip-page" href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/Leo-LiuYao/ExpoMotion"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/abs/2607.03110"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">NeurIPS 2025</div><div class='paper-box-image'><div><img src='project/static/images/FlareX/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering
-
-<p class="publication-authors"><strong>Lishen Qu</strong>, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang</p>
-<p class="publication-description">A physics-informed dataset and rendering-aware approach for generalizable lens-flare removal.</p>
-<div class="publication-links"><a href="project/FlareX.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/FlareX"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2510.09995"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
-</div>
-</div>
-
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">CVPR 2025 Highlight</div><div class='paper-box-image'><div><img src='project/static/images/MDT/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
-
-<p class="publication-authors">Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, <strong>Lishen Qu</strong>, Jufeng Yang</p>
-<p class="publication-description">A polarization-assisted transformer that decomposes motion vectors for sharper image deblurring.</p>
-<div class="publication-links"><a href="project/MDT.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/Calvin11311/MDT"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/pdf/2404.00358"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
-</div>
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/Flickerformer/0.png" alt="It Takes Two"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">CVPR 2026</span><span class="role role-first">First Author</span></div>
+    <h3 class="feat-title">It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal</h3>
+    <p class="feat-authors"><span class="me">Lishen Qu</span>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+    <p class="feat-desc">A dual-stream model that jointly exploits periodicity and directionality to remove flicker from burst captures.</p>
+    <div class="meta"><a class="chip chip-page" href="project/Flickerformer.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/qulishen/Flickerformer"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i>Paper</a></div>
+  </div>
 </div>
 
-<div class='paper-box paper-box--brand paper-box--publication'><div class="badge">ECCV 2024</div><div class='paper-box-image'><div><img src='project/static/images/Fpro/1.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
-
-<p class="publication-authors">Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, <strong>Lishen Qu</strong>, Jufeng Yang</p>
-<p class="publication-description">A frequency-prompt transformer that restores degraded images by guiding recovery in spectral space.</p>
-<div class="publication-links"><a href="project/FPro.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/joshyZhou/FPro"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/pdf/2404.00288"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
-
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/BurstDeflicker/1.png" alt="BurstDeflicker"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">NeurIPS 2025</span><span class="role role-first">First Author</span></div>
+    <h3 class="feat-title">BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes</h3>
+    <p class="feat-authors"><span class="me">Lishen Qu</span>, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+    <p class="feat-desc">A benchmark dataset and method suite for robust flicker removal in dynamic real-world scenes.</p>
+    <div class="meta"><a class="chip chip-page" href="project/BurstDeflicker.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/qulishen/BurstDeflicker"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/abs/2510.09996"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
 </div>
+
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/FlareX/1.png" alt="FlareX"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">NeurIPS 2025</span><span class="role role-first">First Author</span></div>
+    <h3 class="feat-title">FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering</h3>
+    <p class="feat-authors"><span class="me">Lishen Qu</span>, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang</p>
+    <p class="feat-desc">A physics-informed dataset and rendering-aware approach for generalizable lens-flare removal.</p>
+    <div class="meta"><a class="chip chip-page" href="project/FlareX.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/qulishen/FlareX"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/abs/2510.09995"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
+</div>
+
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/MDT/1.png" alt="Polarization-aided Transformer"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">CVPR 2025 Highlight</span><span class="role role-coauthor">Co-Author</span></div>
+    <h3 class="feat-title">A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition</h3>
+    <p class="feat-authors">Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, <span class="me">Lishen Qu</span>, Jufeng Yang</p>
+    <p class="feat-desc">A polarization-assisted transformer that decomposes motion vectors for sharper image deblurring.</p>
+    <div class="meta"><a class="chip chip-page" href="project/MDT.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/Calvin11311/MDT"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/pdf/2404.00358"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
+</div>
+
+<div class="feature">
+  <div class="feat-media"><img src="project/static/images/Fpro/1.png" alt="Seeing the Unseen"></div>
+  <div class="feat-info">
+    <div class="feat-badges"><span class="feat-venue">ECCV 2024</span><span class="role role-coauthor">Co-Author</span></div>
+    <h3 class="feat-title">Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration</h3>
+    <p class="feat-authors">Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, <span class="me">Lishen Qu</span>, Jufeng Yang</p>
+    <p class="feat-desc">A frequency-prompt transformer that restores degraded images by guiding recovery in spectral space.</p>
+    <div class="meta"><a class="chip chip-page" href="project/FPro.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a class="chip chip-code" href="https://github.com/joshyZhou/FPro"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/pdf/2404.00288"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
+  </div>
 </div>
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
@@ -409,7 +402,8 @@ Time: _2020.09 - 2024.06_
         ".page__content h1",
         ".about-intro-card",
         ".news-row-viewport",
-        ".paper-box"
+        ".paper-box",
+        ".feature"
       ].join(",");
 
       var elements = Array.prototype.slice.call(document.querySelectorAll(selector));
