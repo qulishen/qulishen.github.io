@@ -10,13 +10,12 @@ layout: compress
   </head>
 
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     <div id="main" role="main">
       {% include sidebar.html %}
-    
+
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
@@ -28,31 +27,5 @@ layout: compress
     </div>
 
     {% include scripts.html %}
-
-    <button class="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
-      <i class="fas fa-moon" aria-hidden="true"></i>
-    </button>
-    <script>
-      (function () {
-        var button = document.querySelector(".theme-toggle");
-        if (!button) return;
-        var icon = button.querySelector("i");
-        function isDark() { return document.documentElement.getAttribute("data-color-scheme") === "dark"; }
-        function updateButton() {
-          var dark = isDark();
-          button.setAttribute("aria-label", dark ? "切换浅色模式" : "切换深色模式");
-          button.setAttribute("title", dark ? "切换浅色模式" : "切换深色模式");
-          icon.className = dark ? "fas fa-sun" : "fas fa-moon";
-        }
-        updateButton();
-        button.addEventListener("click", function () {
-          var next = isDark() ? "light" : "dark";
-          if (next === "dark") document.documentElement.setAttribute("data-color-scheme", "dark");
-          else document.documentElement.removeAttribute("data-color-scheme");
-          try { localStorage.setItem("site-color-scheme", next); } catch (e) {}
-          updateButton();
-        });
-      })();
-    </script>
   </body>
 </html>

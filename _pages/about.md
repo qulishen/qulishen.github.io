@@ -32,6 +32,7 @@ redirect_from:
     <h1 class="hero-profile__name">Lishen Qu <span>瞿立燊</span></h1>
     <p class="hero-profile__role">Master's Student in Computer Vision</p>
     <p class="hero-profile__affiliation"><i class="fas fa-university" aria-hidden="true"></i> Nankai University &nbsp;·&nbsp; <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tianjin, China</p>
+    <p class="hero-profile__email"><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
     <p class="hero-profile__bio">I am currently pursuing a Master's degree in the Computer Vision Lab led by <a href="https://cv.nankai.edu.cn/">Prof. Jufeng Yang</a> at <a href="https://www.nankai.edu.cn/">Nankai University</a>, where I earned my Bachelor's degree in Software Engineering from the <a href="https://cs.nankai.edu.cn/">Department of Software Engineering</a>.</p>
     <p class="hero-profile__bio">My research focuses on low-level vision, especially multi-exposure fusion, flicker removal, lens flare removal, and deblurring.</p>
 
@@ -164,9 +165,9 @@ redirect_from:
 
 There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
-**Lishen Qu**, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
-
-[**Project**](https://qulishen.github.io/MEF) [**GitHub**](https://github.com/qulishen/FreeMEF) [**arXiv**](https://arxiv.org/abs/2606.27905)
+<p class="publication-authors"><strong>Lishen Qu</strong>, Yao Liu, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+<p class="publication-description">A flexible-frame transformer that reconstructs a natural high-dynamic-range result from bracketed exposures.</p>
+<div class="publication-links"><a href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/FreeMEF"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2606.27905"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -176,11 +177,9 @@ There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion
 
 ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
 
-Yao Liu<sup>\*</sup>, **Lishen Qu**<sup>\*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
-
-<small><sup>\*</sup>Equal contribution.</small>
-
-[**Project**](https://qulishen.github.io/MEF) [**GitHub**](https://github.com/Leo-LiuYao/ExpoMotion) [**arXiv**](https://arxiv.org/abs/2607.03110)
+<p class="publication-authors">Yao Liu<sup>*</sup>, <strong>Lishen Qu</strong><sup>*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang <small><sup>*</sup>Equal contribution.</small></p>
+<p class="publication-description">A large-scale benchmark and learning framework for evaluating multi-exposure fusion under household lighting.</p>
+<div class="publication-links"><a href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/Leo-LiuYao/ExpoMotion"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2607.03110"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -190,9 +189,9 @@ Yao Liu<sup>\*</sup>, **Lishen Qu**<sup>\*</sup>, Shihao Zhou, Jie Liang, Hui Ze
 
 It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 
-**Lishen Qu**, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
-
-[**Project**](project/Flickerformer.html) [**GitHub**](https://github.com/qulishen/Flickerformer) [**Paper**](https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf)
+<p class="publication-authors"><strong>Lishen Qu</strong>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+<p class="publication-description">A dual-stream model that jointly exploits periodicity and directionality to remove flicker from burst captures.</p>
+<div class="publication-links"><a href="project/Flickerformer.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/Flickerformer"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Qu_It_Takes_Two_A_Duet_of_Periodicity_and_Directionality_for_CVPR_2026_paper.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i>Paper</a></div>
 
 </div>
 </div>
@@ -202,9 +201,9 @@ It Takes Two: A Duet of Periodicity and Directionality for Burst Flicker Removal
 
 BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
-**Lishen Qu**, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang
-
-[**Project**](project/BurstDeflicker.html) [**GitHub**](https://github.com/qulishen/BurstDeflicker) [**arXiv**](https://arxiv.org/abs/2510.09996)
+<p class="publication-authors"><strong>Lishen Qu</strong>, Zhihao Liu, Shihao Zhou, Yaqi Luo, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
+<p class="publication-description">A benchmark dataset and method suite for robust flicker removal in dynamic real-world scenes.</p>
+<div class="publication-links"><a href="project/BurstDeflicker.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/BurstDeflicker"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2510.09996"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -214,9 +213,9 @@ BurstDeflicker: A Benchmark Dataset for Flicker Removal in Dynamic Scenes
 
 FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3D Rendering
 
-**Lishen Qu**, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang
-
-[**Project**](project/FlareX.html) [**GitHub**](https://github.com/qulishen/FlareX) [**arXiv**](https://arxiv.org/abs/2510.09995)
+<p class="publication-authors"><strong>Lishen Qu</strong>, Zhihao Liu, Jinshan Pan, Shihao Zhou, Jinglei Shi, Duosheng Chen, Jufeng Yang</p>
+<p class="publication-description">A physics-informed dataset and rendering-aware approach for generalizable lens-flare removal.</p>
+<div class="publication-links"><a href="project/FlareX.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/qulishen/FlareX"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/abs/2510.09995"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -226,9 +225,9 @@ FlareX: A Physics-Informed Dataset for Lens Flare Removal via 2D Synthesis and 3
 
 A Polarization-aided Transformer for Image Deblurring via Motion Vector Decomposition
 
-Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
-
-[**Project**](project/MDT.html) [**GitHub**](https://github.com/Calvin11311/MDT) [**arXiv**](https://arxiv.org/pdf/2404.00358)
+<p class="publication-authors">Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, <strong>Lishen Qu</strong>, Jufeng Yang</p>
+<p class="publication-description">A polarization-assisted transformer that decomposes motion vectors for sharper image deblurring.</p>
+<div class="publication-links"><a href="project/MDT.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/Calvin11311/MDT"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/pdf/2404.00358"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -238,9 +237,9 @@ Duosheng Chen, Shihao Zhou, Jinshan Pan, Jinglei Shi, **Lishen Qu**, Jufeng Yang
 
 Seeing the Unseen: A Frequency Prompt Guided Transformer for Image Restoration
 
-Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, **Lishen Qu**, Jufeng Yang
-
-[**Project**](project/FPro.html) [**GitHub**](https://github.com/joshyZhou/FPro) [**arXiv**](https://arxiv.org/pdf/2404.00288)
+<p class="publication-authors">Shihao Zhou, Jinshan Pan, Jinglei Shi, Duosheng Chen, <strong>Lishen Qu</strong>, Jufeng Yang</p>
+<p class="publication-description">A frequency-prompt transformer that restores degraded images by guiding recovery in spectral space.</p>
+<div class="publication-links"><a href="project/FPro.html"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Project</a><a href="https://github.com/joshyZhou/FPro"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a href="https://arxiv.org/pdf/2404.00288"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
 
 </div>
 </div>
@@ -325,42 +324,24 @@ Time: _2025.07 - (now)_
 </div>
 </div>
 
-# 🎖 Honors and Awards
+<div class="section-heading"><span>🏆</span><h2 id="honors">Honors &amp; Awards</h2></div>
 
-<section class="news-row-carousel" data-news-row-carousel>
-  <div class="news-row-viewport">
-    <div class="news-row-track" data-news-row-track>
-     <article class="news-row-card">
-        <p class="news-row-date">2026.05</p>
-        <p class="news-row-text">OPPO Outstanding Research Intern.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2024.11</p>
-        <p class="news-row-text">Gold Award, Huawei Ascend AI Innovation Competition (Tianjin Division).</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2024.06</p>
-        <p class="news-row-text">Outstanding Undergraduate Thesis Award, Nankai University.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2023.09</p>
-        <p class="news-row-text">Huawei "Intelligent Foundation" Scholarship.</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">2022.09</p>
-        <p class="news-row-text">SK Telecom Artificial Intelligence Scholarship, South Korea.</p>
-      </article>
-    </div>
+<div class="award-grid">
+  <div class="award-card">
+    <div class="award-icon"><i class="fas fa-trophy" aria-hidden="true"></i></div>
+    <div><div class="award-title">OPPO Outstanding Research Intern</div><div class="award-sub">Recognition for outstanding research contribution at OPPO Research Institute, Y Lab.</div><div class="award-year">2026.05</div></div>
   </div>
+  <div class="award-card">
+    <div class="award-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
+    <div><div class="award-title">Gold Award, Huawei Ascend AI Innovation Competition</div><div class="award-sub">Tianjin Division.</div><div class="award-year">2024.11</div></div>
+  </div>
+</div>
 
-  <div class="news-row-footer">
-    <div class="news-row-dots" data-news-row-dots></div>
-    <div class="news-row-controls">
-      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous honors">&#8592;</button>
-      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next honors">&#8594;</button>
-    </div>
-  </div>
-</section>
+<ul class="info-list">
+  <li><span class="when">2024.06</span><span><strong>Outstanding Undergraduate Thesis Award</strong>, Nankai University.</span></li>
+  <li><span class="when">2023.09</span><span><strong>Huawei “Intelligent Foundation” Scholarship</strong>.</span></li>
+  <li><span class="when">2022.09</span><span><strong>SK Telecom Artificial Intelligence Scholarship</strong>, South Korea.</span></li>
+</ul>
 
 # 📖 Educations
 
@@ -384,46 +365,18 @@ Time: _2020.09 - 2024.06_
 </div>
 </div>
 
-# 🤝 Academic Services
+<div class="section-heading"><span>🛠️</span><h2 id="services">Academic Services</h2></div>
 
-<section class="news-row-carousel" data-news-row-carousel>
-  <div class="news-row-viewport">
-    <div class="news-row-track" data-news-row-track>
-      <article class="news-row-card">
-        <p class="news-row-date">Journal Reviewer</p>
-        <p class="news-row-text">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">Conference Reviewer</p>
-        <p class="news-row-text">Annual Conference on Neural Information Processing Systems (NeurIPS)</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">Conference Reviewer</p>
-        <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">Conference Reviewer</p>
-        <p class="news-row-text">International Journal of Computer Vision (IJCV)</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">Conference Reviewer</p>
-        <p class="news-row-text">IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop(CVPRW)</p>
-      </article>
-      <article class="news-row-card">
-        <p class="news-row-date">Journal Reviewer</p>
-        <p class="news-row-text">Jordanian Journal of Computers and Information Technology (JJCIT)</p>
-      </article>
-    </div>
+<div class="svc">
+  <div class="svc-row">
+    <div class="svc-label">Conference Reviewer</div>
+    <div class="svc-chips"><span class="svc-chip">NeurIPS</span><span class="svc-chip">CVPR</span><span class="svc-chip">CVPRW</span></div>
   </div>
-
-  <div class="news-row-footer">
-    <div class="news-row-dots" data-news-row-dots></div>
-    <div class="news-row-controls">
-      <button class="news-row-nav" type="button" data-news-row-prev aria-label="Previous services">&#8592;</button>
-      <button class="news-row-nav" type="button" data-news-row-next aria-label="Next services">&#8594;</button>
-    </div>
+  <div class="svc-row">
+    <div class="svc-label">Journal Reviewer</div>
+    <div class="svc-chips"><span class="svc-chip">IEEE TPAMI</span><span class="svc-chip">IJCV</span><span class="svc-chip">JJCIT</span></div>
   </div>
-</section>
+</div>
 
 <style>
   .reveal-on-load {
