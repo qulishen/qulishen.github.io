@@ -121,6 +121,45 @@ body { background: var(--site-bg) !important; background-image: var(--site-glow)
 .chip { will-change: transform; transition: transform .15s ease, border-color .15s ease, color .15s ease, background-color .15s ease; }
 .chip:hover, .chip:focus-visible { box-shadow: none !important; }
 
+/* 统计卡与论文卡沿用统一的卡片抬升反馈；论文操作按钮只做合成层位移，避免进入卡片时触发额外绘制。 */
+.profile-stats a {
+  display: grid;
+  place-items: center;
+  min-height: 82px;
+  will-change: auto;
+  transition: transform .2s cubic-bezier(.2, .8, .2, 1), border-color .2s ease !important;
+}
+.profile-stats a:hover, .profile-stats a:focus-visible {
+  transform: translate3d(0, -4px, 0);
+  border-color: var(--site-border-strong);
+  box-shadow: var(--site-shadow-sm);
+}
+.profile-stat__value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .42em;
+  color: var(--site-accent);
+  line-height: 1.2;
+}
+.profile-stat__value > i {
+  font-size: .86rem;
+  opacity: .88;
+}
+.profile-stat__value > strong { color: inherit; }
+.feature .chip {
+  will-change: auto;
+  transform: translate3d(0, 0, 0);
+  transition: transform .14s cubic-bezier(.2, .8, .2, 1), border-color .14s ease !important;
+}
+.feature .chip:hover, .feature .chip:focus-visible {
+  transform: translate3d(0, -2px, 0);
+  border-color: var(--site-accent-ring);
+  color: var(--site-accent) !important;
+  background: var(--site-accent-soft);
+}
+.feature .chip:active { transform: translate3d(0, 0, 0) scale(.98); }
+
 /* 竞赛、经历与教育图片直接融入卡片，去除独立色块媒体框，并扩大图文留白。 */
 .paper-box--brand:not(.paper-box--publication) .paper-box-image {
   flex-basis: 220px;

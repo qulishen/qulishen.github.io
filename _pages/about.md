@@ -44,9 +44,18 @@ redirect_from:
       <span><span class="lang-en">Multi-exposure Fusion</span><span class="lang-zh">多曝光融合</span></span><span><span class="lang-en">Flicker Removal</span><span class="lang-zh">闪烁消除</span></span><span><span class="lang-en">Lens Flare Removal</span><span class="lang-zh">镜头耀斑消除</span></span><span><span class="lang-en">Deblurring</span><span class="lang-zh">图像去模糊</span></span>
     </div>
     <div class="profile-stats">
-      <a href="{{ site.author.googlescholar }}"><strong id="total_cit">—</strong><span><span class="lang-en">Citations</span><span class="lang-zh">引用量</span></span></a>
-      <a href="https://github.com/qulishen/"><strong id="total_github_stars">—</strong><span>GitHub Stars</span></a>
-      <a href="mailto:{{ site.author.email }}"><strong><span class="lang-en">Open</span><span class="lang-zh">欢迎</span></strong><span><span class="lang-en">to Collaborate</span><span class="lang-zh">合作交流</span></span></a>
+      <a href="{{ site.author.googlescholar }}">
+        <span class="profile-stat__value"><i class="fas fa-graduation-cap" aria-hidden="true"></i><strong id="total_cit">—</strong></span>
+        <span><span class="lang-en">Citations</span><span class="lang-zh">引用量</span></span>
+      </a>
+      <a href="https://github.com/qulishen/">
+        <span class="profile-stat__value"><i class="fas fa-star" aria-hidden="true"></i><strong id="total_github_stars">—</strong></span>
+        <span>GitHub Stars</span>
+      </a>
+      <a href="mailto:{{ site.author.email }}">
+        <span class="profile-stat__value"><i class="fas fa-handshake" aria-hidden="true"></i><strong><span class="lang-en">Open</span><span class="lang-zh">欢迎</span></strong></span>
+        <span><span class="lang-en">to Collaborate</span><span class="lang-zh">合作交流</span></span>
+      </a>
     </div>
   </div>
 </header>
@@ -211,7 +220,7 @@ redirect_from:
   <div class="feat-info">
     <div class="feat-badges"><span class="feat-venue">ECCV 2026</span><span class="role role-cofirst">Co-First Author</span></div>
     <h3 class="feat-title">ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion</h3>
-    <p class="feat-authors">Yao Liu<sup>*</sup>, <span class="me">Lishen Qu</span><sup>*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang <small><sup>*</sup><span class="lang-en">Equal contribution.</span><span class="lang-zh">共同第一作者。</span></small></p>
+    <p class="feat-authors">Yao Liu<sup>*</sup>, <span class="me">Lishen Qu</span><sup>*</sup>, Shihao Zhou, Jie Liang, Hui Zeng, Lei Zhang, Jufeng Yang</p>
     <p class="feat-desc">A large-scale benchmark and learning framework for evaluating multi-exposure fusion under household lighting.</p>
     <div class="meta"><a class="chip chip-page" href="https://qulishen.github.io/MEF"><i class="fas fa-external-link-alt" aria-hidden="true"></i><span class="lang-en">Project</span><span class="lang-zh">项目</span></a><a class="chip chip-code" href="https://github.com/Leo-LiuYao/ExpoMotion"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a><a class="chip chip-arxiv" href="https://arxiv.org/abs/2607.03110"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a></div>
   </div>
