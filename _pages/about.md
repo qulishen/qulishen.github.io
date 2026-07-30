@@ -32,7 +32,7 @@ redirect_from:
     <p class="hero-profile__affiliation"><i class="fas fa-university" aria-hidden="true"></i> <span class="lang-en">Nankai University</span><span class="lang-zh">南开大学</span> &nbsp;·&nbsp; <i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="lang-en">Tianjin, China</span><span class="lang-zh">中国 · 天津</span></p>
     <p class="hero-profile__email"><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
     <p class="hero-profile__bio lang-en">I am currently pursuing a Master's degree in the Computer Vision Lab led by <a href="https://cv.nankai.edu.cn/">Prof. Jufeng Yang</a> at <a href="https://www.nankai.edu.cn/">Nankai University</a>, where I earned my Bachelor's degree in Software Engineering from the <a href="https://cs.nankai.edu.cn/">Department of Software Engineering</a>.</p>
-    <p class="hero-profile__bio lang-zh">我目前在<a href="https://www.nankai.edu.cn/">南开大学</a>杨巨峰教授领导的<a href="https://cv.nankai.edu.cn/">计算机视觉实验室</a>攻读硕士学位；本科毕业于<a href="https://cs.nankai.edu.cn/">软件学院</a>软件工程专业。</p>
+    <p class="hero-profile__bio lang-zh">我目前在<a href="https://www.nankai.edu.cn/">南开大学</a>杨巨峰教授领导的<a href="https://cv.nankai.edu.cn/">计算机视觉实验室</a>攻读硕士学位；本科毕业于南开大学<a href="https://cs.nankai.edu.cn/">软件学院</a>软件工程专业。</p>
     <p class="hero-profile__bio lang-en">My research focuses on low-level vision, especially multi-exposure fusion, flicker removal, lens flare removal, and deblurring.</p>
     <p class="hero-profile__bio lang-zh">我的研究聚焦低层视觉，尤其关注多曝光融合、闪烁消除、镜头耀斑消除与图像去模糊。</p>
 
