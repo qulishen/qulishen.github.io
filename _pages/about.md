@@ -158,7 +158,7 @@ redirect_from:
   })();
 </script>
 
-<div class="section-heading"><span>✦</span><h2 id="publications">Publications</h2></div>
+<div class="section-heading"><span><i class="fas fa-book-open" aria-hidden="true"></i></span><h2 id="publications">Publications</h2></div>
 
 <div class="feature">
   <div class="feat-media"><img src="project/static/images/FreeMEF/1.png" alt="There and Back Again"></div>
