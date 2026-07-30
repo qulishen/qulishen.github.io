@@ -10,6 +10,7 @@ layout: compress
   </head>
 
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
@@ -26,6 +27,72 @@ layout: compress
       </article>
     </div>
 
+    <div class="top-controls" aria-label="Site controls">
+      <div class="theme-switch" id="theme-switch" role="group" aria-label="Accent color">
+        <button type="button" class="theme-dot" data-theme="indigo" title="Indigo" aria-label="Indigo accent"></button>
+        <button type="button" class="theme-dot" data-theme="ruby" title="Ruby" aria-label="Ruby accent"></button>
+        <button type="button" class="theme-dot" data-theme="ocean" title="Ocean" aria-label="Ocean accent"></button>
+        <button type="button" class="theme-dot" data-theme="emerald" title="Emerald" aria-label="Emerald accent"></button>
+        <button type="button" class="theme-dot" data-theme="rose" title="Rose" aria-label="Rose accent"></button>
+        <button type="button" class="theme-dot" data-theme="amber" title="Amber" aria-label="Amber accent"></button>
+      </div>
+      <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch language"><i class="fas fa-language" aria-hidden="true"></i><span class="lang-en">中文</span><span class="lang-zh">EN</span></button>
+    </div>
+
     {% include scripts.html %}
+    <script>
+      (function () {
+        var themes = ['indigo', 'ruby', 'ocean', 'emerald', 'rose', 'amber'];
+        var languageButton = document.getElementById('lang-toggle');
+        var themeButtons = Array.prototype.slice.call(document.querySelectorAll('.theme-dot'));
+        var progressBar = document.getElementById('scroll-progress-bar');
+        var progressFrame;
+        function updateScrollProgress() {
+          progressFrame = null;
+          if (!progressBar) return;
+          var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+          var progress = documentHeight > 0 ? Math.min(100, Math.max(0, scrollTop / documentHeight * 100)) : 0;
+          progressBar.style.width = progress + '%';
+        }
+        function requestScrollProgressUpdate() {
+          if (!progressFrame) progressFrame = window.requestAnimationFrame(updateScrollProgress);
+        }
+        function setLanguage(language) {
+          var isChinese = language === 'zh';
+          document.body.classList.toggle('zh', isChinese);
+          document.documentElement.setAttribute('lang', isChinese ? 'zh-CN' : 'en');
+          document.querySelectorAll('[data-label-en][data-label-zh]').forEach(function (element) {
+            element.setAttribute('aria-label', element.getAttribute(isChinese ? 'data-label-zh' : 'data-label-en'));
+          });
+          document.querySelectorAll('[data-en][data-zh]').forEach(function (element) {
+            element.textContent = element.getAttribute(isChinese ? 'data-zh' : 'data-en');
+          });
+          document.dispatchEvent(new CustomEvent('site-language-change', { detail: { language: isChinese ? 'zh' : 'en' } }));
+          try { localStorage.setItem('site-lang', isChinese ? 'zh' : 'en'); } catch (error) {}
+        }
+        function setTheme(theme) {
+          if (themes.indexOf(theme) === -1) theme = 'indigo';
+          document.documentElement.setAttribute('data-theme', theme);
+          themeButtons.forEach(function (button) { button.classList.toggle('active', button.getAttribute('data-theme') === theme); });
+          try { localStorage.setItem('site-theme', theme); } catch (error) {}
+        }
+        var savedLanguage = 'en';
+        var savedTheme = 'indigo';
+        try {
+          savedLanguage = localStorage.getItem('site-lang') || 'en';
+          savedTheme = localStorage.getItem('site-theme') || 'indigo';
+        } catch (error) {}
+        var languageMatch = location.search.match(/[?&]lang=(zh|en)\b/);
+        var themeMatch = location.search.match(/[?&]theme=(ruby|indigo|ocean|emerald|rose|amber)\b/);
+        setLanguage(languageMatch ? languageMatch[1] : savedLanguage);
+        setTheme(themeMatch ? themeMatch[1] : savedTheme);
+        if (languageButton) languageButton.addEventListener('click', function () { setLanguage(document.body.classList.contains('zh') ? 'en' : 'zh'); });
+        themeButtons.forEach(function (button) { button.addEventListener('click', function () { setTheme(this.getAttribute('data-theme')); }); });
+        window.addEventListener('scroll', requestScrollProgressUpdate, { passive: true });
+        window.addEventListener('resize', requestScrollProgressUpdate);
+        updateScrollProgress();
+      })();
+    </script>
   </body>
 </html>
