@@ -248,19 +248,21 @@ redirect_from:
         <p class="news-row-date">CVPRW 2026</p>
         <p class="news-row-text">
           NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Professional Image Quality Assessment
-          <br>
-          <a href="https://openaccess.thecvf.com/content/CVPR2026W/NTIRE/papers/Qin_NTIRE_2026_The_3rd_Restore_Any_Image_Model_RAIM_Challenge_CVPRW_2026_paper.pdf">[arXiv]</a>
-          <a href="https://www.codabench.org/competitions/12789/">[Competition]</a>
         </p>
+        <div class="meta report-actions">
+          <a class="chip chip-arxiv" href="https://openaccess.thecvf.com/content/CVPR2026W/NTIRE/papers/Qin_NTIRE_2026_The_3rd_Restore_Any_Image_Model_RAIM_Challenge_CVPRW_2026_paper.pdf"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a>
+          <a class="chip chip-page" href="https://www.codabench.org/competitions/12789/"><i class="fas fa-trophy" aria-hidden="true"></i>Competition</a>
+        </div>
       </article>
       <article class="news-row-card">
         <p class="news-row-date">CVPRW 2026</p>
         <p class="news-row-text">
           NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Multi-Exposure Image Fusion in Dynamic Scenes
-          <br>
-          <a href="https://arxiv.org/abs/2604.09030">[arXiv]</a>
-          <a href="https://www.codabench.org/competitions/12728/">[Competition]</a>
         </p>
+        <div class="meta report-actions">
+          <a class="chip chip-arxiv" href="https://arxiv.org/abs/2604.09030"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a>
+          <a class="chip chip-page" href="https://www.codabench.org/competitions/12728/"><i class="fas fa-trophy" aria-hidden="true"></i>Competition</a>
+        </div>
       </article>
       <article class="news-row-card">
         <p class="news-row-date">CVPRW 2026</p>
