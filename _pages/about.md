@@ -268,10 +268,11 @@ redirect_from:
         <p class="news-row-date">CVPRW 2026</p>
         <p class="news-row-text">
           NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: AI Flash Portrait
-          <br>
-          <a href="https://arxiv.org/abs/2604.11230">[arXiv]</a>
-          <a href="https://www.codabench.org/competitions/12885/">[Competition]</a>
         </p>
+        <div class="meta report-actions">
+          <a class="chip chip-arxiv" href="https://arxiv.org/abs/2604.11230"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a>
+          <a class="chip chip-page" href="https://www.codabench.org/competitions/12885/"><i class="fas fa-trophy" aria-hidden="true"></i>Competition</a>
+        </div>
       </article>
     </div>
   </div>
@@ -309,7 +310,7 @@ Shihao Zhou, Dayu Li, Juncheng Zhou, **Lishen Qu**, Jie Liang, Hui Zeng, Jufeng 
 
 # 💼 Experiences
 
-<div class='paper-box paper-box--brand'><div class='paper-box-image'><div><img src='project/static/images/oppo.png' alt="OPPO"></div></div>
+<div class='paper-box paper-box--brand paper-box--compact'><div class='paper-box-image'><div><img src='project/static/images/oppo.png' alt="OPPO"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Research Scientist/Engineer Intern** \| OPPO Research Institute, Y Lab.
@@ -340,7 +341,7 @@ Time: _2025.07 - (now)_
 
 # 📖 Educations
 
-<div class='paper-box paper-box--brand'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
+<div class='paper-box paper-box--brand paper-box--compact'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Master Student, Computer Science and Technology** \| Nankai University.
@@ -350,7 +351,7 @@ Time: _2024.09 - (now)_
 </div>
 </div>
 
-<div class='paper-box paper-box--brand'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
+<div class='paper-box paper-box--brand paper-box--compact'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Bachelor's Degree, Software Engineering** \| Nankai University.
