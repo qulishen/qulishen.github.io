@@ -17,7 +17,7 @@ redirect_from:
 
 <header class="hero-profile" id="about-me">
   <div class="hero-profile__aside">
-    <img class="hero-profile__avatar" src="images/zipai.jpg" alt="Lishen Qu">
+    <img class="hero-profile__avatar" src="images/xinyi.jpg" alt="Lishen Qu">
     <div class="hero-profile__socials" aria-label="Contact links">
       <a href="{{ site.author.googlescholar }}" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
       <a href="https://github.com/qulishen/" title="GitHub" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
