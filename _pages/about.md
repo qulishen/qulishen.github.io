@@ -52,10 +52,10 @@ redirect_from:
         <span class="profile-stat__value"><i class="fas fa-star" aria-hidden="true"></i><strong id="total_github_stars">—</strong></span>
         <span>GitHub Stars</span>
       </a>
-      <a href="mailto:{{ site.author.email }}">
-        <span class="profile-stat__value"><i class="fas fa-handshake" aria-hidden="true"></i><strong><span class="lang-en">Open</span><span class="lang-zh">欢迎</span></strong></span>
-        <span><span class="lang-en">to Collaborate</span><span class="lang-zh">合作交流</span></span>
-      </a>
+      <div class="profile-stat--visits">
+        <span class="profile-stat__value"><i class="fas fa-chart-line" aria-hidden="true"></i><strong id="recent_visits" aria-live="polite">—</strong></span>
+        <span><span class="lang-en">Visits · 30 days</span><span class="lang-zh">近 30 天访问</span></span>
+      </div>
     </div>
   </div>
 </header>
