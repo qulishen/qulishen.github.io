@@ -1,0 +1,67 @@
+name: Update Site Statistics
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site-statistics
+  cancel-in-progress: false
+
+jobs:
+  update-statistics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: google-auth
+        name: Authenticate Google Analytics request
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
+          token_format: access_token
+
+      - name: Fetch Google Analytics sessions and GitHub stars
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$GA4_PROPERTY_ID" =~ ^[0-9]+$ ]]; then
+            echo "GA4_PROPERTY_ID must be the numeric GA4 property ID." >&2
+            exit 1
+          fi
+
+          response="$(curl --fail-with-body --silent --show-error \
+            --request POST "https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport" \
+            --header "Authorization: Bearer $GOOGLE_ACCESS_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data '{"dateRanges":[{"startDate":"30daysAgo","endDate":"yesterday"}],"metrics":[{"name":"sessions"}]}')"
+          if ! visits="$(jq --exit-status --raw-output \
+            '.rows[0].metricValues[0].value // "0"' <<< "$response")"; then
+            jq '{error, error_description}' <<< "$response" >&2
+            exit 1
+          fi
+
+          github_stars="$(gh api --paginate "users/qulishen/repos?per_page=100" \
+            --jq '.[].stargazers_count' | awk '{ total += $1 } END { print total + 0 }')"
+          jq --null-input --argjson visits "$visits" --argjson githubStars "$github_stars" \
+            --arg updatedAt "$(date --utc --iso-8601=seconds)" \
+            '{visits: $visits, githubStars: $githubStars, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
+
+      - name: Commit updated statistics
+        run: |
+          git add assets/data/visits.json
+          if git diff --cached --quiet -- assets/data/visits.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update site statistics"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push

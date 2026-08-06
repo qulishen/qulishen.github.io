@@ -11,8 +11,8 @@ description              : "Time is a great teacher, but unfortunately it kills 
 repository               : "qulishen/qulishen.github.io"
 google_scholar_stats_use_cdn : true
 
-# google analytics
-google_analytics_id      : xf1FSRYAAAAJ # get google_analytics_id from https://analytics.google.com/analytics/
+# Analytics
+google_analytics_id      : G-FMSLR180WZ # 填入 GA4 Measurement ID，例如 G-XXXXXXXXXX
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
