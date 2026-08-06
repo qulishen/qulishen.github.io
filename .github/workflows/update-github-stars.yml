@@ -1,0 +1,46 @@
+name: Update GitHub Stars
+
+on:
+  schedule:
+    - cron: "37 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-data-commit
+  cancel-in-progress: false
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch GitHub stars
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          github_stars="$(gh api --paginate "users/qulishen/repos?per_page=100" \
+            --jq '.[].stargazers_count' | awk '{ total += $1 } END { print total + 0 }')"
+          mkdir -p assets/data
+          jq --null-input --argjson githubStars "$github_stars" \
+            --arg updatedAt "$(date --utc --iso-8601=seconds)" \
+            '{githubStars: $githubStars, updatedAt: $updatedAt}' > assets/data/github-stars.json
+
+      - name: Commit updated stars
+        run: |
+          set -euo pipefail
+          git add assets/data/github-stars.json
+          if git diff --cached --quiet -- assets/data/github-stars.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update GitHub stars"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push

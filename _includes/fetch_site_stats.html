@@ -3,31 +3,42 @@
     "use strict";
 
     function updateSiteStats() {
-      var visitsEl = document.getElementById("recent_visits");
+      var requestsEl = document.getElementById("recent_requests");
       var starsEl = document.getElementById("total_github_stars");
-      if ((!visitsEl && !starsEl) || !window.fetch) return;
+      if ((!requestsEl && !starsEl) || !window.fetch) return;
 
-      fetch("{{ '/assets/data/visits.json' | relative_url }}", {
-        cache: "no-store",
-        headers: { Accept: "application/json" }
-      })
+      function fetchStats(path) {
+        return fetch(path, {
+          cache: "no-store",
+          headers: { Accept: "application/json" }
+        })
         .then(function (response) {
           if (!response.ok) throw new Error("Site statistics request failed");
           return response.json();
-        })
-        .then(function (data) {
-          if (!data) throw new Error("Site statistics response is invalid");
-          if (visitsEl && typeof data.visits === "number") {
-            visitsEl.textContent = new Intl.NumberFormat().format(data.visits);
-          }
-          if (starsEl && typeof data.githubStars === "number") {
-            starsEl.textContent = new Intl.NumberFormat().format(data.githubStars);
-          }
-        })
-        .catch(function () {
-          if (visitsEl) visitsEl.textContent = "—";
-          if (starsEl) starsEl.textContent = "—";
         });
+      }
+
+      if (requestsEl) {
+        fetchStats("{{ '/assets/data/visits.json' | relative_url }}")
+          .then(function (data) {
+            if (typeof data.requests !== "number") throw new Error("Request statistics response is invalid");
+            requestsEl.textContent = new Intl.NumberFormat().format(data.requests);
+          })
+          .catch(function () {
+            requestsEl.textContent = "—";
+          });
+      }
+
+      if (starsEl) {
+        fetchStats("{{ '/assets/data/github-stars.json' | relative_url }}")
+          .then(function (data) {
+            if (typeof data.githubStars !== "number") throw new Error("GitHub Stars response is invalid");
+            starsEl.textContent = new Intl.NumberFormat().format(data.githubStars);
+          })
+          .catch(function () {
+            starsEl.textContent = "—";
+          });
+      }
     }
 
     if (document.readyState === "loading") {

@@ -1,4 +1,4 @@
-name: Update Site Statistics
+name: Update Cloudflare Requests
 
 on:
   schedule:
@@ -9,59 +9,77 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-site-statistics
+  group: site-data-commit
   cancel-in-progress: false
 
 jobs:
-  update-statistics:
+  update-requests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - id: google-auth
-        name: Authenticate Google Analytics request
-        uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
-          token_format: access_token
+          fetch-depth: 0
 
-      - name: Fetch Google Analytics sessions and GitHub stars
+      - name: Fetch Cloudflare HTTP requests
         env:
-          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
-          GH_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         run: |
           set -euo pipefail
-          if [[ ! "$GA4_PROPERTY_ID" =~ ^[0-9]+$ ]]; then
-            echo "GA4_PROPERTY_ID must be the numeric GA4 property ID." >&2
+          if [[ ! "$CLOUDFLARE_ZONE_ID" =~ ^[a-f0-9]{32}$ ]]; then
+            echo "CLOUDFLARE_ZONE_ID must be the 32-character Zone ID for qulishen.top." >&2
             exit 1
           fi
 
+          start="$(date --utc --date='30 days ago + 5 minutes' '+%Y-%m-%dT%H:%M:%SZ')"
+          end="$(date --utc '+%Y-%m-%dT%H:%M:%SZ')"
+          query='query RecentRequests($zoneTag: string, $start: Time, $end: Time) {
+            viewer {
+              zones(filter: { zoneTag: $zoneTag }) {
+                httpRequestsAdaptiveGroups(
+                  limit: 1
+                  filter: {
+                    datetime_geq: $start
+                    datetime_lt: $end
+                    requestSource: "eyeball"
+                  }
+                ) {
+                  count
+                }
+              }
+            }
+          }'
+          payload="$(jq -n \
+            --arg query "$query" \
+            --arg zoneTag "$CLOUDFLARE_ZONE_ID" \
+            --arg start "$start" \
+            --arg end "$end" \
+            '{query: $query, variables: {zoneTag: $zoneTag, start: $start, end: $end}}')"
           response="$(curl --fail-with-body --silent --show-error \
-            --request POST "https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY_ID}:runReport" \
-            --header "Authorization: Bearer $GOOGLE_ACCESS_TOKEN" \
+            --request POST "https://api.cloudflare.com/client/v4/graphql" \
+            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             --header "Content-Type: application/json" \
-            --data '{"dateRanges":[{"startDate":"30daysAgo","endDate":"yesterday"}],"metrics":[{"name":"sessions"}]}')"
-          if ! visits="$(jq --exit-status --raw-output \
-            '.rows[0].metricValues[0].value // "0"' <<< "$response")"; then
-            jq '{error, error_description}' <<< "$response" >&2
+            --data "$payload")"
+          if ! requests="$(jq --exit-status --raw-output \
+            '.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].count' <<< "$response")"; then
+            jq '{errors}' <<< "$response" >&2
             exit 1
           fi
 
-          github_stars="$(gh api --paginate "users/qulishen/repos?per_page=100" \
-            --jq '.[].stargazers_count' | awk '{ total += $1 } END { print total + 0 }')"
-          jq --null-input --argjson visits "$visits" --argjson githubStars "$github_stars" \
+          mkdir -p assets/data
+          jq --null-input --argjson requests "$requests" \
             --arg updatedAt "$(date --utc --iso-8601=seconds)" \
-            '{visits: $visits, githubStars: $githubStars, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
+            '{requests: $requests, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
 
       - name: Commit updated statistics
         run: |
+          set -euo pipefail
           git add assets/data/visits.json
           if git diff --cached --quiet -- assets/data/visits.json; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update site statistics"
+          git commit -m "chore: update Cloudflare request statistics"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push
