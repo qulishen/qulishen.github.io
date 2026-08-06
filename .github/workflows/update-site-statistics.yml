@@ -1,4 +1,4 @@
-name: Update Cloudflare Requests
+name: Update Cloudflare Unique Visitors
 
 on:
   schedule:
@@ -13,14 +13,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-requests:
+  update-unique-visitors:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Fetch Cloudflare HTTP requests
+      - name: Fetch Cloudflare unique visitors
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
@@ -30,13 +30,17 @@ jobs:
             echo "CLOUDFLARE_ZONE_ID must be the 32-character Zone ID for qulishen.top." >&2
             exit 1
           fi
+          if [[ -z "$CLOUDFLARE_API_TOKEN" ]]; then
+            echo "CLOUDFLARE_API_TOKEN is not configured." >&2
+            exit 1
+          fi
 
           start="$(date --utc --date='30 days ago + 5 minutes' '+%Y-%m-%dT%H:%M:%SZ')"
           end="$(date --utc '+%Y-%m-%dT%H:%M:%SZ')"
-          query='query RecentRequests($zoneTag: string, $start: Time, $end: Time) {
+          query='query RecentUniqueVisitors($zoneTag: string, $start: Time, $end: Time) {
             viewer {
               zones(filter: { zoneTag: $zoneTag }) {
-                httpRequestsAdaptiveGroups(
+                httpRequests1mGroups(
                   limit: 1
                   filter: {
                     datetime_geq: $start
@@ -44,7 +48,9 @@ jobs:
                     requestSource: "eyeball"
                   }
                 ) {
-                  count
+                  uniq {
+                    uniques
+                  }
                 }
               }
             }
@@ -55,21 +61,24 @@ jobs:
             --arg start "$start" \
             --arg end "$end" \
             '{query: $query, variables: {zoneTag: $zoneTag, start: $start, end: $end}}')"
-          response="$(curl --fail-with-body --silent --show-error \
+          if ! response="$(curl --fail-with-body --silent --show-error \
             --request POST "https://api.cloudflare.com/client/v4/graphql" \
             --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             --header "Content-Type: application/json" \
-            --data "$payload")"
-          if ! requests="$(jq --exit-status --raw-output \
-            '.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].count' <<< "$response")"; then
-            jq '{errors}' <<< "$response" >&2
+            --data "$payload")"; then
+            printf '%s\n' "$response" >&2
+            exit 1
+          fi
+          if ! unique_visitors="$(jq --exit-status --raw-output \
+            '.data.viewer.zones[0].httpRequests1mGroups[0].uniq.uniques' <<< "$response")"; then
+            jq '{errors, data}' <<< "$response" >&2
             exit 1
           fi
 
           mkdir -p assets/data
-          jq --null-input --argjson requests "$requests" \
+          jq --null-input --argjson uniqueVisitors "$unique_visitors" \
             --arg updatedAt "$(date --utc --iso-8601=seconds)" \
-            '{requests: $requests, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
+            '{uniqueVisitors: $uniqueVisitors, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
 
       - name: Commit updated statistics
         run: |
@@ -80,6 +89,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update Cloudflare request statistics"
+          git commit -m "chore: update Cloudflare unique visitors"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push
