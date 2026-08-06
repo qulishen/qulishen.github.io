@@ -1,4 +1,4 @@
-name: Update Cloudflare Unique Visitors
+name: Update Cloudflare Visits
 
 on:
   schedule:
@@ -13,14 +13,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-unique-visitors:
+  update-visits:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Fetch Cloudflare unique visitors
+      - name: Fetch Cloudflare visits
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
@@ -35,12 +35,12 @@ jobs:
             exit 1
           fi
 
-          start="$(date --utc --date='30 days ago + 5 minutes' '+%Y-%m-%dT%H:%M:%SZ')"
+          start="$(date --utc --date='30 days ago + 1 hour' '+%Y-%m-%dT%H:%M:%SZ')"
           end="$(date --utc '+%Y-%m-%dT%H:%M:%SZ')"
-          query='query RecentUniqueVisitors($zoneTag: string, $start: Time, $end: Time) {
+          query='query RecentVisits($zoneTag: string, $start: Time, $end: Time) {
             viewer {
               zones(filter: { zoneTag: $zoneTag }) {
-                httpRequests1mGroups(
+                httpRequestsAdaptiveGroups(
                   limit: 1
                   filter: {
                     datetime_geq: $start
@@ -48,8 +48,8 @@ jobs:
                     requestSource: "eyeball"
                   }
                 ) {
-                  uniq {
-                    uniques
+                  sum {
+                    visits
                   }
                 }
               }
@@ -69,16 +69,16 @@ jobs:
             printf '%s\n' "$response" >&2
             exit 1
           fi
-          if ! unique_visitors="$(jq --exit-status --raw-output \
-            '.data.viewer.zones[0].httpRequests1mGroups[0].uniq.uniques' <<< "$response")"; then
+          if ! visits="$(jq --exit-status --raw-output \
+            '.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].sum.visits' <<< "$response")"; then
             jq '{errors, data}' <<< "$response" >&2
             exit 1
           fi
 
           mkdir -p assets/data
-          jq --null-input --argjson uniqueVisitors "$unique_visitors" \
+          jq --null-input --argjson visits "$visits" \
             --arg updatedAt "$(date --utc --iso-8601=seconds)" \
-            '{uniqueVisitors: $uniqueVisitors, periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
+            '{visits: ($visits | round), periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
 
       - name: Commit updated statistics
         run: |
@@ -89,6 +89,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update Cloudflare unique visitors"
+          git commit -m "chore: update Cloudflare visits"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push

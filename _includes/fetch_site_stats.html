@@ -3,9 +3,9 @@
     "use strict";
 
     function updateSiteStats() {
-      var uniqueVisitorsEl = document.getElementById("recent_unique_visitors");
+      var visitsEl = document.getElementById("recent_visits");
       var starsEl = document.getElementById("total_github_stars");
-      if ((!uniqueVisitorsEl && !starsEl) || !window.fetch) return;
+      if ((!visitsEl && !starsEl) || !window.fetch) return;
 
       function fetchStats(path) {
         return fetch(path, {
@@ -18,14 +18,14 @@
         });
       }
 
-      if (uniqueVisitorsEl) {
+      if (visitsEl) {
         fetchStats("{{ '/assets/data/visits.json' | relative_url }}")
           .then(function (data) {
-            if (typeof data.uniqueVisitors !== "number") throw new Error("Unique visitor statistics response is invalid");
-            uniqueVisitorsEl.textContent = new Intl.NumberFormat().format(data.uniqueVisitors);
+            if (typeof data.visits !== "number") throw new Error("Visit statistics response is invalid");
+            visitsEl.textContent = new Intl.NumberFormat().format(data.visits);
           })
           .catch(function () {
-            uniqueVisitorsEl.textContent = "—";
+            visitsEl.textContent = "—";
           });
       }
 
