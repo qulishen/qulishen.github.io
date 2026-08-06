@@ -15,6 +15,7 @@ concurrency:
 jobs:
   update-visits:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,9 +36,7 @@ jobs:
             exit 1
           fi
 
-          start="$(date --utc --date='30 days ago + 1 hour' '+%Y-%m-%dT%H:%M:%SZ')"
-          end="$(date --utc '+%Y-%m-%dT%H:%M:%SZ')"
-          query='query RecentVisits($zoneTag: string, $start: Time, $end: Time) {
+          query='query DailyVisits($zoneTag: string, $start: Time, $end: Time) {
             viewer {
               zones(filter: { zoneTag: $zoneTag }) {
                 httpRequestsAdaptiveGroups(
@@ -55,30 +54,47 @@ jobs:
               }
             }
           }'
-          payload="$(jq -n \
-            --arg query "$query" \
-            --arg zoneTag "$CLOUDFLARE_ZONE_ID" \
-            --arg start "$start" \
-            --arg end "$end" \
-            '{query: $query, variables: {zoneTag: $zoneTag, start: $start, end: $end}}')"
-          if ! response="$(curl --fail-with-body --silent --show-error \
-            --request POST "https://api.cloudflare.com/client/v4/graphql" \
-            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            --header "Content-Type: application/json" \
-            --data "$payload")"; then
-            printf '%s\n' "$response" >&2
-            exit 1
-          fi
-          if ! visits="$(jq --exit-status --raw-output \
-            '.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].sum.visits' <<< "$response")"; then
-            jq '{errors, data}' <<< "$response" >&2
-            exit 1
-          fi
+          period_days=30
+          today="$(date --utc '+%Y-%m-%d')"
+          visits_total=0
+
+          for day_offset in $(seq "$period_days" -1 1); do
+            start="$(date --utc --date="${today} -${day_offset} days" '+%Y-%m-%dT00:00:00Z')"
+            end="$(date --utc --date="${today} -$((day_offset - 1)) days" '+%Y-%m-%dT00:00:00Z')"
+            payload="$(jq -n \
+              --arg query "$query" \
+              --arg zoneTag "$CLOUDFLARE_ZONE_ID" \
+              --arg start "$start" \
+              --arg end "$end" \
+              '{query: $query, variables: {zoneTag: $zoneTag, start: $start, end: $end}}')"
+            if ! response="$(curl --fail-with-body --silent --show-error \
+              --retry 3 --retry-delay 2 --retry-all-errors --max-time 30 \
+              --request POST "https://api.cloudflare.com/client/v4/graphql" \
+              --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              --header "Content-Type: application/json" \
+              --data "$payload")"; then
+              printf '%s\n' "$response" >&2
+              exit 1
+            fi
+            if jq --exit-status '.errors and (.errors | length > 0)' <<< "$response" >/dev/null; then
+              echo "Cloudflare visit query failed for ${start} to ${end}." >&2
+              jq '{errors}' <<< "$response" >&2
+              exit 1
+            fi
+            if ! daily_visits="$(jq --raw-output \
+              '(.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].sum.visits) // 0' <<< "$response")"; then
+              echo "Cloudflare returned an invalid response for ${start} to ${end}." >&2
+              printf '%s\n' "$response" >&2
+              exit 1
+            fi
+            visits_total="$(jq --null-input --argjson total "$visits_total" --argjson daily "$daily_visits" '$total + $daily')"
+          done
 
           mkdir -p assets/data
-          jq --null-input --argjson visits "$visits" \
+          jq --null-input --argjson visits "$visits_total" \
             --arg updatedAt "$(date --utc --iso-8601=seconds)" \
-            '{visits: ($visits | round), periodDays: 30, updatedAt: $updatedAt}' > assets/data/visits.json
+            --argjson periodDays "$period_days" \
+            '{visits: ($visits | round), periodDays: $periodDays, updatedAt: $updatedAt}' > assets/data/visits.json
 
       - name: Commit updated statistics
         run: |
