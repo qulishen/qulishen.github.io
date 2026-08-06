@@ -54,7 +54,7 @@ jobs:
               }
             }
           }'
-          period_days=30
+          period_days=7
           today="$(date --utc '+%Y-%m-%d')"
           visits_total=0
 
@@ -81,10 +81,27 @@ jobs:
               jq '{errors}' <<< "$response" >&2
               exit 1
             fi
-            if ! daily_visits="$(jq --raw-output \
-              '(.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].sum.visits) // 0' <<< "$response")"; then
-              echo "Cloudflare returned an invalid response for ${start} to ${end}." >&2
-              printf '%s\n' "$response" >&2
+            if ! jq --exit-status '.data.viewer.zones | length == 1' <<< "$response" >/dev/null; then
+              echo "Cloudflare returned no accessible zone; check CLOUDFLARE_ZONE_ID and token scope." >&2
+              jq '{data}' <<< "$response" >&2
+              exit 1
+            fi
+            if ! jq --exit-status \
+              '(.data.viewer.zones[0].httpRequestsAdaptiveGroups | type) == "array"' \
+              <<< "$response" >/dev/null; then
+              echo "Cloudflare returned no Analytics dataset; check token analytics scope." >&2
+              jq '{data}' <<< "$response" >&2
+              exit 1
+            fi
+            if jq --exit-status \
+              '(.data.viewer.zones[0].httpRequestsAdaptiveGroups | length) == 0' \
+              <<< "$response" >/dev/null; then
+              daily_visits=0
+            elif ! daily_visits="$(jq --exit-status --raw-output \
+              '.data.viewer.zones[0].httpRequestsAdaptiveGroups[0].sum.visits | select(type == "number")' \
+              <<< "$response")"; then
+              echo "Cloudflare returned invalid visit data for ${start} to ${end}." >&2
+              jq '{data}' <<< "$response" >&2
               exit 1
             fi
             visits_total="$(jq --null-input --argjson total "$visits_total" --argjson daily "$daily_visits" '$total + $daily')"

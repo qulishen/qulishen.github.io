@@ -54,7 +54,7 @@ redirect_from:
       </a>
       <div class="profile-stat--visits">
         <span class="profile-stat__value"><i class="fas fa-chart-line" aria-hidden="true"></i><strong id="recent_visits" aria-live="polite">—</strong></span>
-        <span><span class="lang-en">Visits · 30 days</span><span class="lang-zh">近 30 天访问量</span></span>
+        <span><span class="lang-en">Visits · 7 days</span><span class="lang-zh">近 7 天访问量</span></span>
       </div>
     </div>
   </div>
