@@ -57,12 +57,14 @@ redirect_from:
         <span><span class="lang-en">Visits · 7 days</span><span class="lang-zh">近 7 天访问量</span></span>
       </div>
     </div>
+
   </div>
 </header>
 
 <div class="section-heading"><span>✦</span><h2 id="news"><span class="lang-en">News</span><span class="lang-zh">最新动态</span></h2></div>
 
 <ul class="news-feed">
+  <li><time>2026.09</time><span class="lang-en">I will attend ECCV 2026 in Malmö, Sweden. Welcome to chat!</span><span class="lang-zh">我将参加在瑞典马尔默举办的 ECCV 2026，欢迎交流！</span></li>
   <li class="is-highlight"><time>2026.06</time><span class="lang-en"><strong>2 papers</strong> are accepted to ECCV 2026.</span><span class="lang-zh"><strong>2 篇论文</strong>被 ECCV 2026 接收。</span></li>
   <li><time>2026.06</time><span class="lang-en">I will attend CVPR 2026 in Denver and give an oral presentation at the NTIRE 2026 Workshop. Welcome to join!</span><span class="lang-zh">我将参加在丹佛举办的 CVPR 2026，并在 NTIRE 2026 Workshop 作口头报告，欢迎交流！</span></li>
   <li class="is-highlight"><time>2026.02</time><span class="lang-en"><strong>1 paper</strong> is accepted to CVPR 2026.</span><span class="lang-zh"><strong>1 篇论文</strong>被 CVPR 2026 接收。</span></li>
