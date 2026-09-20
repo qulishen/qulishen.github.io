@@ -380,14 +380,14 @@ redirect_from:
 <div class='paper-box paper-box--brand paper-box--compact'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
 <div class='paper-box-text'>
   <p><strong><span class="lang-en">PhD Student, Computer Technology</span><span class="lang-zh">计算机技术博士研究生</span></strong> | <span class="lang-en">Nankai University</span><span class="lang-zh">南开大学</span></p>
-  <p><span class="lang-en">Time: <em>2024.09 - (now)</em></span><span class="lang-zh">时间：<em>2024.09 - 至今</em></span></p>
+  <p><span class="lang-en">Time: <em>2026.09 - (now)</em></span><span class="lang-zh">时间：<em>2024.09 - 至今</em></span></p>
 </div>
 </div>
 
 <div class='paper-box paper-box--brand paper-box--compact'><div class='paper-box-image'><div><img src='project/static/images/nankai.png' alt="Nankai University"></div></div>
 <div class='paper-box-text'>
   <p><strong><span class="lang-en">Master Student, Computer Science and Technology</span><span class="lang-zh">计算机科学与技术硕士研究生</span></strong> | <span class="lang-en">Nankai University</span><span class="lang-zh">南开大学</span></p>
-  <p><span class="lang-en">Time: <em>2024.09 - (now)</em></span><span class="lang-zh">时间：<em>2024.09 - 至今</em></span></p>
+  <p><span class="lang-en">Time: <em>2024.09 - 2026.06</em></span><span class="lang-zh">时间：<em>2024.09 - 至今</em></span></p>
 </div>
 </div>
 
