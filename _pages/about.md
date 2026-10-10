@@ -317,6 +317,24 @@ redirect_from:
           <a class="chip chip-page" href="https://www.codabench.org/competitions/12885/"><i class="fas fa-trophy" aria-hidden="true"></i><span class="lang-en">Competition</span><span class="lang-zh">竞赛</span></a>
         </div>
       </article>
+      <article class="news-row-card">
+        <p class="news-row-date">ICCVW 2025</p>
+        <p class="news-row-text lang-en">AIM 2025 challenge on robust offline video super-resolution: Dataset, methods and results</p>
+        <p class="news-row-text lang-zh">2025 AIM 挑战赛关于鲁棒性离线视频超分辨率：数据集、方法和结果</p>
+        <div class="meta report-actions">
+          <a class="chip chip-arxiv" href="https://ieeexplore.ieee.org/abstract/document/11375189/"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a>
+          <a class="chip chip-page" href="https://www.cvlai.net/aim/2025/"><i class="fas fa-trophy" aria-hidden="true"></i><span class="lang-en">Competition</span><span class="lang-zh">竞赛</span></a>
+        </div>
+      </article>
+      <article class="news-row-card">
+        <p class="news-row-date">ICCVW 2025</p>
+        <p class="news-row-text lang-en">AIM 2025 Challenge on High FPS Motion Deblurring: Methods and Results</p>
+        <p class="news-row-text lang-zh">2025年AIM高帧率运动去模糊挑战：方法与结果</p>
+        <div class="meta report-actions">
+          <a class="chip chip-arxiv" href="https://ieeexplore.ieee.org/abstract/document/11375608/"><i class="ai ai-arxiv" aria-hidden="true"></i>arXiv</a>
+          <a class="chip chip-page" href="https://www.cvlai.net/aim/2025/"><i class="fas fa-trophy" aria-hidden="true"></i><span class="lang-en">Competition</span><span class="lang-zh">竞赛</span></a>
+        </div>
+      </article>
     </div>
   </div>
 
