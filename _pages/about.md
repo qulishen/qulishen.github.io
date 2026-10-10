@@ -365,11 +365,12 @@ redirect_from:
   </div>
   <div class="award-card">
     <div class="award-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
-    <div><div class="award-title"><span class="lang-en">Gold Award, Huawei Ascend AI Innovation Competition</span><span class="lang-zh">华为昇腾 AI 创新大赛金奖</span></div><div class="award-sub"><span class="lang-en">Tianjin Division.</span><span class="lang-zh">天津赛区。</span></div><div class="award-year">2024.11</div></div>
+    <div><div class="award-title"><span class="lang-en">National Scholarship</span><span class="lang-zh">国家奖学金</span></div><div class="award-sub"><span class="lang-en"> — highest scholarship from the Ministry of Education, China.</span><span class="lang-zh">教育部最高奖学金。</span></div><div class="award-year">2026.10</div></div>
   </div>
 </div>
 
 <ul class="info-list">
+  <li><span class="when">2024.06</span><span class="lang-en"><strong>Gold Award, Huawei Ascend AI Innovation Competitiond</strong>, Tianjin Division.</span><span class="lang-zh"><strong>华为昇腾 AI 创新大赛金奖</strong>，天津赛区。</span></li>
   <li><span class="when">2024.06</span><span class="lang-en"><strong>Outstanding Undergraduate Thesis Award</strong>, Nankai University.</span><span class="lang-zh"><strong>本科优秀毕业论文奖</strong>，南开大学。</span></li>
   <li><span class="when">2023.09</span><span class="lang-en"><strong>Huawei “Intelligent Foundation” Scholarship</strong>.</span><span class="lang-zh"><strong>华为“智能基座”奖学金</strong>。</span></li>
   <li><span class="when">2022.09</span><span class="lang-en"><strong>SK Telecom Artificial Intelligence Scholarship</strong>, South Korea.</span><span class="lang-zh"><strong>SK Telecom 人工智能奖学金</strong>，韩国。</span></li>
