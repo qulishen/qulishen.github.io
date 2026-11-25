@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include seo.html %}
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101722">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | relative_url }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/home.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span class="lang-en">Skip to content</span><span class="lang-zh">跳至正文</span></a>
+  {% capture home_navigation %}
+    {% for link in site.data.navigation.main %}
+      <a href="{{ link.url | remove_first: '/' }}"><span class="lang-en">{{ link.title }}</span><span class="lang-zh">{{ link.title_zh | default: link.title }}</span></a>
+    {% endfor %}
+  {% endcapture %}
+  {% include site-header.html home_url="#about-me" navigation=home_navigation %}
+  <main id="main" tabindex="-1">
+    {{ content }}
+  </main>
+  <footer class="site-footer frame">
+    <a href="#about-me"><span class="lang-en">Back to top</span><span class="lang-zh">返回顶部</span></a>
+  </footer>
+  <span id="citation-source" hidden data-url="{% if site.google_scholar_stats_use_cdn %}https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json{% else %}https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json{% endif %}"></span>
+  {% include fetch_site_stats.html %}
+  {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
+</body>
+</html>

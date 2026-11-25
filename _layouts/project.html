@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ page.title | escape }} · Lishen Qu</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.teaser | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | relative_url }}" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}">
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/project.js' | relative_url }}" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main"><span class="lang-en">Skip to content</span><span class="lang-zh">跳至正文</span></a>
+  {% assign home_url = '/' | relative_url %}
+  {% capture project_navigation %}
+    <a href="{{ home_url }}#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文列表</span></a>
+    <a href="#overview"><span class="lang-en">Overview</span><span class="lang-zh">项目概述</span></a>
+    <a href="#results"><span class="lang-en">Results</span><span class="lang-zh">研究成果</span></a>
+    <a href="#BibTeX">BibTeX</a>
+  {% endcapture %}
+  {% include site-header.html home_url=home_url navigation=project_navigation %}
+  <main id="main" tabindex="-1">
+    <header class="project-hero" id="top">
+      <div class="project-hero__inner frame">
+        <div>
+          <p class="project-venue">{{ page.venue | escape }}{% if page.award %} <strong class="achievement">{{ page.award | escape }}</strong>{% endif %}</p>
+          <h1>{{ page.title | escape }}</h1>
+          <p class="project-authors">
+            {% for author in page.authors %}
+              <span class="project-author">{% if author.self %}<strong><a href="{{ home_url }}#about-me">{{ author.name | escape }}</a></strong>{% elsif author.url %}<a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name | escape }}</a>{% else %}{{ author.name | escape }}{% endif %}{% if author.note %}<sup>{{ author.note | escape }}</sup>{% endif %}{% unless forloop.last %},{% endunless %}</span>
+            {% endfor %}
+          </p>
+          {% if page.affiliations %}
+            <ul class="project-affiliations">
+              {% for affiliation in page.affiliations %}
+                <li>{{ affiliation }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if page.author_note %}<p class="project-author-note">{{ page.author_note }}</p>{% endif %}
+          <div class="project-actions">
+            {% for link in page.links %}
+              <a class="project-button{% if forloop.first %} project-button--primary{% endif %}" href="{{ link.url }}" target="_blank" rel="noopener">
+                <span class="lang-en">{{ link.title | escape }}</span><span class="lang-zh">{{ link.zh | default: link.title | escape }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+        <img class="project-teaser" src="{{ page.teaser | relative_url }}" alt="{{ page.teaser_alt | escape }}" decoding="async">
+      </div>
+    </header>
+
+    <section class="project-section project-section--soft" id="overview" aria-labelledby="overview-title">
+      <div class="frame">
+        <h2 id="overview-title"><span class="lang-en">Abstract</span><span class="lang-zh">摘要</span></h2>
+        <div class="project-prose lang-en">{{ page.abstract_en | markdownify }}</div>
+        <div class="project-prose lang-zh">{{ page.abstract_zh | markdownify }}</div>
+      </div>
+    </section>
+
+    {{ content }}
+
+    <section class="project-section" id="results" aria-labelledby="results-title">
+      <div class="frame">
+        <div class="project-section-head">
+          <h2 id="results-title"><span class="lang-en">Figures{% if page.video %} and Demo{% endif %}</span><span class="lang-zh">{% if page.video %}配图与演示{% else %}研究配图{% endif %}</span></h2>
+          {% if page.figures.size > 1 %}
+            <div class="project-gallery-controls" data-gallery-controls hidden>
+              <button type="button" class="project-button" data-gallery-step="-1" aria-controls="project-gallery" aria-label="Previous figure" data-label-en="Previous figure" data-label-zh="上一张图">←</button>
+              <span data-gallery-position aria-live="polite">1 / {{ page.figures.size }}</span>
+              <button type="button" class="project-button" data-gallery-step="1" aria-controls="project-gallery" aria-label="Next figure" data-label-en="Next figure" data-label-zh="下一张图">→</button>
+            </div>
+          {% endif %}
+        </div>
+        <div class="project-gallery" id="project-gallery"{% if page.figures.size > 1 %} tabindex="0" role="region" aria-labelledby="results-title"{% endif %}>
+          {% for figure in page.figures %}
+            <figure class="project-figure">
+              <a class="project-figure__image" href="{{ figure.src | relative_url }}" target="_blank" rel="noopener">
+                <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt | default: figure.caption | escape }}" loading="lazy" decoding="async">
+              </a>
+              <figcaption><span class="lang-en">{{ figure.caption | escape }}</span><span class="lang-zh">{{ figure.zh | default: figure.caption | escape }}</span></figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+        {% if page.video %}
+          <figure class="project-figure project-demo" id="demo">
+            <video controls playsinline preload="none" poster="{{ page.video.poster | default: page.teaser | relative_url }}">
+              <source src="{{ page.video.src | relative_url }}" type="video/mp4">
+              <a href="{{ page.video.src | relative_url }}"><span class="lang-en">Download video</span><span class="lang-zh">下载视频</span></a>
+            </video>
+            <figcaption><span class="lang-en">{{ page.video.caption | escape }}</span><span class="lang-zh">{{ page.video.zh | escape }}</span></figcaption>
+          </figure>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="project-section project-section--soft" id="BibTeX" aria-labelledby="citation-title">
+      <div class="frame">
+        <div class="project-section-head">
+          <h2 id="citation-title">BibTeX</h2>
+          <button type="button" class="project-button" data-copy-citation hidden>
+            <span class="lang-en">Copy BibTeX</span><span class="lang-zh">复制 BibTeX</span>
+          </button>
+        </div>
+        <pre class="project-citation" tabindex="0" aria-labelledby="citation-title"><code>{{ page.bibtex | strip | escape }}</code></pre>
+        <p class="project-copy-feedback" data-copy-feedback aria-live="polite" hidden></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer frame">
+    <a href="{{ home_url }}#publications"><span class="lang-en">Back to publications</span><span class="lang-zh">返回论文列表</span></a>
+    <a href="#top"><span class="lang-en">Back to top</span><span class="lang-zh">返回顶部</span></a>
+  </footer>
+</body>
+</html>
