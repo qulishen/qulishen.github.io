@@ -79,8 +79,18 @@
 .profile__stats a:hover { color: var(--accent); text-decoration: underline; }
 .profile__stats strong { color: var(--ink); margin-inline-start: .2em; }
 
-.home-section { padding-block: clamp(1.7rem, 4vw, 2.6rem); background: var(--paper); }
-.home-section:nth-of-type(odd) { background: var(--surface); }
+.home-section {
+  inline-size: 100%;
+  padding-block: clamp(1.7rem, 4vw, 2.6rem);
+  background-color: var(--paper);
+}
+
+.home-section--soft { background-color: var(--surface); }
+
+@media (prefers-color-scheme: light) {
+  .home-section--soft { background-color: #eff3f8; }
+}
+
 .home-section h2 {
   margin: 0 0 .8rem;
   font-size: clamp(1.75rem, 3vw, 2.2rem);
