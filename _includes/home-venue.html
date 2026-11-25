@@ -1,0 +1,5 @@
+{%- assign ccf_rank = site.data.ccf_ranks[include.name] -%}
+<span class="venue">
+  <span class="venue-name">{{ include.name | escape }}{% if include.year %} {{ include.year }}{% endif %}</span>
+  {% if ccf_rank %}<span class="venue-rank">CCF {{ ccf_rank }}</span>{% endif %}
+</span>

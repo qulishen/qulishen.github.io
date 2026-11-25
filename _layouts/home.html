@@ -21,12 +21,15 @@
       <a href="{{ link.url | remove_first: '/' }}"><span class="lang-en">{{ link.title }}</span><span class="lang-zh">{{ link.title_zh | default: link.title }}</span></a>
     {% endfor %}
   {% endcapture %}
-  {% include site-header.html home_url="#about-me" navigation=home_navigation %}
+  {% include site-header.html home_url="#about-me" navigation=home_navigation collapse_nav=true %}
   <main id="main" tabindex="-1">
     {{ content }}
   </main>
-  <footer class="site-footer frame">
-    <a href="#about-me"><span class="lang-en">Back to top</span><span class="lang-zh">返回顶部</span></a>
+  <footer class="home-footer">
+    <div class="site-footer frame">
+      <small>&copy; {{ site.time | date: "%Y" }} Lishen Qu · 瞿立燊</small>
+      <a href="#about-me"><span class="lang-en">Back to top</span><span class="lang-zh">返回顶部</span></a>
+    </div>
   </footer>
   <span id="citation-source" hidden data-url="{% if site.google_scholar_stats_use_cdn %}https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json{% else %}https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json{% endif %}"></span>
   {% include fetch_site_stats.html %}

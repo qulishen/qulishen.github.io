@@ -1,11 +1,16 @@
-<header class="site-header">
+<header class="site-header{% if include.collapse_nav %} site-header--collapsible{% endif %}">
   <div class="site-header__inner frame">
     <a class="site-name" href="{{ include.home_url }}"><span class="lang-en">Lishen Qu</span><span class="lang-zh">瞿立燊</span></a>
-    <nav class="site-nav" aria-label="Main navigation" data-label-zh="主导航">
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-label-zh="主导航">
       {{ include.navigation }}
     </nav>
     <button class="language-switch" type="button" id="lang-toggle" hidden>
       <span class="lang-en" lang="zh-CN">中文</span><span class="lang-zh" lang="en">English</span>
     </button>
+    {% if include.collapse_nav %}
+      <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Menu" data-label-en="Menu" data-label-zh="菜单" aria-controls="site-nav" aria-expanded="false" hidden>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    {% endif %}
   </div>
 </header>
