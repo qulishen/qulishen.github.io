@@ -1,0 +1,130 @@
+---
+layout: project
+permalink: /project/FreeMEF.html
+title: 'There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion'
+venue: ECCV 2026
+description: 'There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion (ECCV 2026)'
+authors:
+- name: Lishen Qu
+  self: true
+- name: Yao Liu
+- name: Shihao Zhou
+  url: https://joshyzhou.github.io/
+- name: Jie Liang
+  url: https://liangjie.xyz/
+- name: Hui Zeng
+  url: https://huizeng.github.io/
+- name: Lei Zhang
+  url: https://www4.comp.polyu.edu.hk/~cslzhang/
+- name: Jufeng Yang
+  url: https://cv.nankai.edu.cn/
+links:
+- title: Paper
+  zh: 论文
+  url: https://arxiv.org/abs/2606.27905
+- title: Code
+  zh: 代码
+  url: https://github.com/qulishen/FreeMEF
+teaser: /project/static/FreeMEF/assets/images/hero-hdr-landscape.png
+teaser_alt: HDR landscape from the FreeMEF project
+abstract_en: Multi-exposure fusion models are commonly trained for a fixed number of inputs. FreeMEF accepts
+  varying exposure counts without retraining or architectural changes. A recurrent module collects context
+  from the exposure bracket, and a guided restoration transformer uses it to recover detail in saturated and
+  underexposed areas.
+abstract_zh: 传统多曝光融合模型通常只支持固定帧数。FreeMEF 无需重新训练或更改架构，即可处理帧数不同的曝光序列。模型先循环聚合全局信息，再用这些信息引导 Transformer 复原欠曝与过曝区域的细节。
+figures:
+- src: /project/static/FreeMEF/assets/images/pipeline.png
+  caption: FreeMEF recurrent fusion and U-shaped restoration pipeline.
+  zh: FreeMEF 的循环融合与 U 形复原流程。
+- src: /project/static/FreeMEF/assets/images/motivation.png
+  caption: Fusion before self-attention, cross-attention before fusion, and recurrent fusion before cross-attention.
+  zh: 先融合后自注意力、先交叉注意力后融合，以及先循环融合后交叉注意力的对比。
+- src: /project/static/FreeMEF/assets/images/sice.png
+  caption: Qualitative comparisons on SICE.
+  zh: SICE 上的视觉对比。
+- src: /project/static/FreeMEF/assets/images/gfgb.png
+  caption: Global feature guided block with EAHA and AFFN.
+  zh: 包含 EAHA 和 AFFN 的全局特征引导模块。
+- src: /project/static/FreeMEF/assets/images/eaha-query.png
+  caption: Query visualization for base and reference features.
+  zh: 基础帧与参考帧特征的查询可视化。
+- src: /project/static/FreeMEF/assets/images/ablation-components.png
+  caption: Ablation study of RSSM, EAHA, and AFFN.
+  zh: RSSM、EAHA 与 AFFN 的消融实验。
+- src: /project/static/FreeMEF/assets/images/ablation-eaha-affn.png
+  caption: Qualitative ablation of EAHA and AFFN.
+  zh: EAHA 与 AFFN 的消融视觉对比。
+- src: /project/static/FreeMEF/assets/images/fusion-order.png
+  caption: Visual comparison of exposure fusion orders.
+  zh: 不同曝光融合顺序的视觉对比。
+- src: /project/static/FreeMEF/assets/images/limitation.png
+  caption: Color deviations can occur with large exposure gaps.
+  zh: 曝光间隔过大时可能出现色彩偏差。
+video:
+  src: /project/static/FreeMEF/assets/videos/freemef.mp4
+  poster: /project/static/FreeMEF/assets/images/sice.png
+  caption: FreeMEF demo on scenes with motion and challenging exposure.
+  zh: FreeMEF 在运动与复杂曝光场景中的演示。
+bibtex: |-
+  @inproceedings{qu2026freemef,
+    title={There and Back Again: A Flexible-Frame Transformer for Multi-Exposure Fusion},
+    author={Qu, Lishen and Liu, Yao and Zhou, Shihao and Liang, Jie and Zeng, Hui and Zhang, Lei and Yang, Jufeng},
+    booktitle={European Conference on Computer Vision},
+    year={2026}
+  }
+---
+
+<section class="project-section" id="method" aria-labelledby="method-title">
+  <div class="frame">
+    <h2 id="method-title"><span class="lang-en">Method</span><span class="lang-zh">研究方法</span></h2>
+    <div class="project-points">
+      <article class="project-point">
+        <h3>Recurrent State Space Module</h3>
+        <p><span class="lang-en">The RSSM aligns exposure features adaptively and fuses them sequentially into shared guidance.</span><span class="lang-zh">RSSM 对曝光特征进行自适应对齐，再按序融合为全局引导。</span></p>
+      </article>
+      <article class="project-point">
+        <h3>Extremity-Aware Hybrid Attention</h3>
+        <p><span class="lang-en">EAHA uses reference features to recover information in regions where under- or overexposure makes the base and reference frames look dissimilar.</span><span class="lang-zh">EAHA 从参考帧获取信息，复原因欠曝光或过曝而与参考帧差异较大的区域。</span></p>
+      </article>
+      <article class="project-point">
+        <h3>Affine-Injection FFN</h3>
+        <p><span class="lang-en">AFFN uses statistics from the exposure sequence to adaptively adjust contrast and brightness in the restoration network.</span><span class="lang-zh">AFFN 利用曝光序列的全局统计，自适应调节复原网络中的对比度与亮度。</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="project-section project-section--soft" id="benchmarks" aria-labelledby="benchmarks-title">
+  <div class="frame">
+    <h2 id="benchmarks-title"><span class="lang-en">Quantitative results</span><span class="lang-zh">定量结果</span></h2>
+    <div class="project-prose"><p><span class="lang-en">The same model supports 2-, 3-, and 5-frame exposure brackets and reaches 28.418 dB on Kalantari and 26.077 dB on Real-HDRV in the 3-frame evaluation.</span><span class="lang-zh">同一模型支持 2、3、5 帧曝光序列。在三帧评测中，FreeMEF 在 Kalantari 和 Real-HDRV 上的 PSNR 分别为 28.418 dB 和 26.077 dB。</span></p></div>
+    <div class="project-table" role="region" tabindex="0" aria-labelledby="free-table-1">
+      <table>
+        <caption id="free-table-1"><span class="lang-en">3-frame evaluation</span><span class="lang-zh">三帧评测</span></caption>
+        <thead>
+          <tr><th scope="col">Method</th><th scope="col">Kalantari PSNR</th><th scope="col">Kalantari SSIM</th><th scope="col">Kalantari LPIPS</th><th scope="col">Real-HDRV PSNR</th><th scope="col">Real-HDRV SSIM</th><th scope="col">Real-HDRV LPIPS</th><th scope="col">FLOPs</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">HDR-Transformer</th><td>27.024</td><td>0.935</td><td>0.093</td><td>25.131</td><td>0.930</td><td>0.079</td><td>95.261G</td></tr>
+          <tr><th scope="row">Restormer</th><td>27.149</td><td>0.930</td><td>0.097</td><td>25.562</td><td>0.924</td><td>0.089</td><td>141.160G</td></tr>
+          <tr><th scope="row">AFUNet</th><td>27.226</td><td>0.925</td><td>0.091</td><td>25.423</td><td>0.912</td><td>0.084</td><td>75.340G</td></tr>
+          <tr class="winner"><th scope="row">FreeMEF</th><td>28.418</td><td>0.948</td><td>0.081</td><td>26.077</td><td>0.940</td><td>0.074</td><td>41.496G</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="project-table" role="region" tabindex="0" aria-labelledby="free-table-2">
+      <table>
+        <caption id="free-table-2"><span class="lang-en">Cross-dataset variable-frame evaluation on SICE</span><span class="lang-zh">SICE 跨数据集变帧数评测</span></caption>
+        <thead>
+          <tr><th scope="col">Method</th><th scope="col">2-frame PSNR</th><th scope="col">2-frame SSIM</th><th scope="col">2-frame LPIPS</th><th scope="col">3-frame PSNR</th><th scope="col">3-frame SSIM</th><th scope="col">3-frame LPIPS</th><th scope="col">5-frame PSNR</th><th scope="col">5-frame SSIM</th><th scope="col">5-frame LPIPS</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">HDR-Transformer</th><td>15.339</td><td>0.690</td><td>0.262</td><td>18.151</td><td>0.746</td><td>0.227</td><td>20.748</td><td>0.830</td><td>0.171</td></tr>
+          <tr><th scope="row">SCTNet</th><td>15.288</td><td>0.685</td><td>0.264</td><td>18.724</td><td>0.768</td><td>0.210</td><td>21.153</td><td>0.842</td><td>0.177</td></tr>
+          <tr><th scope="row">AFUNet</th><td>14.591</td><td>0.647</td><td>0.290</td><td>18.669</td><td>0.758</td><td>0.218</td><td>21.121</td><td>0.838</td><td>0.164</td></tr>
+          <tr class="winner"><th scope="row">FreeMEF</th><td>17.087</td><td>0.731</td><td>0.225</td><td>19.326</td><td>0.774</td><td>0.199</td><td>22.269</td><td>0.851</td><td>0.149</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

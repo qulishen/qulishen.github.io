@@ -1,0 +1,75 @@
+---
+layout: project
+permalink: /project/ExpoMotion.html
+title: 'ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion'
+venue: ECCV 2026
+description: 'ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion
+  (ECCV 2026)'
+authors:
+- name: Yao Liu
+  note: '*'
+- name: Lishen Qu
+  self: true
+  note: '*'
+- name: Shihao Zhou
+  url: https://joshyzhou.github.io/
+- name: Jie Liang
+  url: https://liangjie.xyz/
+- name: Hui Zeng
+  url: https://huizeng.github.io/
+- name: Yabin Peng
+- name: Huipeng Lin
+- name: Lei Zhang
+  url: https://www4.comp.polyu.edu.hk/~cslzhang/
+- name: Jufeng Yang
+  url: https://cv.nankai.edu.cn/
+author_note: <span class="lang-en">* Equal contribution</span><span class="lang-zh">* 共同第一作者</span>
+links:
+- title: Paper
+  zh: 论文
+  url: https://arxiv.org/abs/2607.03110
+- title: Code and Dataset
+  zh: 代码与数据集
+  url: https://github.com/Leo-LiuYao/ExpoMotion
+- title: NTIRE Challenge
+  zh: NTIRE 挑战赛
+  url: https://www.codabench.org/competitions/12728/
+teaser: /project/static/images/Expomotion/1.png
+teaser_alt: Examples from ExpoMotion across real motion, controlled motion, lab captures, and extreme lighting.
+abstract_en: Exposure bracketing can preserve details in bright and dark areas, but moving objects often leave
+  ghosts when frames are fused. ExpoMotion benchmarks deghosting on a large collection of dynamic scenes with
+  carefully acquired references. The accompanying Householder Orthogonal Projection network first aligns exposures
+  and then suppresses motion artifacts.
+abstract_zh: 多曝光融合可以保留明暗细节，但运动物体容易在融合结果中留下重影。ExpoMotion 用大规模动态场景与精心采集的参考图像评估去重影能力，配套的 Householder 正交投影网络先对齐各帧曝光，再抑制运动伪影。
+figures:
+- src: /project/static/images/Expomotion/1.png
+  caption: Examples from ExpoMotion across real motion, controlled motion, lab captures, and extreme lighting.
+  zh: ExpoMotion 的真实运动、受控运动、实验室拍摄和极端照明样例。
+bibtex: |-
+  @inproceedings{liu2026expomotion,
+    title={ExpoMotion: A Large-Scale Benchmark and A Householder Projection Network for Multi-Exposure Fusion},
+    author={Liu, Yao and Qu, Lishen and Zhou, Shihao and Liang, Jie and Zeng, Hui and Peng, Yabin and Lin, Huipeng and Zhang, Lei and Yang, Jufeng},
+    booktitle={European Conference on Computer Vision},
+    year={2026}
+  }
+---
+
+<section class="project-section" id="benchmark" aria-labelledby="benchmark-title">
+  <div class="frame">
+    <h2 id="benchmark-title"><span class="lang-en">Benchmark and method</span><span class="lang-zh">数据基准与方法</span></h2>
+    <div class="project-points">
+      <article class="project-point">
+        <h3>ExpoMotion benchmark</h3>
+        <p><span class="lang-en">The dataset contains 1,738 sequences and 10,909 images spanning controlled and real-world motion, lab setups, and extreme lighting.</span><span class="lang-zh">数据集包含 1,738 组序列和 10,909 张图像，覆盖受控运动、真实运动、实验室场景和极端照明。</span></p>
+      </article>
+      <article class="project-point">
+        <h3>Exposure pre-alignment</h3>
+        <p><span class="lang-en">Global Priors Illumination Alignment harmonizes exposure levels before deghosting.</span><span class="lang-zh">全局先验光照对齐模块先统一不同帧的曝光。</span></p>
+      </article>
+      <article class="project-point">
+        <h3>Householder Orthogonal Attention</h3>
+        <p><span class="lang-en">A learned Householder reflector projects out ghosting components while retaining scene details.</span><span class="lang-zh">学习得到的 Householder 反射算子投影消除重影成分，同时保留场景细节。</span></p>
+      </article>
+    </div>
+  </div>
+</section>
